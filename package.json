@@ -6,6 +6,7 @@
   "scripts": {
     "build": "eleventy",
     "start": "eleventy --serve",
+    "css": "postcss styles/tailwind.css -o build/styles/tailwind.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,5 +22,10 @@
   "homepage": "https://github.com/ingjrs01/opos#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.1.1"
   }
 }
