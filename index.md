@@ -1,3 +1,7 @@
+---
+title: Inicio
+layout: mylayout.njk
+---
 # Probando la página 1
 
 ## Contenido de esta lección
