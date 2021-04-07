@@ -1,0 +1,15 @@
+---
+title: Creaciones
+layout: mylayout.njk
+---
+
+<ul>
+{% for convocatoria in collections.convocatorias %}
+<li>
+    <article>
+        <a href="{{convocatoria.url}}"><h2>{{ convocatoria.data.title}}</h2></a>
+        
+    <article>
+</li>
+{% endfor %}
+</ul>
