@@ -12,9 +12,9 @@ Establécese o sistema de concurso-oposición libre.
 ## Terceira. Condicións das persoas aspirantes
 Ademais das condicións sinaladas na base cuarta das xerais as persoas aspirantes deberán posuír o título de graduada ou graduado en Educación Secundaria Obrigatoria ou equivalente, ou estar en condicións de obtelo o día en que remate o prazo de presentación de instancias.
 ## Cuarta. Exercícios da oposición
-PRIMEIRO EXERCICIO, de carácter obrigatorio e eliminatorio. Consistirá en contestar por escrito a un test de 40 preguntas con catro respostas alternativas propostas polo tribunal e correspondentes ás materias contidas no programa. O tempo de realización deste exercicio será de 40 minutos.
-SEGUNDO EXERCICIO, de carácter obrigatorio e eliminatorio. Consistirá na resolución dun suposto práctico relacionado coa parte específica do programa no tempo que marque o tribunal.
-TERCEIRO EXERCICIO, de carácter obrigatorio e non eliminatorio. Consistirá na tradución directa ao idioma galego, sen axuda do dicionario, dun texto en castelán elixido polo tribunal.
+- PRIMEIRO EXERCICIO, de carácter obrigatorio e eliminatorio. Consistirá en contestar por escrito a un test de 40 preguntas con catro respostas alternativas propostas polo tribunal e correspondentes ás materias contidas no programa. O tempo de realización deste exercicio será de 40 minutos.
+- SEGUNDO EXERCICIO, de carácter obrigatorio e eliminatorio. Consistirá na resolución dun suposto práctico relacionado coa parte específica do programa no tempo que marque o tribunal.
+- TERCEIRO EXERCICIO, de carácter obrigatorio e non eliminatorio. Consistirá na tradución directa ao idioma galego, sen axuda do dicionario, dun texto en castelán elixido polo tribunal.
 ## Quinta. Programa da convocatoria
 
 ### Materias xerais:
@@ -28,14 +28,14 @@ TERCEIRO EXERCICIO, de carácter obrigatorio e non eliminatorio. Consistirá na 
 2. Arquitectura de ordenadores. Elementos básicos. Funcións. A unidade central de procesamento. A memoria: tipos, xerarquía e modos de direccionamento.
 3. Periféricos: conectividade e administración. Elementos de impresión. Elementos de almacenamento. Elementos de visualización e dixitalización.
 4. Paquetes de ofimática: aplicacións que os compoñen. Comandos e os seus usos.
-5. Sistemas operativos. Características técnicas e elementos constitutivos. Sistemas Windows. Sistemas Unix y Linux.
+5. [Sistemas operativos. Características técnicas e elementos constitutivos. Sistemas Windows. Sistemas Unix y Linux](/content/articles/sistemas_operativos)
 6. Sistemas operativos para dispositivos móbiles.
 7. [Sistemas de xestión de bases de datos relacionais. Características e compoñentes](/content/articles/bbdd_relacional)
 8. Administración do Sistema operativo e software de base.
-9. Administración de servidores de correo electrónico. Protocolos de correo electrónico.
+9. [Administración de servidores de correo electrónico. Protocolos de correo electrónico](/content/articles/email)
 10. Internet: arquitectura de rede. Orixe, evolución e estado actual.
 11. Internet: principais servizos: correo electrónico, WWW, FTP, Telnet e outros. Protocolos HTTP e HTTPS, SSL e TLS.
-12. Aplicacións Web. Tecnoloxías de programación. Javascript, Applets, Servlets, servizos web. Linguaxes de descrición de datos: HTML e XML e as súas derivacións.Navegadores 13 linguaxes de programación web. Linguaxes de script.
+12. Aplicacións Web. Tecnoloxías de programación. Javascript, Applets, Servlets, servizos web. Linguaxes de descrición de datos: HTML e XML e as súas derivacións.Navegadores e linguaxes de programación web. Linguaxes de script.
 13. [Sistema de xestión de contidos (CMS). Xestión das aplicacións web: Liferay, Wordpress e similares.](/content/articles/cms)
 14. [Regulamento xeral de protección de datos (RXPD) e Lei orgánica 3/2018, de protección de datos persoais e garantía de dereitos dixitais. Características e aplicación.](/content/articles/proteccion_datos)
 15. [Accesibilidade, deseño universal e usabilidade](/content/articles/accesibilidad)

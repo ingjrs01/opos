@@ -1,11 +1,7 @@
 ---
 title: "Resúmenes Ley Funcionariado"
 author: "Juan Ramón Riveiro Sueiro"
-date: "15/9/2019"
-output: 
-    pdf_document: default
-    html_document: default
-    word_document: default
+date: "2019-09-15"
 ---
 # Funcionarios: 
 
