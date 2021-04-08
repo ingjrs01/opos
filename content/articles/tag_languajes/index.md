@@ -158,7 +158,9 @@ Entidades
 
 Son unidades de almacenamiento del contenido del documento. Si estuviésemos en un lenguaje de programación, podríamos asimilarlas a las variables o constantes. Todas las entidades presentes en un documento, deben declararse con un nombre. Se declaran con la palabra clave ENTITY
 Declaración
+
 <!ENTITY nombre “valor”>
+
 Uso. Para usar, utilizamos el caracter &
 <etiqueta>esto es &nombre;</etiqueta
 
@@ -221,10 +223,22 @@ Actividades Prácticas:
 
 1. Diferencias entre Web 1.0, 2.0 y 3.0
 
-- Web 1.0: en los inicios, los internautas sólo tienen un rol: consumir la información que se aloja en servidores informáticos. La navegación era netamente textual y las consultas son muy limitadas. Cuando aparece el lenguaje de programación web HTML (Hyper TextMarkup Language), se hace más atractiva la organización de los elementos que se visualizan en la pantalla. Sin embargo, las interacciones seguían siendo muy limitadas porque el usuario solo podía leer la información y no comentarla, por ejemplo.
+- Web 1.0: en los inicios, los internautas sólo tienen un rol: consumir la información que se aloja en servidores informáticos. La navegación era netamente textual y las consultas son muy limitadas. Cuando aparece el lenguaje de programación web HTML (Hyper TextMarkup Language), se hace más atractiva la organización de los elementos que se visualizan en la pantalla. Sin embargo, las interacciones seguían siendo muy limitadas porque el usuario solo podía leer la información y no comentarla, por ejemplo. Los creadores de la información son webmaster, con altos conocimientos en esta tecnología
 
-- Web 2.0: Alrededor del año 2000 se empieza a hablar de la Web 2.0, al fomentarse la interacción entre páginas web y usuarios. Internet se entiende como una plataforma colaborativa, en la que todos los usuarios participan. Ahora, además de leer, los internautas también pueden generar informaciones y publicarlas en sitios web, en foros de usuarios, blogs, redes sociales y wikis (páginas editables por cualquier usuario).
+- Web 2.0: Alrededor del año 2000 se empieza a hablar de la Web 2.0, al fomentarse la interacción entre páginas web y usuarios. Internet se entiende como una plataforma colaborativa, en la que todos los usuarios participan. Ahora, además de leer, los internautas también pueden generar informaciones y publicarlas en sitios web, en foros de usuarios, blogs, redes sociales y wikis (páginas editables por cualquier usuario). La Web 2.0 supone la decocratización de los contenidos.
 
 - Web 3.0: Se refiere a que las páginas web se pueden relacionar de manera semántica, añadiendo metadatos que aportan valor a la información y mejora la búsqueda y la posibilidad de encontrar información en la web al comprenderse el significado de las palabras.
 
 - Web 4.0: Internet puede funcionar de manera predictiva, ya no solo recibiendo órdenes de parte del usuario, sino que mediante el empleo de la inteligencia artificial se puede anticipar a sus solicitudes e incluso predecir comportamientos en el futuro. Se generalizan también las interacciones mediante la voz, con el uso de dispositivos inteligentes que permiten realizar búsquedas habladas.
+
+2. ¿ Qué es el W3C ?
+
+El Consorcio WWW, en inglés: World Wide Web Consortium (W3C), es un consorcio internacional que genera recomendaciones y estándares que aseguran el crecimiento de la World Wide Web a largo plazo.3
+
+Este consorcio fue creado en octubre de 1994, y está dirigido por Tim Berners-Lee, el creador original del URL (Uniform Resource Locator, Localizador Uniforme de Recursos), del HTTP (HyperText Transfer Protocol, Protocolo de Transferencia de HiperTexto) y del HTML (Hyper Text Markup Language, Lenguaje de Marcado de HiperTexto), que son las principales tecnologías sobre las que se basa la Web.
+
+- Miembros: a abril de 2010 contaba con 330 miembros.
+- Equipo (W3C Team): 65 investigadores y expertos de todo el mundo.
+- Oficinas (W3C Offices): centros regionales establecidos en Alemania y Austria (oficina conjunta), Australia, Benelux (oficina conjunta), China, Corea del Sur, España, Finlandia, Grecia, Hong Kong, Hungría, India, Israel, Italia, Marruecos, Suecia y Reino Unido e Irlanda (oficina conjunta).
+
+4. Diferencias entre HTML4 Y XHTML
