@@ -1,0 +1,340 @@
+<h1>Novedades en HTML5</h1>
+<p>El W3C ha preparado un documento, HTML5 differences from HTML4, en el que detalla las principales diferencias entre HTML4 (y su variante según XML, XHTML 1.0) y la nueva versión del lenguaje, HTML5.</p>
+<p>Algunas de las principales diferencias son:</p>
+<ul>
+<li>HTML5 define una sintaxis que es compatible con HTML4 y XHTML 1.0. Por tanto, un salto de línea se puede escribir como <br> (HTML4) o <br /> (XHTML 1.0).</li>
+<li>Para definir el juego de caracteres se introduce un nuevo atributo para la etiqueta <meta>:  <meta charset=”UTF-8″>
+  aunque todavía es posible utilizar el método tradicional:
+  <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″>
+</li>
+<li>Se simplica el DOCTYPE:  <!DOCTYPE html>
+</li>
+<li>HTML5 permite incluir elementos de SVG y MathML.</li>
+<li>Se introducen nuevos elementos, como: section, article, aside, header, footer, etc.</li>
+<li>Se introducen nuevos atributos, como: media, charset, autofocus, placeholder, etc.</li>
+<li>Algunos elementos cambian, como: a, b, i, menu, etc.</li>
+<li>Algunos atributos cambian, como: type, name, summary, etc.</li>
+<li>Algunos elementos desaparecen, como: basefont, big, center, etc.</li>
+<li>Algunos atributos desaparecen, como: align, background, bgcolor, etc.</li>
+<li>Mejora de las API, como: getElementsByClassName() y innerHTML.</li>
+</ul>
+<p><area />, <base />, <br />,</p>
+<col />
+, <embed />,
+<hr />
+, <img />, <input />, <link />, <meta />, <param />,
+<source />
+,
+<track />
+y <wbr />
+<h2>Nuevos Elementos HTML5</h2>
+<p>Etiqueta Descripción</p>
+<h2>header: Define el header para un documento o una sección.</h2>
+<h2>hgroup (eliminado)</h2>
+<p>Agrupa los elementos para el encabezado. Permitía agrupar elmentos de h1 a h6, para dar consistencia, por ejemplo un título y un subtítulo, etc.</p>
+<pre><code class="language-html">&lt;hgroup&gt;
+  &lt;h1&gt;Alien&lt;/h1&gt;
+  &lt;h2&gt;En el espacio, nadie te escuchará gritar&lt;/h2&gt;
+&lt;/hgroup&gt;
+&lt;p&gt;
+  La nave comercial Nostromo recibe una llamada de auxilio desde un planeta no
+  explorado. Luego de buscar sobrevivientes, la tripulación se dirige a casa
+  sólo para darse cuenta que una mortal forma de vida se les ha unido.
+&lt;/p&gt;
+</code></pre>
+<h2>nav: Define los enlaces de navegación en un documento.</h2>
+<p>Vamos a ver la nueva etiqueta nav HTML5 que nos vale para definir el conjunto de código de un menú de navegación. Esto proporciona información semántica al navegador, sabiendo que en esa sección se encuentran los enlaces que forman un menú de navegación. Se debe utilizar para el menú principal o bloques principales de navegación.</p>
+<p>No confundir con las etiquetas section o menu, nav sólamente contiene enlaces a las diferentes secciones de la web</p>
+<pre><code class="language-html">&lt;nav&gt;
+  &lt;a href=&quot;/enlace1/&quot;&gt;Enlace 1&lt;/a&gt;
+  &lt;a href=&quot;/enlace2/&quot;&gt;Enlace 2&lt;/a&gt;
+  &lt;a href=&quot;/enlace3/&quot;&gt;Enlace 3&lt;/a&gt;
+  &lt;a href=&quot;/enlace4/&quot;&gt;enlace 4&lt;/a&gt;
+&lt;/nav&gt;
+</code></pre>
+<p>Esta etiqueta puede ir dentro de un header, o de cualquier otra sección.</p>
+<h2>section</h2>
+<p>Define una sección en el documento. Es un elemento de seccionamiento genérico, diseñado para contener una parte de un documento temáticamente definida. Los contenidos de un elemento section son usualmente precedidos por un encabezado. En caso de querer agrupar elementos de temática diferente, pero que queremos dar un estilo uniforme, deberems utilziar el elemento div en lugar de éste.</p>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1&gt;Anuncios&lt;/h1&gt;
+  &lt;p&gt;
+    &lt;a href=&quot;http://www.super-frogger-shaper-5000.com&quot;
+      &gt;Super frogger shaper 5000. Todo lo que necesitas para estar en forma!&lt;/a
+    &gt;
+  &lt;/p&gt;
+&lt;/section&gt;
+&lt;main&gt;
+  &lt;h1&gt;¿Cómo mantenerte en forma?&lt;/h1&gt;
+  &lt;p&gt;Llevar un estilo de vida saludable es muy importante...&lt;/p&gt;
+&lt;/main&gt;
+&lt;section&gt;
+  &lt;h1&gt;Artículos relacionados&lt;/h1&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;comida-saludable.html&quot;&gt;Incluye comida saludable en tu dieta&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;habitos-de-descanso.html&quot;&gt;Adopta buenos hábitos de descanso&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/section&gt;
+</code></pre>
+<p>En este ejemplo, vemos como para la parte principal usamos el elemento main, mientras usamos section para las otras partes.</p>
+<h2>main</h2>
+<p>Define el contenido principal del documento. El elemento main es un contenedor para los temas centrales de un documento o sección. Este contenido central puede interpretarse como todo lo que resta luego de quitar anuncios, encabezados (header), pies (footer), secciones de navegación (nav), vínculos relacionados y otros elementos secundarios.</p>
+<p>El elemento main tiene mayor importancia para personas con discapacidades, que habitualmente acceden a la web a través de programas especiales como los navegadores de voz. En tales casos, los navegadores pueden ser instruidos para ir directamente al contenido principal del documento o sección (main), saltándose toda la información menos relevante.</p>
+<p>No existen restricciones en cuanto al número de elementos main que puede contener un documento, pero solo puede estar visible uno a la vez (atributo hidden)</p>
+<p>Como ancestros, solo puede tener los elementos html, body, div y form.</p>
+<h2>article</h2>
+<p>Define un artículo del documento.</p>
+<p>El elemento article es un contenedor de bloques de contenido que se consideran independientes del sitio web y pueden, por lo tanto, ser vistos, reutilizados y distribuidos por separado, como por ejemplo, en la sindicación. Puedes encontrar habitualmente a este elemento encerrando artículos, entradas de blogs o mensajes de un foro.</p>
+<p>Cuando dos o más de estos elementos están anidados, se supone que el elemento article interior guarda relación con el elemento article que actúa como padre. Este podría ser el caso de una entrada de blog (siendo en sí misma un article), donde cada comentario puede estar encerrado por un elemento article.</p>
+<p>El elemento article puede ser utilizado en conjunto con otros elementos como header, footer y time para agregar información acerca de su contenido. Esta información puede ser utilizada, por ejemplo, por navegadores o lectores de noticias.</p>
+<p>No debes confundir los elementos article y section. El elemento article tiene un mayor significado e implica que sus contenidos pueden ser tratados independientemente del documento que los contiene.</p>
+<pre><code class="language-html">&lt;article&gt;
+  &lt;header&gt;
+    &lt;h1&gt;La cocina china&lt;/h1&gt;
+    &lt;p&gt;
+      Publicado
+      &lt;time pubdate datetime=&quot;2014-03-28T20:00-04:00&quot;&gt;2 meses atrás&lt;/time&gt;
+    &lt;/p&gt;
+  &lt;/header&gt;
+  &lt;p&gt;
+    La cocina china incluye estilos originarios de diversas regiones de China,
+    así como de personas chinas en otras partes del mundo. La historia de la
+    cocina en China se remonta a cientos de años atrás y ha cambiado de período
+    a período y en cada región de acuerdo al clima, las modas imperiales, y la
+    preferencia local.
+  &lt;/p&gt;
+  &lt;p&gt;...&lt;/p&gt;
+  &lt;footer&gt;
+    &lt;p&gt;&amp;copy; Todos los derechos reservados&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/article&gt;
+</code></pre>
+<h2>aside</h2>
+<p>Define contenido secundario de la página.</p>
+<p>El elemento aside es un contenedor para información que se considera solo levemente relacionada al documento o la sección en la que es definida. En otras palabras, el contenido del elemento aside debe estar relacionado al contenido circundante, pero no ser completamente necesario para su comprensión.</p>
+<p>El elemento aside puede ser típicamente encontrado alrededor de enlaces de blogrolls, enlaces al archivo, un glosario, una lista de tweets del autor, o notas, pensamientos o ideas que se le han ocurrido al autor durante la producción del documento. Asimismo, puedes ver ejemplos perfectos de notas al margen en revistas y diarios impresos, donde se provee información adicional (pero no crítica) para enriquecer la experiencia del usuario.</p>
+<p>Los autores no deberían utilizar el elemento aside para encerrar contenido que no guarda relación con la sección en la que se define. Su contenido debe tener alguna relación con su entorno.</p>
+<pre><code class="language-html">&lt;h1&gt;El blog de astrofotografía de Pepe&lt;/h1&gt;
+&lt;p&gt;Este es mi blog, y aquí te puedes encontrar...&lt;/p&gt;
+&lt;aside&gt;
+  &lt;nav&gt;
+    &lt;h1&gt;Sitios relacionados&lt;/h1&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;http://science.nasa.gov/astrophysics/&quot;
+          &gt;Astrofísica - NASA Science&lt;/a
+        &gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;http://www-astro.physics.ox.ac.uk/&quot;
+          &gt;Astrofísica | Universidad de Oxford&lt;/a
+        &gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;https://danielmarin.naukas.com/&quot;&gt;Blog de Daniel Marín&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;...&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/aside&gt;
+</code></pre>
+<h2>footer</h2>
+<p>El elemento footer representa al pie de una sección o documento, donde los autores habitualmente colocan firmas, información acerca del autor, información de licencias, documentos relacionados, etc. En muchos casos, los contenidos del pie de un documento son consistentes a lo largo de todo el sitio.</p>
+<p>Cuando un elemento footer es declarado dentro de un elemento de seccionamiento (como article o section) representa un pie en el ámbito de ese elmento. De lo contrario (cuando pertenece al elemento body) representa un pie para el documento entero.</p>
+<p>Aunque es una práctica común colocar los pies al final de la página o sección, no es necesario que ocupen ese lugar. Un pie es un pie por lo que representa, no por su ubicación.</p>
+<p>La información de contacto acerca del autor de un documento o artículo corresponde dentro del elemento address el cual podría incluirse, a su vez, dentro de un elemento footer.</p>
+<pre><code class="language-html">&lt;article&gt;
+  &lt;h1&gt;El extranjero&lt;/h1&gt;
+  &lt;p&gt;
+    &quot;Suficiente!&quot; dijo el pequeño hombre, mientras se levantaba de su
+    desbaratada silla...
+  &lt;/p&gt;
+  &lt;footer&gt;
+    &lt;p&gt;Copyright &amp;copy; 1990-2014 Peter Doe, todos los derechos reservados.&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/article&gt;
+</code></pre>
+<h2>details</h2>
+<p>Define detalles adicionales que el usuario puede ver o esconder.</p>
+<p>El elemento details representa un trozo de contenido oculto que puede ser mostrado a pedido del usuario. Este elemento está pensado para implementar soporte nativo para contenido colapsable y es habitualmente representado por un título (provisto por el elemento summary) acompañado por una flecha que sugirere al usuario que hay más contenido que puede ser accedido. Cuando el usuario hace clic en el título o la flecha, el contenido es automáticamente mostrado.</p>
+<p>Múltiples elementos details pueden ser perfectamente anidados para formar un conjunto de contenidos colapsables en una distribución jerárquica. Adicionalmente, el atributo open puede ser usado para hacer que el contenido del elemento sea inicialmente visible.</p>
+<p>Un título o etiqueta puede ser provisto para el contenido colapsable. En tal caso, éste debe ser representado por un elemento summary, que debe ser el primer hijo del elemento details al cual pertenece.</p>
+<p>El soporte provisto por los navegadores para el elemento details es incompleto. Los autores pueden tener que recurrir a programas para lograr su mismo efecto consistentemente.</p>
+<pre><code class="language-html">&lt;p&gt;
+  La mayoría de procesos astrofísicos no pueden ser recreados en los
+  laboratorios de la Tierra. En cualquier caso, existe una gran variedad de
+  objetos astronómicos visibles a lo largo de todo el espectro electromagnético.
+  El estudio de dichos objetos mediante la adquisición pasiva de datos es el
+  objetivo de la astronomía observacional.
+&lt;/p&gt;
+&lt;details open&gt;
+  &lt;summary&gt;Galileo Galilei&lt;/summary&gt;
+  &lt;img
+    src=&quot;/assets/images/galileo-galilei.jpg&quot;
+    style=&quot;float: right; margin: 0 0 1em 2em&quot;
+    alt=&quot;Galileo Galilei, padre de la astronomía observacional moderna&quot;
+  /&gt;
+  &lt;p&gt;
+    Galileo Galilei fue un astrónomo, filósofo, ingeniero, matemático y físico
+    italiano, relacionado estrechamente con la revolución científica. Eminente
+    hombre del Renacimiento, mostró interés por casi todas las ciencias y artes
+    (música, literatura, pintura).
+  &lt;/p&gt;
+  &lt;p&gt;
+    Sus logros incluyen la mejora del telescopio, gran variedad de observaciones
+    astronómicas, la primera ley del movimiento y un apoyo determinante al
+    copernicanismo.
+  &lt;/p&gt;
+&lt;/details&gt;
+</code></pre>
+<p>Fíjese en el ejemplo anterior en el atributo open, para indicar que por defecto este panel está visible</p>
+<h2>summary</h2>
+<p>Define un encabezado visible para un elemento &lt;details&gt;.</p>
+<p>El elemento summary representa un resumen, título o etiqueta para los contenidos de un elemento details. La descripción provista por este elemento será mostrada encima de los contenidos del elemento details para el cual ha sido declarado.</p>
+<p>El soporte provisto por los navegadores para details y summary es incompleto. Los autores pueden tener que recurrir a programas para lograr los mismos efectos consistentemente.</p>
+<pre><code class="language-html">&lt;p&gt;
+  &lt;b&gt;Cosmos: un viaje personal&lt;/b&gt; es una serie documental de divulgación
+  científica escrita por Carl Sagan, Ann Druyan y Steven Soter (con Sagan como
+  guionista principal y presentador), cuyos objetivos fundamentales fueron:
+  difundir la historia de la astronomía y de la ciencia, así como sobre el
+  origen de la vida; concienciar sobre el lugar que ocupa nuestra especie y
+  nuestro planeta en el universo, y presentar las modernas visiones de la
+  cosmología y las últimas noticias de la exploración espacial, y en particular,
+  las misiones Voyager.
+&lt;/p&gt;
+&lt;details&gt;
+  &lt;summary&gt;Carl Sagan&lt;/summary&gt;
+  &lt;p&gt;
+    Carl Edward Sagan fue un astrónomo, astrofísico, cosmólogo, escritor y
+    divulgador científico estadounidense. Sagan publicó numerosos artículos
+    científicos y comunicaciones1 y fue autor, coautor o editor de más de una
+    veintena de libros. Defensor del pensamiento escéptico científico y del
+    método científico, fue también pionero de la exobiología, promotor de la
+    búsqueda de inteligencia extraterrestre a través del Proyecto SETI e impulsó
+    el envío de mensajes a bordo de sondas espaciales, destinados a informar a
+    posibles civilizaciones extraterrestres acerca de la cultura humana.
+  &lt;/p&gt;
+&lt;/details&gt;
+</code></pre>
+<p>Se verá el texto Carl Sagan, y el demás permanece oculto con un símbolo para mostrarlo</p>
+<h2>figure</h2>
+<p>Define un contenido independiente, como una ilustración, diagrama, foto, etc.</p>
+<p>El elemento figure representa a una pieza de documento autocontenido que se utiliza habitualmente para encerrar imágenes, gráficos, tablas de referencia, videos, poemas, fragmentos de código, etc. Ésta, podrían ser acompañada por una leyenda o título (elemento figcaption) que puede usarse para hacer una referencia al fragmento desde alguna otra parte del documento. Además del título opcional, un elemento figure puede contener a otros elementos como imágenes (img), párrafos (p), código de computadora (code), citas (cite), etc.</p>
+<p>Ser autocontenido significa que figure tiene cierto grado de independencia del flujo del documento, y su posición relativa al contenido circundante no necesita ser exacta.</p>
+<p>Las imágenes ubicadas junto bloques de texto en un períodico contituyen buenos ejemplos de uso apropiado de los elementos figure y figcaption.</p>
+<p>Cuando figure tiene información que sóle está tangencialmente relacionada al contenido circundante, el elemento aside debería ser utilizado en su lugar, opcionalmente contienendo éste mismo un elemento figure.</p>
+<pre><code class="language-html">&lt;h1&gt;Análisis de uso de los navegadores&lt;/h1&gt;
+&lt;figure style=&quot;float: right&quot;&gt;
+  &lt;img src=&quot;/assets/images/browser-statistics.png&quot; /&gt;
+  &lt;figcaption&gt;Gráfico A: Uso de navegadores&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;
+  En la batalla por el dominio del acceso web, el navegador Chrome toma la
+  delantera con más del 40% de los usuarios. Como puedes ver en el gráfico A,
+  esto es casi el doble del uso de su primer competidor, Internet Explorer, el
+  cual toma el segundo lugar con el 24%.
+&lt;/p&gt;
+</code></pre>
+<h2>figcaption</h2>
+<p>Define una título para un elemento &lt;figure&gt;.
+El elemento figcaption representa un título o leyenda de un fragmento de contenido (figure). Un elemento figure representa a un trozo de documento autocontenido que se usa habitualmente para encerrar imágenes, gráficos, tablas de referencia, videos, poemas, fragmentos de código, etc.</p>
+<p>La presencia del elemento figcaption dentro de figure es opcional, pero si está presente, sólo puede hacer uno y debe estar ubicado al comienzo o al final del elemento figure al cual pertenece.</p>
+<h2>mark</h2>
+<p>Define texto resaltado o marcado.</p>
+<p>El elemento mark representa a un trozo de texto remarcado o resaltado al cual los autores pueden referirse desde otro documento, con el fin de analizarlo o explicarlo. Este elemento puede ser habitualmente encontrado encerrando áreas de texto sobre las que el autor desea hablar o que son relevantes a la actividad actual del usuario.</p>
+<p>El elemento mark es particularmente útil para resaltar líneas de texto en una cita (blockquote) con el propósito de hacer una referencia a éstas desde el documento actual.</p>
+<pre><code class="language-html">&lt;p&gt;Luego sigue:&lt;/p&gt;
+&lt;blockquote&gt;
+  El ingeniero y Pencroft,
+  &lt;mark&gt;cada uno armado con un arma de doble barril&lt;/mark&gt;, y Gideon Spilett
+  cargando su rifle, no tenían más que comenzar.
+&lt;/blockquote&gt;
+&lt;p&gt;Queda muy claro que no esperaban otra cosa más que problemas...&lt;/p&gt;
+</code></pre>
+<h2>time</h2>
+<p>Define una fecha/hora.</p>
+<p>El elemento time representa fechas, horas, desplazamientos de zonas horarias y duraciones. Adicionalmente, una versión específica para programas de los contenidos del elemento puede ser provista en el atributo datetime.</p>
+<p>Aunque la presencia del atributo datetime no es obligatoria, ésta puede ser útil para brindar una versión de los contenidos del elemento más sencilla de manejar para los programas, que no requiere la alteración de éstos.</p>
+<p>Si el elemento time es declarado sin el atributo datetime, éste no puede tener ningún elemento como descendiente.</p>
+<p>Las posibles variantes de la versión para programas que el atributo datetime puede proveer deben coincidir con cualquiera de las sintaxis descriptas debajo.</p>
+<pre><code class="language-html">&lt;time&gt;2014-10-29 23:59:59.999&lt;/time&gt;
+&lt;time&gt;1999-12-03 10:20:00.000&lt;/time&gt;
+&lt;time&gt;2000-12-15T10:20&lt;/time&gt;
+&lt;time&gt;1823-01-02T10:53:12.2&lt;/time&gt;
+</code></pre>
+<pre><code class="language-html">&lt;p&gt;
+  Nos casamos &lt;time datetime=&quot;1982-10-06&quot;&gt;el 6 de Octubre, allá por 1982&lt;/time&gt;.
+  &lt;time datetime=&quot;1982-11-06&quot;&gt;Un mes más tarde&lt;/time&gt; supimos que Brian estaba
+  en camino.
+&lt;/p&gt;
+</code></pre>
+<h2>bdi</h2>
+<p>Define una parte del texto que puede ser formateada de una manera diferente a la del texto principal.</p>
+<p>El elemento bdi aísla a un trozo de texto del contenido circundante con propósitos de formateo bidireccional de texto. Este elemento resulta muy útil en situaciones en las que el algoritmo bidireccional, responsable de decirdir automáticamente la dirección del texto, puede &quot;confundirse&quot; y cambiar incorrectamente la dirección del texto.</p>
+<p>A diferencia de los demás elementos del estándar, el valor del atributo dir no es heredado en bdi. Su valor por defecto es siempre auto.</p>
+<p>El elemento bdi ha sido introducido en HTML5 y no es completamente soportado por los navegadores. Aunque su uso es inofensivo, los autores deberian considerar su complementación con CSS con motivos de compatibilidad.</p>
+<pre><code class="language-html">&lt;ul&gt;
+  &lt;li&gt;
+    &lt;b&gt;&lt;bdi&gt;Aaron&lt;/bdi&gt; (2):&lt;/b&gt; Hola!
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;b&gt;&lt;bdi&gt;נקניק&lt;/bdi&gt; (5):&lt;/b&gt; Hola! Cómo estás?
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;b&gt;&lt;bdi&gt;Aaron&lt;/bdi&gt; (2):&lt;/b&gt; Bueno, ha sido una semana larga, pero creo que
+    no puedo quejarme.
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;b&gt;&lt;bdi&gt;נקניק&lt;/bdi&gt; (5):&lt;/b&gt; Wow, estamos en la misma luna...
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<h2>wbr</h2>
+<p>Define un posible retorno de carro.</p>
+<p>El elemento wbr representa una oportunidad de quiebre de línea. Este elemento puede ser muy útil en situaciones donde la comprensión de la información puede verse afectada por un quiebre de línea mal ubicado. Gracias a este elemento, los autores pueden especificar dónde deberían producirse los quiebres de línea, en caso de ser necesarios.</p>
+<pre><code class="language-html">&lt;p&gt;
+  Entonces tienes que invocar a la función
+  &lt;code
+    &gt;toma&lt;wbr /&gt;Estos&lt;wbr /&gt;Dos&lt;wbr /&gt;Valores&lt;wbr /&gt;Y&lt;wbr /&gt;Haz&lt;wbr /&gt;Una&lt;wbr /&gt;Operacion&lt;wbr /&gt;Realmente&lt;wbr /&gt;Compleja&lt;wbr /&gt;Con&lt;wbr /&gt;Ellos(int
+    a, int b)&lt;/code
+  &gt;
+  y pásale los dos resultados obtenidos anteriormente.
+&lt;/p&gt;
+</code></pre>
+<h2>dialog</h2>
+<p>Define una caja de diálogo o ventana</p>
+<p>El elemento dialog representa una parte del documento pensada para la interacción con el usuario, como por ejemplo, un cuadro de diálogo, un inspector o una ventana. HTML5 ha agregado este elemento para ofrecer a los autores soporte nativo para una característica que se ha estado logrando mediante programas por un largo tiempo. Las cajas de diálogo no sólo son parte de los documentos web, sino que han sido utilizadas en programas de escritorio por muchos años.</p>
+<p>La definición de un elemento dialog es sencilla: solo es necesario delcarar cualquier número de elementos entre sus etiquetas de apertura y cierre. La implementación que lo hará funcionar como se espera, por otra parte, requiere el uso de programas del lado cliente. Esto se debe obviamente a la naturaleza interactiva del elemento dialog.</p>
+<p>El atributo open puede ser declarado en un elemento dialog para indicar que el elemento debería ser inicialmente visible.</p>
+<p>Hasta el 31/03/2015, el soporte provisto por los navegadores para el elemento dialog es muy bajo. Los autores pueden tener que recurrir a programas para lograr el mismo efecto consistentemente, hasta que el soporte crezca.</p>
+<pre><code class="language-html">&lt;button type=&quot;button&quot; onclick=&quot;abrirDialogo('dialogo1')&quot;&gt;Abrir diálogo&lt;/button&gt;
+&lt;dialog id=&quot;dialogo1&quot;&gt;
+  &lt;p&gt;Hola! Este es nuestro primer diálogo. Si te gusta, no lo cierres...&lt;/p&gt;
+  &lt;button type=&quot;button&quot; onclick=&quot;cerrarDialogo('dialogo1')&quot;&gt;Cerrar&lt;/button&gt;
+&lt;/dialog&gt;
+</code></pre>
+<h2>command</h2>
+<p>Define un botón de comando al que el usuario puede llamar</p>
+<h2>meter: Define una medida escalar dentro de un rango establecido.</h2>
+<h2>progress: Define el progreso de una tarea.</h2>
+<h2>ruby: Define una anotación ruby (para tipografía del este asiático) .</h2>
+<h2>rt: Define una pronunciación de caracteres (para tipografía del este asiático)</h2>
+<h2>rp: Define lo que se puede mostrar en los navegadores que no soporta las anotaciones ruby.</h2>
+<h2>Elementos eliminados:</h2>
+<ul>
+<li>acronym</li>
+<li>applet</li>
+<li>basefont</li>
+<li>big</li>
+<li>center</li>
+<li>dir</li>
+<li>font</li>
+<li>frame</li>
+<li>frameset</li>
+<li>noframes</li>
+<li>strike</li>
+<li>tt</li>
+</ul>

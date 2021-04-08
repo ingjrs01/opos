@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/tailwind.css" />
+    <title>Convocatoria para Programador de Abril del 2021</title>
+</head>
+<body>
+    <div class="container mx-auto">
+     <header>
+        <h1 class="text-2xl text-gray-400">Materiales para Oposición</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/creaciones">Creaciones1</a></li>
+                <li><a href="/about">Sobre Mi</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <main>
+        <!-- Aquí es donde va el contenido -->
+        <h1>Diferencias entre HTML4 Y XHTML</h1>
+<ul>
+<li>En XHTML no puede haber nada que no esté en una etiqueta, y en HTML sí. El siguiente ejemplo es válido en HTML y no en XHTML</li>
+</ul>
+<pre><code class="language-html">&lt;p&gt;AAAA&lt;/p&gt;
+BBBB
+&lt;p&gt;CCCC&lt;/p&gt;
+</code></pre>
+<ul>
+<li>En XHTML, los nombres de elementos y atributos deben escribirse en minúsculas. En HTML no es necesario. En el ejemplo de abajo, la primera sentencia es válida en ámbas tecnologías, pero la segunda no es válida en XHTML</li>
+</ul>
+<pre><code class="language-html">&lt;p class=&quot;xxx&quot;&gt;AAAA&lt;/p&gt;
+&lt;p class=&quot;xxx&quot;&gt;AAAA&lt;/p&gt;
+</code></pre>
+<ul>
+<li>En XHTML, las referencias a entidades en hexadecimal deben escribirse en minúsculas. En HTML se pueden escribir en minúsculas o mayúsculas. Ejemplo no válido en XHTML</li>
+</ul>
+<pre><code class="language-html">&lt;p&gt;&amp;#X3b1; &amp;#X3b2; &amp;#X3c0;&lt;/p&gt;
+</code></pre>
+<ul>
+<li>Para evitar problemas con los caracteres &quot;&lt;&quot; y &quot;&amp;&quot;, en XHTML el código javascript (y de estilo) se suele incluir en secciones CDATA. En HTML no es necesario:</li>
+</ul>
+<pre><code class="language-html">&lt;script type=&quot;text/javascript&quot;&gt;
+  &lt;![CDATA[
+   ... unescaped script content ...
+  ]]&gt;
+&lt;/script&gt;
+</code></pre>
+<ul>
+<li>Los documentos XHTML tienen que tener un único elemento raíz de todo el documento, el elemento <html>. Los documentos HTML pueden no tenerlo. Ejemplo HTML correcto XHTML incorrecto</li>
+</ul>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot; /&gt;
+  &lt;title&gt;HTML&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- contenido de la página --&gt;
+&lt;/body&gt;
+</code></pre>
+<ul>
+<li>En XHTML, los elementos no vacíos (los que tienen etiqueta de apertura) deben tener etiqueta de cierre. En HTML no es necesario.</li>
+</ul>
+<pre><code class="language-html">&lt;p&gt;AAAA&lt;/p&gt;
+&lt;p&gt;BBBB&lt;/p&gt;
+</code></pre>
+<ul>
+<li>En XHTML, la etiqueta de apertura de los elementos <strong>vacíos</strong> debe acabar en &quot; /&gt;&quot; o debe haber una etiqueta de cierre. En HTML no puede haber etiqueta de cierre.Las etiquetas vacías (void) de HTML son:</li>
+</ul>
+<pre><code class="language-html">&lt;area /&gt;, &lt;base /&gt;, &lt;br /&gt;,
+&lt;col /&gt;
+, &lt;embed /&gt;,
+&lt;hr /&gt;
+, &lt;img /&gt;, &lt;input /&gt;, &lt;link /&gt;, &lt;meta /&gt;, &lt;param /&gt;,
+&lt;source /&gt;
+,
+&lt;track /&gt;
+y &lt;wbr /&gt;.
+</code></pre>
+<p>El siguiente ejemplo, no es válido en HTML</p>
+<pre><code class="language-html">&lt;hr&gt;&lt;/hr&gt;
+</code></pre>
+<p>Este ejemplo no es válido en HTML</p>
+<ul>
+<li>El elemento <pre> no puede contener elementos <img>, <object>, <big>, <small>, <sub> o <sup>.</li>
+</ul>
+<pre><code class="language-html">&lt;pre&gt;x&lt;sup&gt;2&lt;/sup&gt;&lt;/pre&gt;
+</code></pre>
+<ul>
+<li>En XHTML, los atributos deben tener siempre valor (en el caso de atributos booleanos, el valor debe ser el propio nombre del atributo o una cadena vacía). En HTML, los atributos pueden no tener valor asignado.</li>
+</ul>
+<pre><code class="language-html">&lt;ol reversed&gt;
+  &lt;li&gt;AAA&lt;/li&gt;
+  &lt;li&gt;BBB&lt;/li&gt;
+&lt;/ol
+</code></pre>
+<p>Es válido en HTML pero no en XHTML</p>
+<ul>
+<li>En XHTML los valores de los atributos deben escribirse en minúsculas. En HTML se pueden escribir en minúsculas o mayúsculas.</li>
+</ul>
+<pre><code class="language-html">&lt;p&gt;&lt;input type=&quot;TEXT&quot; /&gt;&lt;/p&gt;
+</code></pre>
+<ul>
+<li>En XHTML, los valores de los atributos deben escribirse entre comillas (dobles o simples). En HTML no es necesario si no hay espacios en blanco.</li>
+</ul>
+<pre><code class="language-html">&lt;p style=&quot;color: red&quot;&gt;AAAA&lt;/p&gt;
+&lt;!-- HTML correcto XHTML correcto --&gt;
+&lt;p style=&quot;color:red&quot;&gt;AAAA&lt;/p&gt;
+&lt;!--HTML correcto XHTML incorrecto --&gt;
+&lt;p style=&quot;color:&quot; red&gt;AAAA&lt;/p&gt;
+&lt;!-- HTML incorrecto XHTML incorrecto --&gt;
+&lt;p class=&quot;xxx&quot;&gt;AAAA&lt;/p&gt;
+&lt;!-- HTML correcto XHTML correcto --&gt;
+&lt;p class=&quot;xxx&quot;&gt;AAAA&lt;/p&gt;
+&lt;!-- HTML correcto XHTML incorrecto --&gt;
+</code></pre>
+
+        <a href=""> Volver</a>
+    </main>
+    <footer>
+        <hr/>
+        <p>Copyright año 2021. Todos los derechos reservados</p>
+    </footer>
+    </div>
+</body>
+</html>

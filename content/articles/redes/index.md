@@ -36,7 +36,7 @@ Un claro ejemplo es la topología de árbol.
 
 Topologías más comunes: 
 
-![imagen](img/topologias.png)
+![Topologías de Red](img/topologias.png "Topologías")
 
 ### Punto a punto. 
 Es la topología más sencilla, que siemplemente une dos puntos finales. Es el modelo básico de la telefonía convencional. 

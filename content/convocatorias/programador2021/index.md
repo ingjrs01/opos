@@ -38,13 +38,13 @@ Ademais das condicións sinaladas na base cuarta das xerais as persoas aspirante
 2. Periféricos. Conectividade e administración. Elementos de impresión. Elementos de almacenamento. Elementos de visualización e dixitalización. OCR.
 3. Paquetes de ofimática: aplicacións que os compoñen. Comandos e os seus usos.
 4. Sistemas operativos (Linux e Windows). Definición e obxectivo. Clasificación, estrutura e funcións principais. Administración, servizos e sistemas de ficheiros.
-5. [Modelo de rede en capas. Modelo de rede OSI. Modelo de rede TCP/IP](/content/articles/osi)
+5. [Modelo de rede en capas. Modelo de rede OSI. Modelo de rede TCP/IP](/articles/osi)
 6. Internet: Arquitectura de rede. Orixe, evolución e estado actual. Servizos: correo electrónico, WWW, FTP, Telnet e outros. Protocolos HTTP e HTTPS, SSL e TLS.
 7. Arquitectura cliente/servidor. Modelo de 2 capas. Modelo de 3 capas. Compoñentes e operación. Arquitecturas de servizos Webs.
-8. [Linguaxes de marca ou etiqueta. Características e funcionalidades. SGML, HTML, XML e as súas derivacións](/content/articles/tag_languajes)
+8. [Linguaxes de marca ou etiqueta. Características e funcionalidades. SGML, HTML, XML e as súas derivacións](/articles/tag_languajes)
 9. Navegadores e linguaxes de programación Web. Linguaxes de script.
 10. Administración das redes de área local. Xestión das persoas usuarias. Xestión de dispositivos. Monitorización e control da rede e dos seus servizos. Protocolos.
-11. [Redes de computadores. LAN, MAN, WAN. Redes públicas e privadas. Tipoloxía. Compoñentes de rede. Métodos de acceso. Dispositivos e interconexión](/content/articles/redes)
+11. [Redes de computadores. LAN, MAN, WAN. Redes públicas e privadas. Tipoloxía. Compoñentes de rede. Métodos de acceso. Dispositivos e interconexión](/articles/redes)
 
 - Segunda parte:
 12. Software de código aberto. Software libre. Conceptos base. Aplicacións contorno ofimática e servidores Web.

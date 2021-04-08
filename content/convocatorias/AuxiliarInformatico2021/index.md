@@ -20,7 +20,7 @@ Ademais das condicións sinaladas na base cuarta das xerais as persoas aspirante
 ### Materias xerais:
 1. A Constitución española de 1978. Principios xerais. Dereitos e deberes fundamentais dos españois.
 2. A provincia. Antecedentes, concepto e caracteres. A organización provincial. Competencias.
-3. [A función pública local. Concepto de persoal funcionario. Clases de persoal funcionario. Dereitos e deberes do persoal funcionario.](/content/articles/ley_funcionariado)
+3. [A función pública local. Concepto de persoal funcionario. Clases de persoal funcionario. Dereitos e deberes do persoal funcionario.](/articles/ley_funcionariado)
 4. Prevención de riscos laborais. Dereitos e obrigas. Protección de datos. Principios e dereitos da persoa. Igualdade. Principios reitores.
 
 ### Materias específicas:
@@ -28,15 +28,15 @@ Ademais das condicións sinaladas na base cuarta das xerais as persoas aspirante
 2. Arquitectura de ordenadores. Elementos básicos. Funcións. A unidade central de procesamento. A memoria: tipos, xerarquía e modos de direccionamento.
 3. Periféricos: conectividade e administración. Elementos de impresión. Elementos de almacenamento. Elementos de visualización e dixitalización.
 4. Paquetes de ofimática: aplicacións que os compoñen. Comandos e os seus usos.
-5. [Sistemas operativos. Características técnicas e elementos constitutivos. Sistemas Windows. Sistemas Unix y Linux](/content/articles/sistemas_operativos)
+5. [Sistemas operativos. Características técnicas e elementos constitutivos. Sistemas Windows. Sistemas Unix y Linux](/articles/sistemas_operativos)
 6. Sistemas operativos para dispositivos móbiles.
-7. [Sistemas de xestión de bases de datos relacionais. Características e compoñentes](/content/articles/bbdd_relacional)
+7. [Sistemas de xestión de bases de datos relacionais. Características e compoñentes](/articles/bbdd_relacional)
 8. Administración do Sistema operativo e software de base.
-9. [Administración de servidores de correo electrónico. Protocolos de correo electrónico](/content/articles/email)
+9. [Administración de servidores de correo electrónico. Protocolos de correo electrónico](/articles/email)
 10. Internet: arquitectura de rede. Orixe, evolución e estado actual.
 11. Internet: principais servizos: correo electrónico, WWW, FTP, Telnet e outros. Protocolos HTTP e HTTPS, SSL e TLS.
 12. Aplicacións Web. Tecnoloxías de programación. Javascript, Applets, Servlets, servizos web. Linguaxes de descrición de datos: HTML e XML e as súas derivacións.Navegadores e linguaxes de programación web. Linguaxes de script.
-13. [Sistema de xestión de contidos (CMS). Xestión das aplicacións web: Liferay, Wordpress e similares.](/content/articles/cms)
-14. [Regulamento xeral de protección de datos (RXPD) e Lei orgánica 3/2018, de protección de datos persoais e garantía de dereitos dixitais. Características e aplicación.](/content/articles/proteccion_datos)
-15. [Accesibilidade, deseño universal e usabilidade](/content/articles/accesibilidad)
-16. [Implantación da Administración electrónica. Sede electrónica. Sede electrónica e servizos da sede. A sociedade da información. Identidade e sinatura electrónica. O DNIelectrónico.](/content/articles/eadministracion)
+13. [Sistema de xestión de contidos (CMS). Xestión das aplicacións web: Liferay, Wordpress e similares.](/articles/cms)
+14. [Regulamento xeral de protección de datos (RXPD) e Lei orgánica 3/2018, de protección de datos persoais e garantía de dereitos dixitais. Características e aplicación.](/articles/proteccion_datos)
+15. [Accesibilidade, deseño universal e usabilidade](/articles/accesibilidad)
+16. [Implantación da Administración electrónica. Sede electrónica. Sede electrónica e servizos da sede. A sociedade da información. Identidade e sinatura electrónica. O DNIelectrónico.](/articles/eadministracion)

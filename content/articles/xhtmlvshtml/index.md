@@ -1,3 +1,8 @@
+---
+title: Convocatoria para Programador de Abril del 2021
+layout: articles.njk
+---
+
 # Diferencias entre HTML4 Y XHTML
 
 - En XHTML no puede haber nada que no esté en una etiqueta, y en HTML sí. El siguiente ejemplo es válido en HTML y no en XHTML
