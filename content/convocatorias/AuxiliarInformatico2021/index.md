@@ -1,6 +1,6 @@
 ---
 title: Auxiliar Técnico Informático
-layout: mylayout.njk
+layout: articles.njk
 ---
 
 # Unha praza de auxiliar técnico/a informático/a, quenda libre

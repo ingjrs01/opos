@@ -1,3 +1,8 @@
+---
+title: Sistemas Operativos
+layout: articles.njk
+---
+
 # Sistemas Operativos
 
 - Clasificación
