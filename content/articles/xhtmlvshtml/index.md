@@ -65,6 +65,8 @@ BBBB
 y <wbr />.
 ```
 
+El siguiente ejemplo, no es válido en HTML
+
 ```html
 <hr></hr>
 ```
