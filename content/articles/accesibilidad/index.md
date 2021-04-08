@@ -1,3 +1,8 @@
+---
+title: Acesibilidad, diseño universal y usabilidad. 
+layout: articles.njk
+---
+
 # Acesibilidad, diseño universal y usabilidad. 
 
 ## Accesibilidad
