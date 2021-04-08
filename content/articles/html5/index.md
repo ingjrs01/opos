@@ -295,21 +295,142 @@ Ser autocontenido significa que figure tiene cierto grado de independencia del f
 
 Las imágenes ubicadas junto bloques de texto en un períodico contituyen buenos ejemplos de uso apropiado de los elementos figure y figcaption.
 
-Cuando figure tiene unformación que sóle está tangencialmente relacionada al contenido circundante, el elemento aside debería ser utilizado en su lugar, opcionalmente contienendo éste mismo un elemento figure.
+Cuando figure tiene información que sóle está tangencialmente relacionada al contenido circundante, el elemento aside debería ser utilizado en su lugar, opcionalmente contienendo éste mismo un elemento figure.
 
-## figcaption: Define una título para un elemento &lt;figure&gt;.
+```html
+<h1>Análisis de uso de los navegadores</h1>
+<figure style="float: right">
+  <img src="/assets/images/browser-statistics.png" />
+  <figcaption>Gráfico A: Uso de navegadores</figcaption>
+</figure>
+<p>
+  En la batalla por el dominio del acceso web, el navegador Chrome toma la
+  delantera con más del 40% de los usuarios. Como puedes ver en el gráfico A,
+  esto es casi el doble del uso de su primer competidor, Internet Explorer, el
+  cual toma el segundo lugar con el 24%.
+</p>
+```
 
-## mark: Define texto resaltado o marcado.
+## figcaption
 
-## time: Define una fecha/hora.
+Define una título para un elemento &lt;figure&gt;.
+El elemento figcaption representa un título o leyenda de un fragmento de contenido (figure). Un elemento figure representa a un trozo de documento autocontenido que se usa habitualmente para encerrar imágenes, gráficos, tablas de referencia, videos, poemas, fragmentos de código, etc.
 
-## bdi: Define una parte del texto que puede ser formateada de una manera diferente a la del texto principal.
+La presencia del elemento figcaption dentro de figure es opcional, pero si está presente, sólo puede hacer uno y debe estar ubicado al comienzo o al final del elemento figure al cual pertenece.
 
-## wbr: Define un posible retorno de carro.
+## mark
 
-## dialog: Define una caja de diálogo o ventana
+Define texto resaltado o marcado.
 
-## command: Define un botón de comando al que el usuario puede llamar
+El elemento mark representa a un trozo de texto remarcado o resaltado al cual los autores pueden referirse desde otro documento, con el fin de analizarlo o explicarlo. Este elemento puede ser habitualmente encontrado encerrando áreas de texto sobre las que el autor desea hablar o que son relevantes a la actividad actual del usuario.
+
+El elemento mark es particularmente útil para resaltar líneas de texto en una cita (blockquote) con el propósito de hacer una referencia a éstas desde el documento actual.
+
+```html
+<p>Luego sigue:</p>
+<blockquote>
+  El ingeniero y Pencroft,
+  <mark>cada uno armado con un arma de doble barril</mark>, y Gideon Spilett
+  cargando su rifle, no tenían más que comenzar.
+</blockquote>
+<p>Queda muy claro que no esperaban otra cosa más que problemas...</p>
+```
+
+## time
+
+Define una fecha/hora.
+
+El elemento time representa fechas, horas, desplazamientos de zonas horarias y duraciones. Adicionalmente, una versión específica para programas de los contenidos del elemento puede ser provista en el atributo datetime.
+
+Aunque la presencia del atributo datetime no es obligatoria, ésta puede ser útil para brindar una versión de los contenidos del elemento más sencilla de manejar para los programas, que no requiere la alteración de éstos.
+
+Si el elemento time es declarado sin el atributo datetime, éste no puede tener ningún elemento como descendiente.
+
+Las posibles variantes de la versión para programas que el atributo datetime puede proveer deben coincidir con cualquiera de las sintaxis descriptas debajo.
+
+```html
+<time>2014-10-29 23:59:59.999</time>
+<time>1999-12-03 10:20:00.000</time>
+<time>2000-12-15T10:20</time>
+<time>1823-01-02T10:53:12.2</time>
+```
+
+```html
+<p>
+  Nos casamos <time datetime="1982-10-06">el 6 de Octubre, allá por 1982</time>.
+  <time datetime="1982-11-06">Un mes más tarde</time> supimos que Brian estaba
+  en camino.
+</p>
+```
+
+## bdi
+
+Define una parte del texto que puede ser formateada de una manera diferente a la del texto principal.
+
+El elemento bdi aísla a un trozo de texto del contenido circundante con propósitos de formateo bidireccional de texto. Este elemento resulta muy útil en situaciones en las que el algoritmo bidireccional, responsable de decirdir automáticamente la dirección del texto, puede "confundirse" y cambiar incorrectamente la dirección del texto.
+
+A diferencia de los demás elementos del estándar, el valor del atributo dir no es heredado en bdi. Su valor por defecto es siempre auto.
+
+El elemento bdi ha sido introducido en HTML5 y no es completamente soportado por los navegadores. Aunque su uso es inofensivo, los autores deberian considerar su complementación con CSS con motivos de compatibilidad.
+
+```html
+<ul>
+  <li>
+    <b><bdi>Aaron</bdi> (2):</b> Hola!
+  </li>
+  <li>
+    <b><bdi>נקניק</bdi> (5):</b> Hola! Cómo estás?
+  </li>
+  <li>
+    <b><bdi>Aaron</bdi> (2):</b> Bueno, ha sido una semana larga, pero creo que
+    no puedo quejarme.
+  </li>
+  <li>
+    <b><bdi>נקניק</bdi> (5):</b> Wow, estamos en la misma luna...
+  </li>
+</ul>
+```
+
+## wbr
+
+Define un posible retorno de carro.
+
+El elemento wbr representa una oportunidad de quiebre de línea. Este elemento puede ser muy útil en situaciones donde la comprensión de la información puede verse afectada por un quiebre de línea mal ubicado. Gracias a este elemento, los autores pueden especificar dónde deberían producirse los quiebres de línea, en caso de ser necesarios.
+
+```html
+<p>
+  Entonces tienes que invocar a la función
+  <code
+    >toma<wbr />Estos<wbr />Dos<wbr />Valores<wbr />Y<wbr />Haz<wbr />Una<wbr />Operacion<wbr />Realmente<wbr />Compleja<wbr />Con<wbr />Ellos(int
+    a, int b)</code
+  >
+  y pásale los dos resultados obtenidos anteriormente.
+</p>
+```
+
+## dialog
+
+Define una caja de diálogo o ventana
+
+El elemento dialog representa una parte del documento pensada para la interacción con el usuario, como por ejemplo, un cuadro de diálogo, un inspector o una ventana. HTML5 ha agregado este elemento para ofrecer a los autores soporte nativo para una característica que se ha estado logrando mediante programas por un largo tiempo. Las cajas de diálogo no sólo son parte de los documentos web, sino que han sido utilizadas en programas de escritorio por muchos años.
+
+La definición de un elemento dialog es sencilla: solo es necesario delcarar cualquier número de elementos entre sus etiquetas de apertura y cierre. La implementación que lo hará funcionar como se espera, por otra parte, requiere el uso de programas del lado cliente. Esto se debe obviamente a la naturaleza interactiva del elemento dialog.
+
+El atributo open puede ser declarado en un elemento dialog para indicar que el elemento debería ser inicialmente visible.
+
+Hasta el 31/03/2015, el soporte provisto por los navegadores para el elemento dialog es muy bajo. Los autores pueden tener que recurrir a programas para lograr el mismo efecto consistentemente, hasta que el soporte crezca.
+
+```html
+<button type="button" onclick="abrirDialogo('dialogo1')">Abrir diálogo</button>
+<dialog id="dialogo1">
+  <p>Hola! Este es nuestro primer diálogo. Si te gusta, no lo cierres...</p>
+  <button type="button" onclick="cerrarDialogo('dialogo1')">Cerrar</button>
+</dialog>
+```
+
+## command
+
+Define un botón de comando al que el usuario puede llamar
 
 ## meter: Define una medida escalar dentro de un rango establecido.
 
