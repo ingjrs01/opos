@@ -1,7 +1,7 @@
 {
-  "name": "app",
+  "name": "opos-contenido",
   "version": "1.0.0",
-  "description": "Página para ir guardando la documentación generada en el estudio de las oposiciones",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "build": "eleventy",
