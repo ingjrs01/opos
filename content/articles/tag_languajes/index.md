@@ -205,7 +205,7 @@ Actividades:
 1. Indique que diferencias hay entre Web 1.0, 2.0 y 3.0
 2. ¿Qué es el W3C ?
 3. ¿Que características tiene un lenguaje de etiquetas?
-4. ¿Qué diferencias hay entre HTML4 y XHTML?
+4. [¿Qué diferencias hay entre HTML4 y XHTML?](/content/articles/xhtmlvshtml)
 5. ¿Cuáles son las ventajas que introduce HTML5?
 6. ¿Para qué sirve utilizar CSS en un proyecto web?
 7. ¿Para qué se utiliza JavaScript?
@@ -240,5 +240,3 @@ Este consorcio fue creado en octubre de 1994, y está dirigido por Tim Berners-L
 - Miembros: a abril de 2010 contaba con 330 miembros.
 - Equipo (W3C Team): 65 investigadores y expertos de todo el mundo.
 - Oficinas (W3C Offices): centros regionales establecidos en Alemania y Austria (oficina conjunta), Australia, Benelux (oficina conjunta), China, Corea del Sur, España, Finlandia, Grecia, Hong Kong, Hungría, India, Israel, Italia, Marruecos, Suecia y Reino Unido e Irlanda (oficina conjunta).
-
-4. Diferencias entre HTML4 Y XHTML
