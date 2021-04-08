@@ -51,7 +51,19 @@ BBBB
 <p>BBBB</p>
 ```
 
-- En XHTML, la etiqueta de apertura de los elementos **vacíos** debe acabar en " />" o debe haber una etiqueta de cierre. En HTML no puede haber etiqueta de cierre.Las etiquetas vacías (void) de HTML son <area>, <base>, <br>, <col>, <embed>, <hr>, <img>, <input>, <link>, <meta>, <param>, <source>, <track> y <wbr>.
+- En XHTML, la etiqueta de apertura de los elementos **vacíos** debe acabar en " />" o debe haber una etiqueta de cierre. En HTML no puede haber etiqueta de cierre.Las etiquetas vacías (void) de HTML son:
+
+```html
+<area />, <base />, <br />,
+<col />
+, <embed />,
+<hr />
+, <img />, <input />, <link />, <meta />, <param />,
+<source />
+,
+<track />
+y <wbr />.
+```
 
 ```html
 <hr></hr>
