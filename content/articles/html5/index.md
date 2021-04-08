@@ -102,19 +102,200 @@ Define una sección en el documento. Es un elemento de seccionamiento genérico,
 
 En este ejemplo, vemos como para la parte principal usamos el elemento main, mientras usamos section para las otras partes.
 
-## main: Define el contenido principal del documento.
+## main
 
-## article: Define un artículo del documento.
+Define el contenido principal del documento. El elemento main es un contenedor para los temas centrales de un documento o sección. Este contenido central puede interpretarse como todo lo que resta luego de quitar anuncios, encabezados (header), pies (footer), secciones de navegación (nav), vínculos relacionados y otros elementos secundarios.
 
-## aside: Define contenido secundario de la página.
+El elemento main tiene mayor importancia para personas con discapacidades, que habitualmente acceden a la web a través de programas especiales como los navegadores de voz. En tales casos, los navegadores pueden ser instruidos para ir directamente al contenido principal del documento o sección (main), saltándose toda la información menos relevante.
 
-## footer: Define el pie del documento o sección.
+No existen restricciones en cuanto al número de elementos main que puede contener un documento, pero solo puede estar visible uno a la vez (atributo hidden)
 
-## details: Define detalles adicionales que el usuario puede ver o esconder.
+Como ancestros, solo puede tener los elementos html, body, div y form.
 
-## summary: Define un encabezado visible para un elemento &lt;details&gt;.
+## article
 
-## figure: Define un contenido independiente, como una ilustración, diagrama, foto, etc.
+Define un artículo del documento.
+
+El elemento article es un contenedor de bloques de contenido que se consideran independientes del sitio web y pueden, por lo tanto, ser vistos, reutilizados y distribuidos por separado, como por ejemplo, en la sindicación. Puedes encontrar habitualmente a este elemento encerrando artículos, entradas de blogs o mensajes de un foro.
+
+Cuando dos o más de estos elementos están anidados, se supone que el elemento article interior guarda relación con el elemento article que actúa como padre. Este podría ser el caso de una entrada de blog (siendo en sí misma un article), donde cada comentario puede estar encerrado por un elemento article.
+
+El elemento article puede ser utilizado en conjunto con otros elementos como header, footer y time para agregar información acerca de su contenido. Esta información puede ser utilizada, por ejemplo, por navegadores o lectores de noticias.
+
+No debes confundir los elementos article y section. El elemento article tiene un mayor significado e implica que sus contenidos pueden ser tratados independientemente del documento que los contiene.
+
+```html
+<article>
+  <header>
+    <h1>La cocina china</h1>
+    <p>
+      Publicado
+      <time pubdate datetime="2014-03-28T20:00-04:00">2 meses atrás</time>
+    </p>
+  </header>
+  <p>
+    La cocina china incluye estilos originarios de diversas regiones de China,
+    así como de personas chinas en otras partes del mundo. La historia de la
+    cocina en China se remonta a cientos de años atrás y ha cambiado de período
+    a período y en cada región de acuerdo al clima, las modas imperiales, y la
+    preferencia local.
+  </p>
+  <p>...</p>
+  <footer>
+    <p>&copy; Todos los derechos reservados</p>
+  </footer>
+</article>
+```
+
+## aside
+
+Define contenido secundario de la página.
+
+El elemento aside es un contenedor para información que se considera solo levemente relacionada al documento o la sección en la que es definida. En otras palabras, el contenido del elemento aside debe estar relacionado al contenido circundante, pero no ser completamente necesario para su comprensión.
+
+El elemento aside puede ser típicamente encontrado alrededor de enlaces de blogrolls, enlaces al archivo, un glosario, una lista de tweets del autor, o notas, pensamientos o ideas que se le han ocurrido al autor durante la producción del documento. Asimismo, puedes ver ejemplos perfectos de notas al margen en revistas y diarios impresos, donde se provee información adicional (pero no crítica) para enriquecer la experiencia del usuario.
+
+Los autores no deberían utilizar el elemento aside para encerrar contenido que no guarda relación con la sección en la que se define. Su contenido debe tener alguna relación con su entorno.
+
+```html
+<h1>El blog de astrofotografía de Pepe</h1>
+<p>Este es mi blog, y aquí te puedes encontrar...</p>
+<aside>
+  <nav>
+    <h1>Sitios relacionados</h1>
+    <ul>
+      <li>
+        <a href="http://science.nasa.gov/astrophysics/"
+          >Astrofísica - NASA Science</a
+        >
+      </li>
+      <li>
+        <a href="http://www-astro.physics.ox.ac.uk/"
+          >Astrofísica | Universidad de Oxford</a
+        >
+      </li>
+      <li>
+        <a href="https://danielmarin.naukas.com/">Blog de Daniel Marín</a>
+      </li>
+      <li>...</li>
+    </ul>
+  </nav>
+</aside>
+```
+
+## footer
+
+El elemento footer representa al pie de una sección o documento, donde los autores habitualmente colocan firmas, información acerca del autor, información de licencias, documentos relacionados, etc. En muchos casos, los contenidos del pie de un documento son consistentes a lo largo de todo el sitio.
+
+Cuando un elemento footer es declarado dentro de un elemento de seccionamiento (como article o section) representa un pie en el ámbito de ese elmento. De lo contrario (cuando pertenece al elemento body) representa un pie para el documento entero.
+
+Aunque es una práctica común colocar los pies al final de la página o sección, no es necesario que ocupen ese lugar. Un pie es un pie por lo que representa, no por su ubicación.
+
+La información de contacto acerca del autor de un documento o artículo corresponde dentro del elemento address el cual podría incluirse, a su vez, dentro de un elemento footer.
+
+```html
+<article>
+  <h1>El extranjero</h1>
+  <p>
+    "Suficiente!" dijo el pequeño hombre, mientras se levantaba de su
+    desbaratada silla...
+  </p>
+  <footer>
+    <p>Copyright &copy; 1990-2014 Peter Doe, todos los derechos reservados.</p>
+  </footer>
+</article>
+```
+
+## details
+
+Define detalles adicionales que el usuario puede ver o esconder.
+
+El elemento details representa un trozo de contenido oculto que puede ser mostrado a pedido del usuario. Este elemento está pensado para implementar soporte nativo para contenido colapsable y es habitualmente representado por un título (provisto por el elemento summary) acompañado por una flecha que sugirere al usuario que hay más contenido que puede ser accedido. Cuando el usuario hace clic en el título o la flecha, el contenido es automáticamente mostrado.
+
+Múltiples elementos details pueden ser perfectamente anidados para formar un conjunto de contenidos colapsables en una distribución jerárquica. Adicionalmente, el atributo open puede ser usado para hacer que el contenido del elemento sea inicialmente visible.
+
+Un título o etiqueta puede ser provisto para el contenido colapsable. En tal caso, éste debe ser representado por un elemento summary, que debe ser el primer hijo del elemento details al cual pertenece.
+
+El soporte provisto por los navegadores para el elemento details es incompleto. Los autores pueden tener que recurrir a programas para lograr su mismo efecto consistentemente.
+
+```html
+<p>
+  La mayoría de procesos astrofísicos no pueden ser recreados en los
+  laboratorios de la Tierra. En cualquier caso, existe una gran variedad de
+  objetos astronómicos visibles a lo largo de todo el espectro electromagnético.
+  El estudio de dichos objetos mediante la adquisición pasiva de datos es el
+  objetivo de la astronomía observacional.
+</p>
+<details open>
+  <summary>Galileo Galilei</summary>
+  <img
+    src="/assets/images/galileo-galilei.jpg"
+    style="float: right; margin: 0 0 1em 2em"
+    alt="Galileo Galilei, padre de la astronomía observacional moderna"
+  />
+  <p>
+    Galileo Galilei fue un astrónomo, filósofo, ingeniero, matemático y físico
+    italiano, relacionado estrechamente con la revolución científica. Eminente
+    hombre del Renacimiento, mostró interés por casi todas las ciencias y artes
+    (música, literatura, pintura).
+  </p>
+  <p>
+    Sus logros incluyen la mejora del telescopio, gran variedad de observaciones
+    astronómicas, la primera ley del movimiento y un apoyo determinante al
+    copernicanismo.
+  </p>
+</details>
+```
+
+Fíjese en el ejemplo anterior en el atributo open, para indicar que por defecto este panel está visible
+
+## summary
+
+Define un encabezado visible para un elemento &lt;details&gt;.
+
+El elemento summary representa un resumen, título o etiqueta para los contenidos de un elemento details. La descripción provista por este elemento será mostrada encima de los contenidos del elemento details para el cual ha sido declarado.
+
+El soporte provisto por los navegadores para details y summary es incompleto. Los autores pueden tener que recurrir a programas para lograr los mismos efectos consistentemente.
+
+```html
+<p>
+  <b>Cosmos: un viaje personal</b> es una serie documental de divulgación
+  científica escrita por Carl Sagan, Ann Druyan y Steven Soter (con Sagan como
+  guionista principal y presentador), cuyos objetivos fundamentales fueron:
+  difundir la historia de la astronomía y de la ciencia, así como sobre el
+  origen de la vida; concienciar sobre el lugar que ocupa nuestra especie y
+  nuestro planeta en el universo, y presentar las modernas visiones de la
+  cosmología y las últimas noticias de la exploración espacial, y en particular,
+  las misiones Voyager.
+</p>
+<details>
+  <summary>Carl Sagan</summary>
+  <p>
+    Carl Edward Sagan fue un astrónomo, astrofísico, cosmólogo, escritor y
+    divulgador científico estadounidense. Sagan publicó numerosos artículos
+    científicos y comunicaciones1 y fue autor, coautor o editor de más de una
+    veintena de libros. Defensor del pensamiento escéptico científico y del
+    método científico, fue también pionero de la exobiología, promotor de la
+    búsqueda de inteligencia extraterrestre a través del Proyecto SETI e impulsó
+    el envío de mensajes a bordo de sondas espaciales, destinados a informar a
+    posibles civilizaciones extraterrestres acerca de la cultura humana.
+  </p>
+</details>
+```
+
+Se verá el texto Carl Sagan, y el demás permanece oculto con un símbolo para mostrarlo
+
+## figure
+
+Define un contenido independiente, como una ilustración, diagrama, foto, etc.
+
+El elemento figure representa a una pieza de documento autocontenido que se utiliza habitualmente para encerrar imágenes, gráficos, tablas de referencia, videos, poemas, fragmentos de código, etc. Ésta, podrían ser acompañada por una leyenda o título (elemento figcaption) que puede usarse para hacer una referencia al fragmento desde alguna otra parte del documento. Además del título opcional, un elemento figure puede contener a otros elementos como imágenes (img), párrafos (p), código de computadora (code), citas (cite), etc.
+
+Ser autocontenido significa que figure tiene cierto grado de independencia del flujo del documento, y su posición relativa al contenido circundante no necesita ser exacta.
+
+Las imágenes ubicadas junto bloques de texto en un períodico contituyen buenos ejemplos de uso apropiado de los elementos figure y figcaption.
+
+Cuando figure tiene unformación que sóle está tangencialmente relacionada al contenido circundante, el elemento aside debería ser utilizado en su lugar, opcionalmente contienendo éste mismo un elemento figure.
 
 ## figcaption: Define una título para un elemento &lt;figure&gt;.
 
