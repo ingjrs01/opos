@@ -453,7 +453,7 @@ El soporte provisto por los navegadores para meter es incompleto. Los atutores p
 </p>
 ```
 
-[Ejemplos de como se ve meter](img/meter.jpg)
+![Ejemplos de como se ve meter](img/meter.jpg)
 
 ## progress
 
