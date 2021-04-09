@@ -1,3 +1,8 @@
+---
+title: Sistemas de Gestión de Contenidos (CMS)
+layout: articles.njk
+---
+
 # Sistemas de Gestión de Contenidos
 
 Un sistema de gestión de contenidos, en adelante CMS es un software quie sirve para administrar contenido web, con facilidad y sin necesidad de conocimientos de programación web. Pero esta no es la única ventaja o característica que define a un CMS. Utilizar un gestor de contenidos aporta: 

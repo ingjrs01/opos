@@ -1,4 +1,9 @@
-# Administración Electronica. 
+---
+title: Administración Electronica
+layout: articles.njk
+---
+
+# Administración Electronica
 La administración electrónica es la aplicación de las tecnologías de la información y las comunicaciones en la administración pública. Al implementarla, se conseguirían dos cosas, por un lado mejorar de la organización, conviertiendo los procesos en papel por procesos electrónicos que permiten reducir mucho todo el trabajo. Por otro lado se ofrece al ciudadano una nueva forma de interactuar con la administración, cómodamente, desde su casa, sin horarios, sin colas, sin desplazamientos y más rápido. 
 
 La definición oficial dada por la Comisión Europea de la Unión Europea es "Administración Electrónica es el uso de las Tecnologías de la Información y las Comunicaciones en las Administraciones Públicas, Combinado con cambios organizativos y nuevas aptitudes, con el find e mejorar los servicios públicos y los procesos democráticos y reforzar el apoyo a las políticas públicas. 

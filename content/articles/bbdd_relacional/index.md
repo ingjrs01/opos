@@ -1,4 +1,9 @@
-# Bases de datos. 
+---
+title: Bases de Datos
+layout: articles.njk
+---
+
+# Bases de datos
 
 Tradicionalemente los sistemas de información de las empresas se componían de programs escritos en lenguajes de alto nivel (C, fortran, ...) que gestionaban información almacenada en ficheros, de forma que el programador esta el responsable de almacenar y recuperar la información. Esto supone varios problemas: 
 Por un lado los programadores estan escribiendo una y otra vez código para realizar las mismas operaciones, y posiblemente no todos de una forma correcta. 

@@ -1,3 +1,7 @@
+---
+title: Correo Electrónico
+layout: articles.njk
+---
 # Correo Electrónico
 
 - Servidores de correo

@@ -1,3 +1,8 @@
+---
+title: HTML 5
+layout: articles.njk
+---
+
 # Novedades en HTML5
 
 El W3C ha preparado un documento, HTML5 differences from HTML4, en el que detalla las principales diferencias entre HTML4 (y su variante según XML, XHTML 1.0) y la nueva versión del lenguaje, HTML5.

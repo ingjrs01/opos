@@ -1,3 +1,8 @@
+---
+title: Redes
+layout: articles.njk
+---
+
 # Redes de ordenadores
 
 

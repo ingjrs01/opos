@@ -1,3 +1,8 @@
+---
+title: Protección de Datos
+layout: articles.njk
+---
+
 # La protección de datos personales. Régimen Jurídico. 
 
 El artículo 3 define dato como "cualquier información concerniente a personas físicas idenficados o identificables". Específicamente el reglamento considera dato personal cualquier información numérica, alfabética, acústica, fotográfica, gráfica o de cualquier otro tipo, siempre que concierna a una persona física identificada o identificable. 

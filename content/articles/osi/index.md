@@ -1,4 +1,9 @@
-# Modelos de referencia OSI. Protocolos de rede. Suite TCP/IP
+---
+title: Modelos de Referencia OSI. Protocolos de Red
+layout: articles.njk
+---
+
+# Modelos de referencia OSI. Protocolos de red. Suite TCP/IP
 
 - Modelo de rede en capas
 - Modelos de referencia OSI

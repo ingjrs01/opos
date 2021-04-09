@@ -1,4 +1,28 @@
-<h1>Novedades en HTML5</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../styles/tailwind.css" />
+    <title>HTML 5</title>
+</head>
+<body>
+    <div class="container mx-auto">
+     <header>
+        <h1 class="text-2xl text-gray-400">Materiales para Oposición</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/creaciones">Creaciones1</a></li>
+                <li><a href="/about">Sobre Mi</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <main>
+        <!-- Aquí es donde va el contenido -->
+        <h1>Novedades en HTML5</h1>
 <p>El W3C ha preparado un documento, HTML5 differences from HTML4, en el que detalla las principales diferencias entre HTML4 (y su variante según XML, XHTML 1.0) y la nueva versión del lenguaje, HTML5.</p>
 <p>Algunas de las principales diferencias son:</p>
 <ul>
@@ -18,15 +42,13 @@
 <li>Algunos atributos desaparecen, como: align, background, bgcolor, etc.</li>
 <li>Mejora de las API, como: getElementsByClassName() y innerHTML.</li>
 </ul>
-<p><area />, <base />, <br />,</p>
+<p><area />, , <br />,</p>
 <col />
-, <embed />,
+, ,
 <hr />
 , <img />, <input />, <link />, <meta />, <param />,
-<source />
-,
-<track />
-y <wbr />
+<p>,</p>
+<p>y <wbr /></p>
 <h2>Nuevos Elementos HTML5</h2>
 <p>Etiqueta Descripción</p>
 <h2>header: Define el header para un documento o una sección.</h2>
@@ -318,11 +340,184 @@ El elemento figcaption representa un título o leyenda de un fragmento de conten
 </code></pre>
 <h2>command</h2>
 <p>Define un botón de comando al que el usuario puede llamar</p>
-<h2>meter: Define una medida escalar dentro de un rango establecido.</h2>
-<h2>progress: Define el progreso de una tarea.</h2>
+<h2>meter</h2>
+<p>El elemento meter representa una medida dentro de un rango conocido. Este elemento, nuevo en HTML5, puede ser útil para representar medidas en diferentes situaciones, como uso de disco, memoria o ancho de banda, los resultados de un encuesta, la cantidad recaudada en una colecta, el número de registros coincidentes en una consulta, etc.</p>
+<p>El elemento meter soporta seis atributos especiales diseñados para agregar información acerca de los valores que éste contiene. Los atributos min y max representan los límites inferior y superior del rango. Los atributos low y high ayudarán a los autores a definir segmentos (desde los márgenes) que contendrán valores considerados como bajos y altos respectivamente, mientras que optimal indicará cuál es el valor óptimo en esta medida. Por último, el atributo value representa el valor tomado por esta medida.</p>
+<p>Los autores no deben confudir a este elemento con progress. A diferencia de meter, el elemento progress mide únicamente la completitud de una tarea.</p>
+<p>Si los atributos min y max no son declarados en este control, los límites de esta medida serán los predeterminados 0 (límite inferior) y 1 (límite superior).</p>
+<p>Aunque no existe una forma explícita de especificar las unidades en el elemento meter, éstas pueden proveerse en el atributo title en texto de forma libre.</p>
+<p>El soporte provisto por los navegadores para meter es incompleto. Los atutores pueden tener que recurrir a programas y/u hojas de estilo para lograr los mismo efectos consistentemente.</p>
+<pre><code class="language-html">&lt;p&gt;
+  Uso de la memoria RAM:
+  &lt;meter max=&quot;2048&quot; value=&quot;547&quot; title=&quot;Megabytes&quot;&gt;547/2048&lt;/meter&gt;
+&lt;/p&gt;
+</code></pre>
+<p><img src="img/meter.jpg" alt="Ejemplos de como se ve meter"></p>
+<h2>progress</h2>
+<p>El elemento progress representa el estado de progreso de una operación, como ser la transferencia de un archivo, una codificación o la recuperación de valores desde una base de datos. Este control es normalmente representado por una barra de progreso, compuesta por un contenedor que es llenado de izquierda a derecha de acuerdo con el progreso de la operación.</p>
+<p>Una barra progress puede representar un progreso en dos estados: como indeterminado, indicando que el proceso está siendo llevado a cabo pero no existe información acerca de su estado de completitud; o como un valor que indica la cantidad de trabajo que ha sido realizado en la tarea.</p>
+<p>Los autores no deben confundir este elemento con meter. A diferencia de meter, el elemento progress mide únicamente la completitud de una tarea.</p>
+<p>El progreso en un control progress es medido entre 0 y el valor del atributo max. Si este atributo no está definido, toma el valor por defecto de 1.</p>
+<p>El soporte provisto por los navegadores para el elemento progress es incompleto. Los autores pueden tener que recurrir a programas para lograr los mismos efectos consistentemente.</p>
+<pre><code class="language-html">&lt;p&gt;Progreso de la subida: &lt;progress max=&quot;68&quot; value=&quot;47&quot;&gt;47/68&lt;/progress&gt;&lt;/p&gt;
+</code></pre>
 <h2>ruby: Define una anotación ruby (para tipografía del este asiático) .</h2>
-<h2>rt: Define una pronunciación de caracteres (para tipografía del este asiático)</h2>
-<h2>rp: Define lo que se puede mostrar en los navegadores que no soporta las anotaciones ruby.</h2>
+<p>El elemento ruby provee los medios para aplicar anotaciones ruby a una línea de texto. Las anotaciones ruby son trozos cortos de texto que corren a la par del texto base y proveen algún tipo de ayuda para procesarlo. Son mayormente utilizadas en la tipografía asiática, pero pueden ser útiles para cualquier tipo de anotaciones.</p>
+<p>El texto con anotaciones ruby se encuentra dentro del elemento ruby, mientras que rt provee las anotaciones para todos los caracteres no anotados que se encuentran a su izquierda. Por su parte, el elemento rp provee los medios para ocultar información adicional utilizada para mejorar la lectura en navegadores que no soportan las anotaciones. El texto dentro del elemento ruby se muestra como una sola línea de texto en navegadores que no lo soportan, por lo que puede ser razonable proveer, por ejemplo, paréntesis (ocultos dentro del elemento rp) para encerrar las anotaciones.</p>
+<p>Un elemento rt provee anotaciones para todos los caracteres ubicados a su izquierda que todavía no han sido anotados.</p>
+<p>El soporte provisto por los navegadores para los elementos ruby (ruby, rt y rp) es incompleto. Los autores pueden tener que recurrir a técnicas de estilo (CSS) para lograr que las anotaciones ruby funcionen consistentemente.</p>
+<pre><code class="language-html">&lt;p&gt;
+  Los cuatro símbolos en el mazo de cartas de póker con
+  &lt;ruby&gt;♥&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;corazón&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;,
+  &lt;ruby&gt;♠&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;pica&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;,
+  &lt;ruby&gt;♣&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;trébol&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt; and
+  &lt;ruby&gt;♦&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;diamante&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;.
+&lt;/p&gt;
+</code></pre>
+<p><img src="img/ruby.jpg" alt="Ejemplo visualización Ruby"></p>
+<h2>rt</h2>
+<p>Define una pronunciación de caracteres (para tipografía del este asiático)
+El elemento rt provee una anotación ruby para todo el texto no anotado que lo precede dentro del elemento ruby en el cual se encuentra. El elemento rt es habitualmente acompañado por el elemento rp, el cual provee los medios para ocultar información utilizada para mejorar la legibilidad en navegadores que no soportan estos elementos. Los contenidos del elemento rp son invisibles en navegadores que soportan anotaciones ruby.</p>
+<p>Un elemento rt provee anotaciones para todos los caracteres ubicados a su izquierda que todavía no han sido anotados.</p>
+<p>El soporte provisto por los navegadores para los elementos ruby (ruby, rt y rp) es incompleto. Los autores pueden tener que recurrir a técnicas de estilo (CSS) para lograr que las anotaciones ruby funcionen consistentemente.</p>
+<h2>rp</h2>
+<p>Define lo que se puede mostrar en los navegadores que no soporta las anotaciones ruby.</p>
+<p>El elemento rp provee los medios para ocurtar información en anotaciones ruby (ruby). El principal propósito de este elemento es el de hacer que ruby se más compatible, especialmente debido al soporte parcial provisto por los navegadores.</p>
+<p>En navegadores que soportan las anotaciones ruby, cualquier cosa que se encuentre dentro del elemento rp no solo será invisible para el usuario, sino que también carecerá de significado para el documento.</p>
+<p>El soporte provisto por los navegadores para los elementos ruby (ruby, rt y rp) es incompleto. Los autores pueden tener que recurrir a técnicas de estilo (CSS) para lograr que las anotaciones ruby funcionen consistentemente.</p>
+<h2>embed</h2>
+<p>El elemento embed provee los medios para insertar acplicaciones externas, típicamente aquellas que requieren un plugin, en el documento.</p>
+<p>Este elemento, introducido por Netscape 2 y luego adoptado por Internet Explorer 3 (a principio de los 90), no ha sido nunca parte de un estándar HTML. Sin embargo, ha sido muy bien soportado por todos los navegadores del mercado y frecuentemente utilizado en múltiples sitios web, principalmente, para insertar películas de Flash. Al estar tan bien soportado, básicamente gracias a su longevidad, el elemento embed era la primera opción cuando los autores necesitaban incrustar películas Flash en sus documentos, a pesar del hecho de que nunca ha sido reglamentario. Esto, sumado a las defectuosas e irregulares implementaciones del elemento object, ha llevado a HTML5 a incluirlo en la especificación.</p>
+<p>Este elemento acepta cualquier atributo definido por el usuario que no concuerde con otros nombres de atributos en la especificación. Los valores de estos atributos serán pasados a la aplicación que el elemento incruste como parámetros.</p>
+<p>El uso de cualquiera de los atributos tradicionales (name, align, hspace y vspace) está prohibido, por producir efectos secundarios inapropiados.</p>
+<p>Ejemplo</p>
+<pre><code class="language-html">&lt;p&gt;Aquí tienes la versión MIDI de &quot;Aire para la cuerda de sol&quot;.&lt;/p&gt;
+&lt;embed
+  src=&quot;/assets/audio/Bach_Air_on_the_G_string.mid&quot;
+  type=&quot;audio/mid&quot;
+  autostart=&quot;false&quot;
+/&gt;
+</code></pre>
+<p>Esta etiqueta admite los siguientes parámetros:</p>
+<ul>
+<li>src: El URI del recurso que será incrustado. Es obligatorio si el atributo itemprop está presente</li>
+<li>type: Para indicar el tipo de archivo. Se pueden consultar <a href="https://www.htmlquick.com/es/reference/mime-types.html">aquí</a>{:target=&quot;_blank&quot;}</li>
+<li>width</li>
+<li>height</li>
+</ul>
+<h2>area (HTML3)</h2>
+<p>El elemento area define una sección en un mapa de imagen. Los mapas de imagen permiten a los autores definir secciones en una imagen y, opcionalmente, convertirlas en hipervínculos que apuntan a otros recursos. En otras palabras, los mapas de imagen hacen posbile la creación de un vínculo a partir de una o más secciones de la imagen (img) a la que se encuentran asociados.</p>
+<p>Existen cuatro tipos de figuras que pueden ser definidas para cada área del mapa de imagen, declarando cualquiera de los valores listados a continuación en el atributo shape. El atributo coords debe proveer las coordenadas de la forma de manera específica para cada tipo de area.</p>
+<ul>
+<li>default: todo el área del mapa. El atributo coords no es necesario.</li>
+<li>rect: una región rectangular. El atributo coords debe proveer dos esquinas opuestas &quot;izquierda-x, arriba-y, derecha-x, abajo-y&quot;.</li>
+<li>circle: una región circular. El atributo coords debe proveer el centro y el radio &quot;centro-x, centro-y, radio&quot;. Si el radio se mide en porcentajes, es calculado como relativo al tamaño menor del objeto asociado.</li>
+<li>poly: el área encerrada dentro de un polígono. El atributo coords debe proveer, una a una, las coordenadas de los vértices &quot;x1, y1, x2, y2, ..., xn, yn&quot;. Si éstas definen un polígono abierto, el navegador debería cerrarlo agregando un segmento entre el primer vértice y el último.</li>
+</ul>
+<p>En versiones previas del estándar, los autores también podían definir las áreas de un mapa de imagen con el elemento a. En HTML5 sólo el elemento area provee esta funcionalidad.</p>
+<p>El elemento area solo puede tener un elemento map como padre. No puede ser declarado como hijo de ningún otro elemento.</p>
+<p>En HTML5, el atributo alt es obligatorio cuando el atributo href está presente y debe ser omitido en caso contrario. También es requerido que se especifiquen las coordenadas para la forma (en el atributo coords) si no se ha optado por la forma &quot;default&quot;.</p>
+<pre><code class="language-html">&lt;map name=&quot;image-map-1&quot;&gt;
+  &lt;area
+    href=&quot;../../tutorials.html&quot;
+    alt=&quot;Tutoriales HTML&quot;
+    shape=&quot;circle&quot;
+    coords=&quot;67,73,47&quot;
+  /&gt;
+  &lt;area
+    href=&quot;../../tutorials.html&quot;
+    alt=&quot;Tutoriales HTML&quot;
+    shape=&quot;rect&quot;
+    coords=&quot;60,54,142,99&quot;
+  /&gt;
+&lt;/map&gt;
+&lt;img
+  src=&quot;/assets/images/image-map-1-es.png&quot;
+  usemap=&quot;#image-map-1&quot;
+  alt=&quot;Mapa de imagen de ejemplo&quot;
+/&gt;
+</code></pre>
+<p>Lista de parámetros:</p>
+<ul>
+<li>alt: Versión de texto. Es obligatorio si tenemos presente el parámetro href</li>
+<li>shape</li>
+<li>coords</li>
+<li>href</li>
+<li>target: Puede tomar los siguientes valores:
+_blank: el vínculo se abrirá en una nueva ventana.
+_parent: el vínculo se abrirá en el contexto padre inmediato.
+_self: el vínculo se abrirá en el mismo contexto que contiene al vínculo.
+_top: el vínculo se abrirá en el más alto contexto de navegación (el contexto más exterior que contiene al vínculo).</li>
+<li>download: Un valor booleano que indica si el recurso enlazado debería ser descargado a la máquina del usuario o abrirse en el navegador.</li>
+<li>ping: Este parámetro es una lista de url's a las que el navegador debería hacer ping cuando el enlace sea activado. Esto se hace sobre todo a efectos estadísticos.</li>
+<li>rel</li>
+<li>referrerpolicy</li>
+<li>hreflang</li>
+<li>type</li>
+<li>nohref</li>
+</ul>
+<h2>base</h2>
+<p>El elemento base puede proveer un URI para resolver todos los URIs relativos en el documento, o para definir el contexto predeterminado en el que se abrirán todos los vínculos del documento. Resumidamente, establece la conducta predeterminada para vínculos y resolución de URIs en un documento HTML.</p>
+<p>El elemento base puede ser declarado únicamente en la sección head del documento y sólo una vez y, debido a su propósito, debe preceder a todos los elementos que precisan de la resolución de URIs o que representan hypervínculos.</p>
+<pre><code class="language-html">&lt;head&gt;
+  &lt;title&gt;Imágenes de postres&lt;/title&gt;
+  &lt;base href=&quot;http://www.misitio.es/imagenes/postres/&quot; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;img src=&quot;tarta_manzana.jpg&quot; /&gt;
+  &lt;img src=&quot;chocolate.jpg&quot; /&gt;
+  &lt;img src=&quot;fresas.jpg&quot; /&gt;
+&lt;/body&gt;
+</code></pre>
+<h3>source</h3>
+<p>El elemento source permite a los autores proveer diferentes versiones de un archivo en los elementos de medios (audio y video) y las imágenes (picture). Un elemento de medios o imagen puede contener uno o más elementos source, cada uno de lo cuales provee una versión diferente del medio (codificado utilizando un códec diferente) o imagen (en diferentes tamaños o formatos). Entonces, queda en manos del navegador elegir qué recurso cargar, una decisión que tomará en base a los formatos que soporta y a las dimensiones de la imagen (mejor coincidencia).</p>
+<p>Los autores deben elegir una de las dos formas de especificar un recurso de medios pero nunca ambas. Si se declara el atributo src en el elemento de medios (audio y video), no será posible proveer alternativas con el elemento source.</p>
+<p>El soporte provisto por los navegadores para el elemento picture es muy bajo. Los autores pueden tener que recurrir a media queries para lograr el mismo efecto consistentemente, hasta que el soporte crezca.</p>
+<p>Ejemplo:</p>
+<pre><code class="language-html">&lt;audio controls&gt;
+  &lt;source
+    src=&quot;/assets/audio/Jahzzar_The_Flowers_Are_Still_Standing.ogg&quot;
+    type=&quot;audio/ogg&quot;
+  /&gt;
+  &lt;source
+    src=&quot;/assets/audio/Jahzzar_The_Flowers_Are_Still_Standing.mp3&quot;
+    type=&quot;audio/mpeg&quot;
+  /&gt;
+&lt;/audio&gt;
+</code></pre>
+<p>Ejemplo con vídeo:</p>
+<pre><code class="language-html">&lt;video width=&quot;384&quot; height=&quot;288&quot; controls&gt;
+  &lt;source src=&quot;/assets/videos/A_Flight_To_Mars.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+  &lt;source src=&quot;/assets/videos/A_Flight_To_Mars.webm&quot; type=&quot;video/webm&quot; /&gt;
+  &lt;source src=&quot;/assets/videos/A_Flight_To_Mars.ogg&quot; type=&quot;video/ogg&quot; /&gt;
+&lt;/video&gt;
+</code></pre>
+<p>Para los navegadores que soportan al elemento video, no hace falta proveer más que dos formatos (MP4 y Ogg) para hacer que el video sea reproducido correctamente en todos los navegadores. Sin embargo, pondremos a disponibilidad una tercera versión, WebM, por ser la mejor candidata a convertirse en el estándar para web en el futuro cercano.</p>
+<p>Para mejorar la compatibilidad aún más, pondremos a la versión en MP4 primero, para evitar un error particular en los navegadores de iPad.</p>
+<p>Ejemplo con imágen:</p>
+<pre><code class="language-html">&lt;picture&gt;
+  &lt;source
+    media=&quot;(min-width: 1280px)&quot;
+    srcset=&quot;/assets/images/charles-darwin-l.jpg&quot;
+  /&gt;
+  &lt;source media=&quot;(max-width: 520px)&quot; srcset=&quot;../../../charles-darwin-s.jpg&quot; /&gt;
+  &lt;img
+    class=&quot;float-right&quot;
+    src=&quot;/assets/images/charles-darwin.jpg&quot;
+    alt=&quot;Charles Robert Darwin&quot;
+  /&gt;
+&lt;/picture&gt;
+&lt;p&gt;
+  Charles Robert Darwin fue un naturalista inglés que postuló todas las especies
+  de seres vivos que han evolucionado con el tiempo a partir de un antepasado
+  común mediante un proceso denominado selección natural. La evolución fue
+  aceptada como un hecho por la comunidad científica y por buena parte del
+  público en vida de Darwin, mientras que su teoría de la evolución mediante
+  selección natural no fue considerada como la explicación primaria del proceso
+  evolutivo hasta los años 1930.
+&lt;/p&gt;
+</code></pre>
+<h2>track</h2>
 <h2>Elementos eliminados:</h2>
 <ul>
 <li>acronym</li>
@@ -338,3 +533,13 @@ El elemento figcaption representa un título o leyenda de un fragmento de conten
 <li>strike</li>
 <li>tt</li>
 </ul>
+
+        <a href=""> Volver</a>
+    </main>
+    <footer>
+        <hr/>
+        <p>Copyright año 2021. Todos los derechos reservados</p>
+    </footer>
+    </div>
+</body>
+</html>

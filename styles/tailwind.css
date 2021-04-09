@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-.markdown h1 {
-    @apply text-4xl text-red-400 font-bold;
+@layer base {
+  h1 {
+    @apply text-3xl text-center text-gray-600 font-bold mb-6
   }
+
+  h2 {
+    @apply text-2xl font-bold pt-8 mb-6 border-b-2 text-gray-600 border-gray-600
+
+  }
+
+  h3 {
+    @apply text-xl pt-2 mb-3 text-gray-600
+
+  }
+
+  ol {
+    @apply list-decimal list-inside
+  }
+
+  ul {
+    @apply list-disc list-inside
+  }
+
+  a {
+    @apply text-blue-600 hover:underline 
+  }
+
+  p {
+    @apply mb-2
+  }
+}

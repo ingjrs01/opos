@@ -1,4 +1,9 @@
-# Tema 12. SGML, HTML, XML y sus derivaciones
+---
+title: SGML, HTML y sus derivaciones
+layout: articles.njk
+---
+
+# SGML, HTML, XML y sus derivaciones
 
 - Linguaxes de marca
 - SGML
