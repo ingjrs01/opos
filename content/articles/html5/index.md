@@ -432,9 +432,32 @@ Hasta el 31/03/2015, el soporte provisto por los navegadores para el elemento di
 
 Define un botón de comando al que el usuario puede llamar
 
-## meter: Define una medida escalar dentro de un rango establecido.
+## meter
 
-## progress: Define el progreso de una tarea.
+El elemento meter representa una medida dentro de un rango conocido. Este elemento, nuevo en HTML5, puede ser útil para representar medidas en diferentes situaciones, como uso de disco, memoria o ancho de banda, los resultados de un encuesta, la cantidad recaudada en una colecta, el número de registros coincidentes en una consulta, etc.
+
+El elemento meter soporta seis atributos especiales diseñados para agregar información acerca de los valores que éste contiene. Los atributos min y max representan los límites inferior y superior del rango. Los atributos low y high ayudarán a los autores a definir segmentos (desde los márgenes) que contendrán valores considerados como bajos y altos respectivamente, mientras que optimal indicará cuál es el valor óptimo en esta medida. Por último, el atributo value representa el valor tomado por esta medida.
+
+Los autores no deben confudir a este elemento con progress. A diferencia de meter, el elemento progress mide únicamente la completitud de una tarea.
+
+Si los atributos min y max no son declarados en este control, los límites de esta medida serán los predeterminados 0 (límite inferior) y 1 (límite superior).
+
+Aunque no existe una forma explícita de especificar las unidades en el elemento meter, éstas pueden proveerse en el atributo title en texto de forma libre.
+
+El soporte provisto por los navegadores para meter es incompleto. Los atutores pueden tener que recurrir a programas y/u hojas de estilo para lograr los mismo efectos consistentemente.
+
+```html
+<p>
+  Uso de la memoria RAM:
+  <meter max="2048" value="547" title="Megabytes">547/2048</meter>
+</p>
+```
+
+[Ejemplos de como se ve meter](img/meter.jpg)
+
+## progress
+
+Define el progreso de una tarea.
 
 ## ruby: Define una anotación ruby (para tipografía del este asiático) .
 
