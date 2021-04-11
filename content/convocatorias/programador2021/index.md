@@ -1,5 +1,6 @@
 ---
 title: Convocatoria para Programador de Abril del 2021
+layout: articles.njk
 ---
 
 # Convocatoria para Programador de Abril del 2021
@@ -64,9 +65,15 @@ Ademais das condicións sinaladas na base cuarta das xerais as persoas aspirante
 24. Linguaxes de programación. Representación de tipos de datos. Operadores. Instrucións condicionais. Bucles e recursividade. Procedementos, funcións e parámetros. Vectores e rexistros. Estrutura dun programa.
 25. Accesibilidade, deseño universal e usabilidade.
 26. Aplicacións Web. Desenvolvemento front-end e en servidor.
-27. Sistemas de xestión de contidos (CMS).
+27. [Sistemas de xestión de contidos (CMS)](/articles/cms)
 28. Regulamento Xeral de Protección de datos (RXPD) e Lei Orgánica 3/2018 de Protección de Datos Persoais e garantía de dereitos dixitais. Características e aplicación.
 29. Criptografía. Clave asimétrica. Clave simétrica. Certificados dixitais, sinatura electrónica. Sistemas KDC.
 30. Esquema Nacional de Seguridade (ENS) e Esquema Nacional de Interoperabilidade (ENI), adecuación e cumprimento, instrumentos.
 31. Implantación da Administración electrónica. Sede electrónica. Sede electrónica e servizos de Sede.
 32. Rexistro electrónico. Expediente electrónico. Arquivo electrónico de documentos. Dixitalización, compulsa electrónica.
+
+## Enlaces: 
+
+- <a href="" target="_blank">Publicación en el BOPPO</a>
+- <a href="https://sede.depo.gal/web/public/employment/employment-public-examination.xhtml?idprocedure=91097386&idoposicion=91359363" target="_blank">Enlace a proceso en Sede Electrónica</a>
+

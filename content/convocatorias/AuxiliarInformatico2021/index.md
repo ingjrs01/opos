@@ -50,3 +50,9 @@ Ademais das condicións sinaladas na base cuarta das xerais as persoas aspirante
 14. [Regulamento xeral de protección de datos (RXPD) e Lei orgánica 3/2018, de protección de datos persoais e garantía de dereitos dixitais. Características e aplicación.](/articles/proteccion_datos)
 15. [Accesibilidade, deseño universal e usabilidade](/articles/accesibilidad)
 16. [Implantación da Administración electrónica. Sede electrónica. Sede electrónica e servizos da sede. A sociedade da información. Identidade e sinatura electrónica. O DNIelectrónico.](/articles/eadministracion)
+
+## Enlaces: 
+
+- <a href="https://boppo.depo.gal/web/boppo/detalle/-/boppo/2021/04/06/2021016861" target="_blak">BOPPO de la publicación</a>
+- <a href="https://sede.depo.gal/web/public/employment/employment-public-examination.xhtml?idprocedure=91097386&idoposicion=91360144" target="_blank">Proceso en Sede Electrónica</a>
+- <a href="https://sede.depo.gal/web/dcsv/78CPOG53OURULEY5" target="_blank">Bases específicas</a>
