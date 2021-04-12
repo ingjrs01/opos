@@ -25,17 +25,6 @@ Algunas de las principales diferencias son:
 - Algunos atributos desaparecen, como: align, background, bgcolor, etc.
 - Mejora de las API, como: getElementsByClassName() y innerHTML.
 
-<area />, , <br />,
-
-<col />
-, ,
-<hr />
-, <img />, <input />, <link />, <meta />, <param />,
-
-,
-
-y <wbr />
-
 ## Nuevos Elementos HTML5
 
 Etiqueta Descripción
@@ -685,6 +674,117 @@ Ejemplo con imágen:
 ```
 
 ## track
+
+El elemento track permite a los autores proveer subtítulos, títulos, descripciones, capítulos o metadatos para elementos de medios (audio y video). La información textual es provista en un archivo separado, que puede estar en cualquier formato soportado por los navegadores, aunque el W3C provee un estándar recomendado denominado WebVTT.
+
+Siendo relativamente nuevo, el elemento track no es completamente soportado por los navegadores. Los autores no deberían confiar en este elemento para mostrar información importante.
+Dependiendo del valor del atributo kind, el elemento track puede ser usado para mostrar cinco tipos diferentes de información. Los navegadores mostrarán las pistas de texto de acuerdo al tipo de información que éstas representan.
+
+- subtitles: una transcripción o traducción del audio, pensado para aquellos casos en los que el audio se escucha adecuadamente pero no es comprendido, como cuando el usuario lo comprende el lenguaje hablado en el recurso. Los navegadores deberían mostrar esta información como texto superpuesto en el video. Este es el valor por defecto.
+- captions: información relevante de audio para ayudar a los usuario que no pueden escuchar apropiadamente el recurso, como cuando el usuario es sordo, cuando el recurse se encuentra silenciado o cuando el ruido del ambiente es elevado. Los navegadores deberían mostrar esta información como texto superpuesto en el video.
+- descriptions: una descripción que explica al video (o a una parte de él), pensada para ayudar a los usuarios que no pueden verlo apropiadamente, como cuando el usuario es ciego, cuando está conduciendo o cuando el brillo de su pantalla tiene baja intensidad. Los navegadores deberían usar sintetizadores de voz para reproducir el contenido textual.
+- chapters: títulos de los capítulos, pensados para permitir a los usuarios navegar el recurso de medios. Los navegadores pueden proveerlos como una lista interactiva.
+- metadata: pensado únicamente para su uso con programas, no son mostrados por el navegador.
+
+Si no se indica, se debería de considerar subtitles.
+
+Ejemplo
+
+```html
+
+<video width="384" height="288" controls>
+  <source src="/assets/videos/Cyrano_de_Beryerac.mp4" type="video/mp4">
+  <source src="/assets/videos/Cyrano_de_Beryerac.webm" type="video/webm">
+  <source src="/assets/videos/Cyrano_de_Beryerac.ogg" type="video/ogg">
+  <track kind="captions" label="Captions" src="/assets/videos/Cyrano_de_Beryerac_EN.vtt" srclang="en"></track>
+  <track kind="subtitles" label="Subtítulos en español" src="/assets/videos/Cyrano_de_Beryerac_ES.vtt" srclang="es"></track>
+</video>
+```
+
+## link
+
+El elemento link provee información relacional acerca del documento, como versiones alternativas, autores, licencias de copyright, íconos, etc.
+
+Un elemento link debe tener un atributos rel o un atributo itemprop, pero nunca ambos. El atributo href también es obligatorio.
+
+Cuando el atributo itemprop se encuentra ausente, este elemento sólo puede ser declarado en la sección de encabezado (head) del documento. En caso contrario puede ser declarado en cualquier lugar.
+
+al utilizarse en este elemento, el atributo title tiene un significado especial: define el título del vínculo en todos los casos, a excepción del de hojas de estilos, en el cual representa el nombre del conjunto de hojas de estilo a la cual esta pertenece.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Película "La guerra de las galaxias: Una nueva esperanza"</title>
+    <link rel="license" href="copyright.html" />
+    <link rel="next" href="el-imperio-contraataca.html" />
+    <link rel="search" href="buscar-peliculas.html" />
+    <link rel="alternate" hreflang="en" href="en/a-new-hope.html" />
+    <link rel="stylesheet" href="predeterminado.css" />
+    <link rel="stylesheet alternate" media="print" href="impresion.css" />
+    <link rel="icon" sizes="16x16" href="una-nueva-esperanza-16.png" />
+  </head>
+  <body>
+    <h1>Una nueva esperanza</h1>
+    <p>
+      Luego de la caída de la democracia y ascenso del imperio, la esperanza
+      estaba perdida...
+    </p>
+  </body>
+</html>
+```
+
+## col
+
+El elemento col representa una o más columnas en una tabla (table). Este elemento se vuelve útil cuando se precisa asignar un conjunto de atributos a todas las celdas en una o más columnas. En tales casos, los atributos pueden ser declarados directamente en el elemento col y sus efectos serán automáticamente transferidos a las columnas que éste representa.
+
+Mediante el atributo span, los autores pueden especificar cuántas columnas serán afectadas por el elemento col. El conteo de columnas va de izquierda a derecha, de modo que para tener un elemento col que represente a la tercera columna de una tabla, debes primero representar con otro elemento col a las dos primeras.
+
+A diferencia de otras versiones, en HTML5 el elemento col no puede ser declarado como hijo de table. Debe ser contenido por un elemento colgroup el cual representa a un grupo de columnas.
+
+```html
+<table class="default">
+  <colgroup span="3"></colgroup>
+  <colgroup>
+    <col />
+    <col
+      span="2"
+      style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);"
+    />
+  </colgroup>
+  <tr>
+    <th>Ciudad</th>
+    <th>Lengua</th>
+    <th>Moneda</th>
+    <th>Área</th>
+    <th>Población</th>
+    <th>Densidad</th>
+  </tr>
+  <tr>
+    <td>Londres</td>
+    <td>Inglés</td>
+    <td>GBP</td>
+    <td>1,572.00 km<sup>2</sup></td>
+    <td>8,416,535</td>
+    <td>5,354/km<sup>2</sup></td>
+  </tr>
+</table>
+```
+
+## param
+
+El elemento param provee parámetros para los recursos incrustados con el elemento object. Estos parámetros son pasados al plugin a cargo del procesamiento o ejecución del objeto y por lo tanto, son sólo necesarios cuando el objeto representa un recurso que invoca a un plugin.
+
+Para definir parámetros, los autores tienen disponibles dos atributos, ambos requeridos, que son name y value. Juntos, permiten especificar un nombre y un valor para los parámetros que definen.
+
+Los atributos type y valuetype se han vuelto inválidos en HTML5. Se aconseja a los autores abandonar su uso.
+
+```html
+<p>Aquí tienes la versión MIDI de "Aire para la cuerda de sol".</p>
+<object data="/assets/audio/Bach_Air_on_the_G_string.mid" type="audio/mid">
+  <param name="autostart" value="false" />
+</object>
+```
 
 ## Elementos eliminados:
 
