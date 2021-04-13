@@ -36,13 +36,6 @@
 <li>Algunos atributos desaparecen, como: align, background, bgcolor, etc.</li>
 <li>Mejora de las API, como: getElementsByClassName() y innerHTML.</li>
 </ul>
-<p><area />, , <br />,</p>
-<col />
-, ,
-<hr />
-, <img />, <input />, <link />, <meta />, <param />,
-<p>,</p>
-<p>y <wbr /></p>
 <h2>Nuevos Elementos HTML5</h2>
 <p>Etiqueta Descripción</p>
 <h2>header: Define el header para un documento o una sección.</h2>
@@ -512,6 +505,93 @@ _top: el vínculo se abrirá en el más alto contexto de navegación (el context
 &lt;/p&gt;
 </code></pre>
 <h2>track</h2>
+<p>El elemento track permite a los autores proveer subtítulos, títulos, descripciones, capítulos o metadatos para elementos de medios (audio y video). La información textual es provista en un archivo separado, que puede estar en cualquier formato soportado por los navegadores, aunque el W3C provee un estándar recomendado denominado WebVTT.</p>
+<p>Siendo relativamente nuevo, el elemento track no es completamente soportado por los navegadores. Los autores no deberían confiar en este elemento para mostrar información importante.
+Dependiendo del valor del atributo kind, el elemento track puede ser usado para mostrar cinco tipos diferentes de información. Los navegadores mostrarán las pistas de texto de acuerdo al tipo de información que éstas representan.</p>
+<ul>
+<li>subtitles: una transcripción o traducción del audio, pensado para aquellos casos en los que el audio se escucha adecuadamente pero no es comprendido, como cuando el usuario lo comprende el lenguaje hablado en el recurso. Los navegadores deberían mostrar esta información como texto superpuesto en el video. Este es el valor por defecto.</li>
+<li>captions: información relevante de audio para ayudar a los usuario que no pueden escuchar apropiadamente el recurso, como cuando el usuario es sordo, cuando el recurse se encuentra silenciado o cuando el ruido del ambiente es elevado. Los navegadores deberían mostrar esta información como texto superpuesto en el video.</li>
+<li>descriptions: una descripción que explica al video (o a una parte de él), pensada para ayudar a los usuarios que no pueden verlo apropiadamente, como cuando el usuario es ciego, cuando está conduciendo o cuando el brillo de su pantalla tiene baja intensidad. Los navegadores deberían usar sintetizadores de voz para reproducir el contenido textual.</li>
+<li>chapters: títulos de los capítulos, pensados para permitir a los usuarios navegar el recurso de medios. Los navegadores pueden proveerlos como una lista interactiva.</li>
+<li>metadata: pensado únicamente para su uso con programas, no son mostrados por el navegador.</li>
+</ul>
+<p>Si no se indica, se debería de considerar subtitles.</p>
+<p>Ejemplo</p>
+<pre><code class="language-html">
+&lt;video width=&quot;384&quot; height=&quot;288&quot; controls&gt;
+  &lt;source src=&quot;/assets/videos/Cyrano_de_Beryerac.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  &lt;source src=&quot;/assets/videos/Cyrano_de_Beryerac.webm&quot; type=&quot;video/webm&quot;&gt;
+  &lt;source src=&quot;/assets/videos/Cyrano_de_Beryerac.ogg&quot; type=&quot;video/ogg&quot;&gt;
+  &lt;track kind=&quot;captions&quot; label=&quot;Captions&quot; src=&quot;/assets/videos/Cyrano_de_Beryerac_EN.vtt&quot; srclang=&quot;en&quot;&gt;&lt;/track&gt;
+  &lt;track kind=&quot;subtitles&quot; label=&quot;Subtítulos en español&quot; src=&quot;/assets/videos/Cyrano_de_Beryerac_ES.vtt&quot; srclang=&quot;es&quot;&gt;&lt;/track&gt;
+&lt;/video&gt;
+</code></pre>
+<h2>link</h2>
+<p>El elemento link provee información relacional acerca del documento, como versiones alternativas, autores, licencias de copyright, íconos, etc.</p>
+<p>Un elemento link debe tener un atributos rel o un atributo itemprop, pero nunca ambos. El atributo href también es obligatorio.</p>
+<p>Cuando el atributo itemprop se encuentra ausente, este elemento sólo puede ser declarado en la sección de encabezado (head) del documento. En caso contrario puede ser declarado en cualquier lugar.</p>
+<p>al utilizarse en este elemento, el atributo title tiene un significado especial: define el título del vínculo en todos los casos, a excepción del de hojas de estilos, en el cual representa el nombre del conjunto de hojas de estilo a la cual esta pertenece.</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Película &quot;La guerra de las galaxias: Una nueva esperanza&quot;&lt;/title&gt;
+    &lt;link rel=&quot;license&quot; href=&quot;copyright.html&quot; /&gt;
+    &lt;link rel=&quot;next&quot; href=&quot;el-imperio-contraataca.html&quot; /&gt;
+    &lt;link rel=&quot;search&quot; href=&quot;buscar-peliculas.html&quot; /&gt;
+    &lt;link rel=&quot;alternate&quot; hreflang=&quot;en&quot; href=&quot;en/a-new-hope.html&quot; /&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;predeterminado.css&quot; /&gt;
+    &lt;link rel=&quot;stylesheet alternate&quot; media=&quot;print&quot; href=&quot;impresion.css&quot; /&gt;
+    &lt;link rel=&quot;icon&quot; sizes=&quot;16x16&quot; href=&quot;una-nueva-esperanza-16.png&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Una nueva esperanza&lt;/h1&gt;
+    &lt;p&gt;
+      Luego de la caída de la democracia y ascenso del imperio, la esperanza
+      estaba perdida...
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2>col</h2>
+<p>El elemento col representa una o más columnas en una tabla (table). Este elemento se vuelve útil cuando se precisa asignar un conjunto de atributos a todas las celdas en una o más columnas. En tales casos, los atributos pueden ser declarados directamente en el elemento col y sus efectos serán automáticamente transferidos a las columnas que éste representa.</p>
+<p>Mediante el atributo span, los autores pueden especificar cuántas columnas serán afectadas por el elemento col. El conteo de columnas va de izquierda a derecha, de modo que para tener un elemento col que represente a la tercera columna de una tabla, debes primero representar con otro elemento col a las dos primeras.</p>
+<p>A diferencia de otras versiones, en HTML5 el elemento col no puede ser declarado como hijo de table. Debe ser contenido por un elemento colgroup el cual representa a un grupo de columnas.</p>
+<pre><code class="language-html">&lt;table class=&quot;default&quot;&gt;
+  &lt;colgroup span=&quot;3&quot;&gt;&lt;/colgroup&gt;
+  &lt;colgroup&gt;
+    &lt;col /&gt;
+    &lt;col
+      span=&quot;2&quot;
+      style=&quot;background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);&quot;
+    /&gt;
+  &lt;/colgroup&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Ciudad&lt;/th&gt;
+    &lt;th&gt;Lengua&lt;/th&gt;
+    &lt;th&gt;Moneda&lt;/th&gt;
+    &lt;th&gt;Área&lt;/th&gt;
+    &lt;th&gt;Población&lt;/th&gt;
+    &lt;th&gt;Densidad&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Londres&lt;/td&gt;
+    &lt;td&gt;Inglés&lt;/td&gt;
+    &lt;td&gt;GBP&lt;/td&gt;
+    &lt;td&gt;1,572.00 km&lt;sup&gt;2&lt;/sup&gt;&lt;/td&gt;
+    &lt;td&gt;8,416,535&lt;/td&gt;
+    &lt;td&gt;5,354/km&lt;sup&gt;2&lt;/sup&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+<h2>param</h2>
+<p>El elemento param provee parámetros para los recursos incrustados con el elemento object. Estos parámetros son pasados al plugin a cargo del procesamiento o ejecución del objeto y por lo tanto, son sólo necesarios cuando el objeto representa un recurso que invoca a un plugin.</p>
+<p>Para definir parámetros, los autores tienen disponibles dos atributos, ambos requeridos, que son name y value. Juntos, permiten especificar un nombre y un valor para los parámetros que definen.</p>
+<p>Los atributos type y valuetype se han vuelto inválidos en HTML5. Se aconseja a los autores abandonar su uso.</p>
+<pre><code class="language-html">&lt;p&gt;Aquí tienes la versión MIDI de &quot;Aire para la cuerda de sol&quot;.&lt;/p&gt;
+&lt;object data=&quot;/assets/audio/Bach_Air_on_the_G_string.mid&quot; type=&quot;audio/mid&quot;&gt;
+  &lt;param name=&quot;autostart&quot; value=&quot;false&quot; /&gt;
+&lt;/object&gt;
+</code></pre>
 <h2>Elementos eliminados:</h2>
 <ul>
 <li>acronym</li>

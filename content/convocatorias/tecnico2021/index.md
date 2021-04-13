@@ -3,7 +3,7 @@ title: Convocatoria para técnico, de abril del 2021
 layout: articles.njk
 ---
 
-# Tres prazas de técnico/a informático/a nivel 3, quenda libre
+# 1230 - Tres prazas de técnico/a informático/a nivel 3, quenda libre
 
 
 ## Primeira. Número de prazas e características
@@ -71,3 +71,8 @@ CUARTO EXERCICIO, de carácter obrigatorio e non eliminatorio. Consistirá na tr
 30. Servizos de Internet, servidores Web, servidores de aplicacións, contedores de aplicacións, software de servidor, configuración, xestión e administración.
 31. Esquema nacional de seguridade (ENS) e Esquema Nacional de Interoperabilidade (ENI), adecuación e cumprimento, instrumentos.
 32. Principais estándares e metodoloxías para a xestión de proxectos e servizos. ITIL. Xestión do cambio.
+
+## Enlaces y Recursos
+
+- <a href="https://boppo.depo.gal/web/boppo/detalle/-/boppo/2021/04/06/2021016860" target="_blank">Publicación en DOGA</a>
+- <a href="https://sede.depo.gal/web/public/employment/employment-public-examination.xhtml?idprocedure=91097623&idoposicion=91382691" target="_blank">Enlace en Sede Electrónica</a>
