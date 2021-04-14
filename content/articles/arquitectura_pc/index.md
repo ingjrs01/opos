@@ -9,3 +9,5 @@ layout: articles.njk
 
 
 ## La memoria: tipos, jerarquía y modos de direccionamento
+
+La memoria
