@@ -45,13 +45,13 @@ Ademais das condicións sinaladas na base cuarta das xerais as persoas aspirante
 9. [Administración de servidores de correo electrónico. Protocolos de correo electrónico](/articles/email)
 10. Internet: arquitectura de rede. Orixe, evolución e estado actual.
 11. [Internet: principais servizos: correo electrónico, WWW, FTP, Telnet e outros. Protocolos HTTP e HTTPS, SSL e TLS](/articles/internet_servicios)
-12. Aplicacións Web. Tecnoloxías de programación. Javascript, Applets, Servlets, servizos web. Linguaxes de descrición de datos: HTML e XML e as súas derivacións.Navegadores e linguaxes de programación web. Linguaxes de script.
+12. [Aplicacións Web. Tecnoloxías de programación. Javascript, Applets, Servlets, servizos web. Linguaxes de descrición de datos: HTML e XML e as súas derivacións.Navegadores e linguaxes de programación web. Linguaxes de script](/articles/aplicaciones_web)
 13. [Sistema de xestión de contidos (CMS). Xestión das aplicacións web: Liferay, Wordpress e similares.](/articles/cms)
 14. [Regulamento xeral de protección de datos (RXPD) e Lei orgánica 3/2018, de protección de datos persoais e garantía de dereitos dixitais. Características e aplicación.](/articles/proteccion_datos)
 15. [Accesibilidade, deseño universal e usabilidade](/articles/accesibilidad)
 16. [Implantación da Administración electrónica. Sede electrónica. Sede electrónica e servizos da sede. A sociedade da información. Identidade e sinatura electrónica. O DNIelectrónico.](/articles/eadministracion)
 
-## Enlaces: 
+## Enlaces:
 
 - <a href="https://boppo.depo.gal/web/boppo/detalle/-/boppo/2021/04/06/2021016861" target="_blak">BOPPO de la publicación</a>
 - <a href="https://sede.depo.gal/web/public/employment/employment-public-examination.xhtml?idprocedure=91097386&idoposicion=91360144" target="_blank">Proceso en Sede Electrónica</a>

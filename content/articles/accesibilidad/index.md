@@ -64,6 +64,23 @@ En la actualidad hay que destacar que por ejemplo en web, gran parte de los usua
 
 Es un concepto relativamente reciente y tiene que ver con el diseño de productos y entornos que resulten de fácil acceso para el mayor número de personas posible, sin necesidad de adaptarlos o rediseñarlos de forma especial. Es un término más global que engloba la accesibilidad
 
+El Diseño Universal va más allá de la definición de accesibilidad, proponiendo siete principios tanto para espacios construidos como para productos o servicios que se ofrecen en la vida diaria y que, obviamente, deben estar disponibles para todos en igualdad de condiciones, teniendo en cuenta, también, el acceso a la información y las comunicaciones como parte de la integración e inclusión de personas con discapacidad.
+
+Lo cierto es que, en un momento dado, todos podemos vernos perjudicados por las características del entorno por lo que la accesibilidad pensada, en principio, para personas con discapacidad, nos ayuda a todas las personas, haciendo los espacios más cómodos y seguros, por lo que podríamos hablar de “diseño para todos”, “diseños incluyentes” o “diseño universal”.
+
+El diseño universal es definido como “el diseño de productos y entornos para ser usados por todas las personas, al máximo posible, sin adaptaciones o necesidades de un diseño especializados”.
+
+Los siete principios del diseño universal:
+
+- **Uso equitativo**.
+- **Uso flexible**.Ha de ser usable por personas con un amplio rango de preferencias, hábitos y habilidades. Por ejemplo un packaging diseñado para baja visión y con etiqueta braille es universal, pero una máquina de vending táctil no parlante no lo es.
+- **Uso simple e intuitivo**. Fácil de enteder por cualquier persona. Ejemplo, el sistema de pago sin contacto NFC y no es universal las máquinas expendedoras de tiques del metro (porque normalmente requieren de experiencia o mucha habilidad cognitiva).
+- **Información Perceptible**. La información ha de poder ser percibida y entendida por todos en condiciones ambientales diversas y por parte de usuarios con distintas habilidades sensoriales. Por ejemplo, es universal el DVD de una película que contenga un canal con audio descripción para personas con dificultades de visión y con subtítulos para personas con diversidad funcional auditiva y no es universal un aviso de oferta que sólo se emite por el sistema de audio de un supermercado (porque no es recibido por personas que no oyen o que lo hacen con dificultad).
+- **Tolerancia al error**. Ejemplos, es universal una máquina vending que tenga un botón claramente identificable para cancelar la operación.
+  No es universal una lata de conservas que deja filos metálicos cortantes.
+- **Mínimo esfuerzo físico**. Ejemplos, es universal un acceso por rampa mecánica a un primer piso de un centro comercial y no es universal una gran superficie que no disponga de espacios para el descanso.
+- **Tamaño adecuado de aproximación y uso**. Ejemplos, es universal un MOSTRADOR de atención A DOBLE ALTURA (uno a 80 cm del suelo (con hueco bajo él) para personas de talla baja o que van en silla, y otro a 110 cm para personas que caminan) y no son universales las baldas de un lineal que están por encima de los 120 cm (porque una persona en silla de ruedas no alcanza con comodidad los productos).
+
 ## Pautas de Accesibilidad para el Contenido Web (WCAG)
 
 Las pautas de accesibilidad para el contenido web son un conjunto de reglas, cuyo cumplimiento hace que nuestro sitio sea más accesible para las personas con diversidad funcional. Para que una página sea compatible con la normativa WCAG 2.1, se deben satisfacer todos los requisitos de conformidad:
