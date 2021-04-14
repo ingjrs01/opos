@@ -32,3 +32,5 @@ La acción de scripting es esencialmente escribir una serie de comandos que son 
 Esto es lo que diferencia a los lenguajes de scripting de los lenguajes de programación como Java, que se pueden «Write Once Run Anywhere (escribir una vez, ejecutar en cualquier lugar)» (eslogan oficial de Java que significa que los programas de Java pueden ejecutarse como aplicaciones autónomas en cualquier entorno; desde que se acuñó también se ha convertido en el principio WORA que se refiere a las capacidades multiplataforma).
 
 Algunos lenaguajes de scripting actuales son: JavaScript/ECMAScript, PHP, Python, Ruby, Groovy.
+
+Sigue ...
