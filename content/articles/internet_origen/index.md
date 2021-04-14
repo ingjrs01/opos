@@ -1,5 +1,5 @@
 ---
-title: Internet: arquitectura de red. Origen, evolución y estado actual
+title: Internet. arquitectura de red. Origen, evolución y estado actual
 layout: articles.njk
 ---
 

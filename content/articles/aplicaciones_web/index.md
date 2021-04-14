@@ -1,6 +1,6 @@
 ---
 title: Aplicaciones Web
-layout: article.njk
+layout: articles.njk
 ---
 
 # Aplicaciones Web.
