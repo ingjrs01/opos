@@ -43,7 +43,7 @@ Ademais das condicións sinaladas na base cuarta das xerais as persoas aspirante
 7. [Sistemas de xestión de bases de datos relacionais. Características e compoñentes](/articles/bbdd_relacional)
 8. Administración do Sistema operativo e software de base.
 9. [Administración de servidores de correo electrónico. Protocolos de correo electrónico](/articles/email)
-10. Internet: arquitectura de rede. Orixe, evolución e estado actual.
+10. [Internet: arquitectura de rede. Orixe, evolución e estado actual](/articles/internet_arquitectura)
 11. [Internet: principais servizos: correo electrónico, WWW, FTP, Telnet e outros. Protocolos HTTP e HTTPS, SSL e TLS](/articles/internet_servicios)
 12. [Aplicacións Web. Tecnoloxías de programación. Javascript, Applets, Servlets, servizos web. Linguaxes de descrición de datos: HTML e XML e as súas derivacións.Navegadores e linguaxes de programación web. Linguaxes de script](/articles/aplicaciones_web)
 13. [Sistema de xestión de contidos (CMS). Xestión das aplicacións web: Liferay, Wordpress e similares.](/articles/cms)
