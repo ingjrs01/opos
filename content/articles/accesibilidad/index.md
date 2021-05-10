@@ -83,7 +83,9 @@ Los siete principios del diseño universal:
 
 ## Pautas de Accesibilidad para el Contenido Web (WCAG)
 
-Las pautas de accesibilidad para el contenido web son un conjunto de reglas, cuyo cumplimiento hace que nuestro sitio sea más accesible para las personas con diversidad funcional. Para que una página sea compatible con la normativa WCAG 2.1, se deben satisfacer todos los requisitos de conformidad:
+Las pautas de accesibilidad para el contenido web son un conjunto de reglas, cuyo cumplimiento hace que nuestro sitio sea más accesible para las personas con diversidad funcional. Las pautas WCAG 2.0 se publicaron el 11 de diciembre de 2008 y las 2.1 el 5 de junio de 2018. Todos los criterios de 2.0 están incluídos en las 2.1. 
+Tanto WCAG 2.0 como 2.1 son estándares actuales. WCAG 2.1 no deja WCAG 2.0 obsoleto ni lo sustituye. Desde W3C se anima a utilizar la versión más reciente al desarrollar o actualizar contenido
+Para que una página sea compatible con la normativa WCAG 2.1, se deben satisfacer todos los requisitos de conformidad:
 
 - Existen tres niveles de conformidad. Se debe cumplir con todos los requisitos de al menos un nivel.
   - Nivel A: Requisitos básicos para que algunos usuarios puedan utilizar los contenidos web.
@@ -95,9 +97,6 @@ Las pautas de accesibilidad para el contenido web son un conjunto de reglas, cuy
 - Sin interferencias.
 
 Las pautas se pueden agrupar en cuatro principios
-
-## Pautas:
-
 - Perceptible.
 - Operable.
 - Comprensible
@@ -123,6 +122,19 @@ De forma resumida:
    - Se ayuda a los usuarios a corregir los errores.
 4. Robusto:
    - Se maximiza la compatiblidad con las aplicaciones de usuario actuales y futuras, incluyendo las ayudas técnicas.
+
+
+
+
+
+![Pautas WCAG](img/pautas_resumen.png "Pautas WCAG")
+
+
+
+
+
+
+
 
 ## Navegación accesible con roles WAI-ARIA
 
