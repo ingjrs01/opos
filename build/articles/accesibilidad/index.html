@@ -140,14 +140,40 @@ Para que una página sea compatible con la normativa WCAG 2.1, se deben satisfac
 </ol>
 <p><img src="img/pautas_resumen.png" alt="Pautas WCAG" title="Pautas WCAG"></p>
 <h2>Navegación accesible con roles WAI-ARIA</h2>
+<p>Segun la definición del W3C, aria es la forma de crear contenido web y aplicaciones web que sean accesibles para las personas con discapacidades.</p>
+<p>La llega de Ajax a la web, y su uso intensivo ha hecho que las aplicaciones sean más interactivas y ricas, pero a la vez menos accesibles. Imaginamos por un momento que tenemos un widget en una web como un slider. Un lector de pantalla no puede identificar que elemento es, ni conocer su estado y propiedades o capturar su comportamiento.</p>
+<p>ARIA proporciona:</p>
+<ol>
+<li>Estructuras semánticas para las zonas funcionales</li>
+<li>Mejora la navegación mediante teclado</li>
+<li>Controles complejos (widgets) más accesibles.</li>
+<li>Accesibilidad para el contenido actualizado de forma dinámica.</li>
+</ol>
 <p>Se trata de hacerles la vida más fácil a usuarios que usan un lector de pantalla. Se trata de estructurar la navegación a través del sitio web.
 Para orientarse a través de un sitio web, los usuarios que usan lector de pantallas van pulsando diferentes teclas para navegar por la web: ir saltando por encabezados, listas, ojear imágenes, etc.</p>
-<p>Ej, Para ojear los encabezados pueden ir pulsando la letra h.</p>
-<p>¿ Como saltar entre los diferntes bloques de contenido ?
-Es decir, de la cabecera a la zonad e navegación, al contenido principal, al cuadro de búsqueda, al pié de página, etc. Las WCAG 2.0 establecieron la especificación WAI-ARIA que consistte en establecer unos roles que sirven para crear contenidos web accesibles.</p>
-<p>Añadir roles es muy sencillo, bastará con añadir a la etiqueta contenedora el atricuto role=&quot;[loquesea]&quot;</p>
-<p>Ejemplo:</p>
-<pre><code class="language-html">&lt;div role=&quot;main&quot;&gt;...&lt;/div&gt;
+<h3>Roles</h3>
+<p>Los roles sirven para especificar la función de un elemento. Para utilizarlo, es tan sencillo como añadir una propiedad al elemento role=&quot;[nombre_rol]&quot;.</p>
+<p>Ejemplos:</p>
+<pre><code class="language-html">&lt;div role=&quot;application&quot;&gt;
+   &lt;ul role=&quot;nav&quot;&gt;
+   ...
+   &lt;/ul&gt;
+&lt;/div&gt;
+
+
+Dentro de los roles, existen dos tipos: los que definen la estructura de la página (cabecera, navegación , pié, ...) también llamamos landmark roles y aquellos que definen elementos de la interfaz (árboles, alertas, sliders, ...)
+
+Ej, Para ojear los encabezados pueden ir pulsando la letra h.
+
+¿ Como saltar entre los diferntes bloques de contenido ?
+Es decir, de la cabecera a la zonad e navegación, al contenido principal, al cuadro de búsqueda, al pié de página, etc. Las WCAG 2.0 establecieron la especificación WAI-ARIA que consistte en establecer unos roles que sirven para crear contenidos web accesibles.
+
+Añadir roles es muy sencillo, bastará con añadir a la etiqueta contenedora el atricuto role=&quot;[loquesea]&quot;
+
+Ejemplo:
+
+```html
+&lt;div id=&quot;main&quot; role=&quot;main&quot;&gt;...&lt;/div&gt;
 </code></pre>
 <p>Los landmark roles son:</p>
 <ul>

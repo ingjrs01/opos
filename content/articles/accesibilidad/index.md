@@ -138,37 +138,62 @@ De forma resumida:
 
 ## Navegación accesible con roles WAI-ARIA
 
+Segun la definición del W3C, aria es la forma de crear contenido web y aplicaciones web que sean accesibles para las personas con discapacidades. 
+
+La llega de Ajax a la web, y su uso intensivo ha hecho que las aplicaciones sean más interactivas y ricas, pero a la vez menos accesibles. Imaginamos por un momento que tenemos un widget en una web como un slider. Un lector de pantalla no puede identificar que elemento es, ni conocer su estado y propiedades o capturar su comportamiento. 
+
+ARIA proporciona: 
+1. Estructuras semánticas para las zonas funcionales
+2. Mejora la navegación mediante teclado
+3. Controles complejos (widgets) más accesibles.
+4. Accesibilidad para el contenido actualizado de forma dinámica.
+
 Se trata de hacerles la vida más fácil a usuarios que usan un lector de pantalla. Se trata de estructurar la navegación a través del sitio web.
 Para orientarse a través de un sitio web, los usuarios que usan lector de pantallas van pulsando diferentes teclas para navegar por la web: ir saltando por encabezados, listas, ojear imágenes, etc.
+
+### Roles
+
+Los roles sirven para especificar la función de un elemento. Para utilizarlo, es tan sencillo como añadir una propiedad al elemento role="[nombre_rol]".
+
+Ejemplos:
+```html
+<div role="application">
+   <ul role="nav">
+   ...
+   </ul>
+</div>
+```
+
+Dentro de los roles, existen dos tipos: los que definen la estructura de la página (cabecera, navegación , pié, ...) también llamamos landmark roles y aquellos que definen elementos de la interfaz (árboles, alertas, sliders, ...)
 
 Ej, Para ojear los encabezados pueden ir pulsando la letra h.
 
 ¿ Como saltar entre los diferntes bloques de contenido ?
 Es decir, de la cabecera a la zonad e navegación, al contenido principal, al cuadro de búsqueda, al pié de página, etc. Las WCAG 2.0 establecieron la especificación WAI-ARIA que consistte en establecer unos roles que sirven para crear contenidos web accesibles.
 
-Añadir roles es muy sencillo, bastará con añadir a la etiqueta contenedora el atricuto role="[loquesea]"
-
-Ejemplo:
-
-```html
-<div role="main">...</div>
-```
-
 Los landmark roles son:
 
-- Banner: zona del título. Solo 1 por página
-- Complementary: zona complementaria. por ejemplo artículos relacionados
-- Contentinfo: zona de información sobre el documento.
-- Form
-- Main.
-- Navigation
-- Search
-- Application (eliminado de los Landmark Roles en ARIA 1.1, que pasa a ser un rol de estructura)
-- Region (añadido en los Landmark Roles en ARIA 1.1)
+- banner: zona del logo y título de la página. Debería haber solo uno por página. En html se puede asimilar a header
+- complementary: zona complementaria,  por ejemplo artículos relacionados. En HTML5 sería un aside
+- contentinfo: zona de información sobre el documento, normalmente el pié de página. 1 por página. En HTML5 footer
+- form
+- main. Solo uno por página
+- navigation. Se pueden tener varios. En HTML5 nav
+- search. No hay un elemento en HTML5, así que se haría con un form
+- application (eliminado de los Landmark Roles en ARIA 1.1, que pasa a ser un rol de estructura)
+- region (añadido en los Landmark Roles en ARIA 1.1)
 
 ### Etiquetas Aria-label
 
 Con ello ponemos una etiqueta dentro del elemento con un atributo
+
+https://olgacarreras.blogspot.com/2017/12/novedades-wai-aria-11.html
+https://olgacarreras.blogspot.com/2007/09/wai-aria-introduccion-referencias.html
+https://www.usableyaccesible.com/servicios.php
+https://olgacarreras.blogspot.com/2014/03/navegacion-mas-accesible-y-semantica-en.html
+http://www.nosolousabilidad.com/articulos/wai_aria.htm
+
+
 
 ## Bibliografía
 

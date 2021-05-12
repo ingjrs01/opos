@@ -1,0 +1,24 @@
+div#header {
+    background-color: azure;
+}
+ul.nav
+{
+   padding-right: 0px;
+   padding-left: 0px;
+   padding-bottom: 0px;
+   padding-top: 0px;
+   margin: 0px;
+}
+li.nav_item
+{
+   list-style-type: none;
+   display: inline;
+   padding-right: 5px;
+}
+div#main {
+    height: 500px;
+    background-color: darkgray;
+}
+div#header {
+    background-color: azure;
+}
