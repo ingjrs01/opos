@@ -40,7 +40,7 @@ Ademais das condicións sinaladas na base cuarta das xerais as persoas aspirante
 3. Paquetes de ofimática: aplicacións que os compoñen. Comandos e os seus usos.
 4. Sistemas operativos (Linux e Windows). Definición e obxectivo. Clasificación, estrutura e funcións principais. Administración, servizos e sistemas de ficheiros.
 5. [Modelo de rede en capas. Modelo de rede OSI. Modelo de rede TCP/IP](/articles/osi)
-6. Internet: Arquitectura de rede. Orixe, evolución e estado actual. Servizos: correo electrónico, WWW, FTP, Telnet e outros. Protocolos HTTP e HTTPS, SSL e TLS.
+6. [Internet: Arquitectura de rede. Orixe, evolución e estado actual. Servizos: correo electrónico, WWW, FTP, Telnet e outros. Protocolos HTTP e HTTPS, SSL e TLS.](/articles/internet_servicios)
 7. Arquitectura cliente/servidor. Modelo de 2 capas. Modelo de 3 capas. Compoñentes e operación. Arquitecturas de servizos Webs.
 8. [Linguaxes de marca ou etiqueta. Características e funcionalidades. SGML, HTML, XML e as súas derivacións](/articles/tag_languajes)
 9. Navegadores e linguaxes de programación Web. Linguaxes de script.

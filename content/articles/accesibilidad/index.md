@@ -183,6 +183,47 @@ Los landmark roles son:
 - application (eliminado de los Landmark Roles en ARIA 1.1, que pasa a ser un rol de estructura)
 - region (añadido en los Landmark Roles en ARIA 1.1)
 
+
+Los otros elementos, son de interfaz (roles para widgets). Para verlo mejor, veamos un ejemplo, los problemas que tiene y las soluciones que aporta ARIA: 
+
+Pensemos en un slider, que se puede situar en 3 posiciones: fácil, normal o difícil (valores 1, 2 y 3). El código podría ser algo como : 
+
+```html
+<div id="slider-background" title="nivel">
+	<div id="slider-pointer">
+		<img src="handler.png" />
+	</div>
+</div>
+```
+
+Para una persona sin discapacidad su uso es trivial, pero para una que utilice un lector de pantalla, el lector no sabe que tipod e elemento es (el ve un div), ni puede acceder a el (los divs no son accesibles por teclado), no se sabe el estado actual, ni que posibles valores puede tomar. En el siguiente ejemplo vemos un slider accesible con ARIA: 
+
+```html
+<p id="slider-description">Puede usar las teclas derecha/izquierda para cambiar el nivel.</p> 
+<span id="slider-label">Nivel:</span> 
+<div id="slider-rail">
+	<button id="slider-handler" role="slider" aria-labelledby="slider-label" aria-describedby="slider-description" aria-valuemin="1" aria-valuemax="3" aria-valuenow="2"></button>
+</div>
+```
+
+### Navegación con el teclado
+
+Podemos establecer la navegación con el teclado mediante el atributo tabindex, pero hay que tener en cuenta que los únicos elementos capaces de recibir el foco son : a, area, button, input, object, select y textarea. 
+
+Con tabindex y un número, podemos indicar el órden. Si queremos excluír algén elemento, podemos indicar tabindex=-1
+
+
+### Actualizaciones dinámicas de contenido. 
+
+ARIA denomina "regiones activas" a los elementos/zonas que pueden presntar actualizaciones por ajax y cuenta con la propiedad aria-live para indicar el valor de intrusismo: 
+
+- off
+- polite
+- assertive
+- rude
+
+
+
 ### Etiquetas Aria-label
 
 Con ello ponemos una etiqueta dentro del elemento con un atributo

@@ -159,36 +159,56 @@ Para orientarse a través de un sitio web, los usuarios que usan lector de panta
    ...
    &lt;/ul&gt;
 &lt;/div&gt;
-
-
-Dentro de los roles, existen dos tipos: los que definen la estructura de la página (cabecera, navegación , pié, ...) también llamamos landmark roles y aquellos que definen elementos de la interfaz (árboles, alertas, sliders, ...)
-
-Ej, Para ojear los encabezados pueden ir pulsando la letra h.
-
-¿ Como saltar entre los diferntes bloques de contenido ?
-Es decir, de la cabecera a la zonad e navegación, al contenido principal, al cuadro de búsqueda, al pié de página, etc. Las WCAG 2.0 establecieron la especificación WAI-ARIA que consistte en establecer unos roles que sirven para crear contenidos web accesibles.
-
-Añadir roles es muy sencillo, bastará con añadir a la etiqueta contenedora el atricuto role=&quot;[loquesea]&quot;
-
-Ejemplo:
-
-```html
-&lt;div id=&quot;main&quot; role=&quot;main&quot;&gt;...&lt;/div&gt;
 </code></pre>
+<p>Dentro de los roles, existen dos tipos: los que definen la estructura de la página (cabecera, navegación , pié, ...) también llamamos landmark roles y aquellos que definen elementos de la interfaz (árboles, alertas, sliders, ...)</p>
+<p>Ej, Para ojear los encabezados pueden ir pulsando la letra h.</p>
+<p>¿ Como saltar entre los diferntes bloques de contenido ?
+Es decir, de la cabecera a la zonad e navegación, al contenido principal, al cuadro de búsqueda, al pié de página, etc. Las WCAG 2.0 establecieron la especificación WAI-ARIA que consistte en establecer unos roles que sirven para crear contenidos web accesibles.</p>
 <p>Los landmark roles son:</p>
 <ul>
-<li>Banner: zona del título. Solo 1 por página</li>
-<li>Complementary: zona complementaria. por ejemplo artículos relacionados</li>
-<li>Contentinfo: zona de información sobre el documento.</li>
-<li>Form</li>
-<li>Main.</li>
-<li>Navigation</li>
-<li>Search</li>
-<li>Application (eliminado de los Landmark Roles en ARIA 1.1, que pasa a ser un rol de estructura)</li>
-<li>Region (añadido en los Landmark Roles en ARIA 1.1)</li>
+<li>banner: zona del logo y título de la página. Debería haber solo uno por página. En html se puede asimilar a header</li>
+<li>complementary: zona complementaria,  por ejemplo artículos relacionados. En HTML5 sería un aside</li>
+<li>contentinfo: zona de información sobre el documento, normalmente el pié de página. 1 por página. En HTML5 footer</li>
+<li>form</li>
+<li>main. Solo uno por página</li>
+<li>navigation. Se pueden tener varios. En HTML5 nav</li>
+<li>search. No hay un elemento en HTML5, así que se haría con un form</li>
+<li>application (eliminado de los Landmark Roles en ARIA 1.1, que pasa a ser un rol de estructura)</li>
+<li>region (añadido en los Landmark Roles en ARIA 1.1)</li>
+</ul>
+<p>Los otros elementos, son de interfaz (roles para widgets). Para verlo mejor, veamos un ejemplo, los problemas que tiene y las soluciones que aporta ARIA:</p>
+<p>Pensemos en un slider, que se puede situar en 3 posiciones: fácil, normal o difícil (valores 1, 2 y 3). El código podría ser algo como :</p>
+<pre><code class="language-html">&lt;div id=&quot;slider-background&quot; title=&quot;nivel&quot;&gt;
+	&lt;div id=&quot;slider-pointer&quot;&gt;
+		&lt;img src=&quot;handler.png&quot; /&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Para una persona sin discapacidad su uso es trivial, pero para una que utilice un lector de pantalla, el lector no sabe que tipod e elemento es (el ve un div), ni puede acceder a el (los divs no son accesibles por teclado), no se sabe el estado actual, ni que posibles valores puede tomar. En el siguiente ejemplo vemos un slider accesible con ARIA:</p>
+<pre><code class="language-html">&lt;p id=&quot;slider-description&quot;&gt;Puede usar las teclas derecha/izquierda para cambiar el nivel.&lt;/p&gt; 
+&lt;span id=&quot;slider-label&quot;&gt;Nivel:&lt;/span&gt; 
+&lt;div id=&quot;slider-rail&quot;&gt;
+	&lt;button id=&quot;slider-handler&quot; role=&quot;slider&quot; aria-labelledby=&quot;slider-label&quot; aria-describedby=&quot;slider-description&quot; aria-valuemin=&quot;1&quot; aria-valuemax=&quot;3&quot; aria-valuenow=&quot;2&quot;&gt;&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<h3>Navegación con el teclado</h3>
+<p>Podemos establecer la navegación con el teclado mediante el atributo tabindex, pero hay que tener en cuenta que los únicos elementos capaces de recibir el foco son : a, area, button, input, object, select y textarea.</p>
+<p>Con tabindex y un número, podemos indicar el órden. Si queremos excluír algén elemento, podemos indicar tabindex=-1</p>
+<h3>Actualizaciones dinámicas de contenido.</h3>
+<p>ARIA denomina &quot;regiones activas&quot; a los elementos/zonas que pueden presntar actualizaciones por ajax y cuenta con la propiedad aria-live para indicar el valor de intrusismo:</p>
+<ul>
+<li>off</li>
+<li>polite</li>
+<li>assertive</li>
+<li>rude</li>
 </ul>
 <h3>Etiquetas Aria-label</h3>
 <p>Con ello ponemos una etiqueta dentro del elemento con un atributo</p>
+<p>https://olgacarreras.blogspot.com/2017/12/novedades-wai-aria-11.html
+https://olgacarreras.blogspot.com/2007/09/wai-aria-introduccion-referencias.html
+https://www.usableyaccesible.com/servicios.php
+https://olgacarreras.blogspot.com/2014/03/navegacion-mas-accesible-y-semantica-en.html
+http://www.nosolousabilidad.com/articulos/wai_aria.htm</p>
 <h2>Bibliografía</h2>
 <p>Web: https://www.mcarmendealba.com/accesibilidad-y-usabilidad-diferencias/
 Web: https://olgacarreras.blogspot.com/
