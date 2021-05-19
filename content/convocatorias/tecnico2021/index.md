@@ -50,7 +50,7 @@ CUARTO EXERCICIO, de carácter obrigatorio e non eliminatorio. Consistirá na tr
 11. Sistemas de virtualización de hardware. Fundamentos e beneficios. Hipervisores.
 
 - Segunda parte:
-12. Sistemas de virtualización de escritorio. Fundamentos e beneficios. Vantaxes e inconvenientes.
+12. [Sistemas de virtualización de escritorio. Fundamentos e beneficios. Vantaxes e inconvenientes.](/articles/virtualizacion_desktop)
 13. [LDAP. Orixe e influencias. Uso. Implementacións. Active Directory](/articles/ldap)
 14. [Servidores de correo electrónico. Funcionamento. MTA. Relays](/articles/email)
 15. Hiperconectividade e Hiperconverxencia.
