@@ -77,3 +77,8 @@ Ademais das condicións sinaladas na base cuarta das xerais as persoas aspirante
 - <a href="" target="_blank">Publicación en el BOPPO</a>
 - <a href="https://sede.depo.gal/web/public/employment/employment-public-examination.xhtml?idprocedure=91097386&idoposicion=91359363" target="_blank">Enlace a proceso en Sede Electrónica</a>
 
+## Documentos: 
+
+- <a href="docs/pago_tasa_programador.pdf" target="_blak">Recibo</a>
+- <a href="docs/Solicitude_programador.pdf" target="_blak">Solicitud</a>
+- <a href="docs/REX_WEB2021022231.pdf" target="_blak">Comprobante</a>

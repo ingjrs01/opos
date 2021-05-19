@@ -56,3 +56,11 @@ Ademais das condicións sinaladas na base cuarta das xerais as persoas aspirante
 - <a href="https://boppo.depo.gal/web/boppo/detalle/-/boppo/2021/04/06/2021016861" target="_blak">BOPPO de la publicación</a>
 - <a href="https://sede.depo.gal/web/public/employment/employment-public-examination.xhtml?idprocedure=91097386&idoposicion=91360144" target="_blank">Proceso en Sede Electrónica</a>
 - <a href="https://sede.depo.gal/web/dcsv/78CPOG53OURULEY5" target="_blank">Bases específicas</a>
+
+## Documentos: 
+
+- <a href="docs/pago_tasa.pdf" target="_blak">Recibo</a>
+- <a href="docs/Solicitude.pdf" target="_blak">Solicitud</a>
+- <a href="docs/REX_WEB2021020982.pdf" target="_blak">Comprobante</a>
+
+

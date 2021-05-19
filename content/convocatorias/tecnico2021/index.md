@@ -76,3 +76,9 @@ CUARTO EXERCICIO, de carácter obrigatorio e non eliminatorio. Consistirá na tr
 
 - <a href="https://boppo.depo.gal/web/boppo/detalle/-/boppo/2021/04/06/2021016860" target="_blank">Publicación en DOGA</a>
 - <a href="https://sede.depo.gal/web/public/employment/employment-public-examination.xhtml?idprocedure=91097623&idoposicion=91382691" target="_blank">Enlace en Sede Electrónica</a>
+
+## Documentos: 
+
+- <a href="docs/pago_tasa.pdf" target="_blak">Recibo</a>
+- <a href="docs/Recibo.pdf" target="_blak">Solicitud</a>
+- <a href="docs/REX_WEB2021022242.pdf" target="_blak">Comprobante</a>
