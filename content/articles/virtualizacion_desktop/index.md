@@ -11,7 +11,7 @@ layout: articles.njk
 - Fundamentos
 - Beneficios
 - Ventajas 
-- Inconvenientes.
+- [Inconvenientes](#inconvenientes)
 
 ## Definición
 
@@ -51,3 +51,10 @@ La virtualización de escritorio hace que todos los datos de los usuarios de los
 - Recursos a medida de las necesidades del escritorio
 - Múltiples escritorios bajo demanda
 - Libre provisión de equipos de sobremesa (controlada por las políticas de cada corporación)
+
+## <a name="inconvenientes"></a>Inconvenientes:
+
+- Un problema que afecte al servidor, afectará  a múltiples usuarios
+- Los usuarios que requieran de aplicaciones únicas o sus propios ajustes pueden dar lugar a una proliferación de imágenes, que pueden llegar a ser complicadas de gestionar. 
+- Se requiere de una imporante inversión en servidores, almacenamiento y posiblemente mejora de la red. 
+- Los administradores necesitan conocer las limitaciones de este tipo de infraestructura

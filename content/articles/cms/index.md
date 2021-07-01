@@ -5,11 +5,14 @@ layout: articles.njk
 
 # Sistemas de Gestión de Contenidos
 
+## Introducción
 Un sistema de gestión de contenidos, en adelante CMS es un software quie sirve para administrar contenido web, con facilidad y sin necesidad de conocimientos de programación web. Pero esta no es la única ventaja o característica que define a un CMS. Utilizar un gestor de contenidos aporta: 
 - Se trata de un desarrollo ya hecho, por lo tanto no necesitamos empezar a trabajar desde cero, lo que debería reducir los costes. 
+- Incorporan un sistema sencillo e intuitivo para simplificar la edición y publicación de los contenidos.
 - Separa los contenidos propiamente dichos de como se presentan. Esta es una de las principales características. También se puede conseguir programando a mano, pero en un CMS esto ya viene hecho. El poder hacer esto significa que se puede modificar todo el aspecto visual sin necesidad de perder los contenidos, o ir modificando los contenidos con independencia del aspecto visual que van a tener. 
 - Permiten que usuarios sin conocimentos técnicos en tecnologías web, pero expertos en otros ámbitos como la creación de contenido (un periodista por ejemplo), pueda centrarse en su trabajo. 
-- La mayoría poseen un sistema de usuarios y permisos que permiten definir roles, y administrar que actividades puede realizar cada persona. 
+- La mayoría poseen un sistema de gestión usuarios y permisos que permiten definir roles, y administrar que actividades puede realizar cada persona. 
+- La gran mayoría incopora sistemas para tenemos nuesto contenido en varios idiomas. 
 
 Entre las ventajas, podríamos citar que ciertos sistemas son muy conocidos, y sino se mantienen actualizados, un atacante puede tener más facilidades para vulnerar nuestro sitio. Por otro lado, algunos cms pueden resultar pesados y hacer que la página sea más lenta o haber limitacones de funcionalidad. 
 
@@ -19,9 +22,25 @@ No todos los programas son iguales, y en casi cualquier cosa que digamos pueden 
 En un primer momento, podemo sdecir que todo CMS tiene dos grandes partes, por un lado un panel de control desde donde se crear y administran los contenidos, los usuarios, y en general toda la administración de la herramienta, y una parte pública que viene siendo la web resultante. A menudo se usan los términos backend y fontend para referirnos a estas partes. 
 Si nos memtemos más en los compontes, todos los CMS tiene un sistema de plantillas que define como es la vista exterior y core o parte principal que las funcionalidades principales y unas extensiones o plugins que permiten añadir funcionalidades a gusto del administrador. 
 
+## Ventajas e Inconvenientes: 
+
+- La mayoría de los CMS son libres, o al menos tienen una versión libre para poder probarlos. 
+- Falicitan la subida de contenidos multimedia. 
+- Poseen herramientas SEO para facilitar esta tarea. 
+- Son muy personlinizables. 
+- Poseen un gran número de plántillas y plugins, tanto gratuítos como de pago, para personalizar el sitio a las necesidades del usuario. 
+
+
+Las deventajas son: 
+- Necesitan de actualizaciones periódicas.
+- La utilización de muchos plugins, y de algunos de baja calidad pueden afectar mucho al rendimiento. 
+- El hosting para un CMS es un poco más caro
+- 
+
 ## Clasificación. 
 Es complicado establecer una clasificación para CMS, porque se puede establecer en base a muchos conceptos. Por ejemmplo, podemos estblecer en función del lenguaje de programación en el que están creados (PHP, Java, Python, Javascript, Ruby, ...), en base al tipo de licencia software libre o propietarios, o también en base a su uso o funcionalidad. 
 Según esto último, nos propemos encontrar cms dirigidos a la creación de blogs, como blogger o wordpress en un principio, cms oritenados a comercio electrónico como magento, prestashop, cms orientados al e-leargning como moodle o para el mundo del periodisdo como bCube Publisher. Por último, tenemos CMS de propósito general como Wordpress en la actualidad, Joomla, Drupal o Typo 3
+
 
 ## TYPO3
 Software libre programado en PHP y compatible con varias bases de datos como MySQL, PostGree e incluso Oracle. 
@@ -85,6 +104,7 @@ Para sitios orientados a negocios, portales empresariales.
 ## Homestead
 ## Liferay
 CMS de código libre desarrollado en Java. 
+Fué creado en el año 2000, en origen como una solución para organizaciones sin ánimo de lucro. 
 
 ## Radian CMS
 
