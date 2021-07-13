@@ -15,3 +15,8 @@
     La formación y la concienciación (disposición adicional primera).
 
 
+## Introducción
+
+El ENS fue establecido anteriormente por el artículo 42 de la Ley 11/2007 y está regulado por el Real Decreto 3/2010, de 8 de enero(Abre en nueva ventana) , que fue modificado por el Real Decreto 951/2015(Abre en nueva ventana) para actualizarlo a la luz de la experiencia obtenida en su implantación, de la evolución de la tecnología y las ciberamenazas y del contexto regulatorio internacional y europeo.
+
+Las instrucciones técnicas de seguridad , de obligado cumplimiento, son esenciales para lograr una adecuada, homogénea y coherente implantación de los requisitos y medidas recogidos en el Esquema y, particularmente, para indicar el modo común de actuar en aspectos concretos: Informe del estado de la seguridad; Notificación de incidentes de seguridad; Auditoría de la seguridad; Conformidad con el Esquema Nacional de Seguridad; Adquisición de productos de seguridad; Criptología de empleo en el Esquema Nacional de Seguridad; Interconexión en el Esquema Nacional de Seguridad; y Requisitos de seguridad en entornos externalizados.

@@ -204,6 +204,7 @@ Para una persona sin discapacidad su uso es trivial, pero para una que utilice u
 <div id="slider-rail">
 	<button id="slider-handler" role="slider" aria-labelledby="slider-label" aria-describedby="slider-description" aria-valuemin="1" aria-valuemax="3" aria-valuenow="2"></button>
 </div>
+
 ```
 
 ### Navegación con el teclado
