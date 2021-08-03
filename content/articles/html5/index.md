@@ -287,9 +287,9 @@ El elemento figure representa a una pieza de documento autocontenido que se util
 
 Ser autocontenido significa que figure tiene cierto grado de independencia del flujo del documento, y su posición relativa al contenido circundante no necesita ser exacta.
 
-Las imágenes ubicadas junto bloques de texto en un períodico contituyen buenos ejemplos de uso apropiado de los elementos figure y figcaption.
+Las imágenes ubicadas junto bloques de texto en un periódico contituyen buenos ejemplos de uso apropiado de los elementos figure y figcaption.
 
-Cuando figure tiene información que sóle está tangencialmente relacionada al contenido circundante, el elemento aside debería ser utilizado en su lugar, opcionalmente contienendo éste mismo un elemento figure.
+Cuando figure tiene información que sólo está tangencialmente relacionada al contenido circundante, el elemento aside debería ser utilizado en su lugar, opcionalmente contienendo éste mismo un elemento figure.
 
 ```html
 <h1>Análisis de uso de los navegadores</h1>
@@ -305,12 +305,15 @@ Cuando figure tiene información que sóle está tangencialmente relacionada al 
 </p>
 ```
 
+En cuanto a los formatos para utilizar en las imágnes
+
 ## figcaption
 
 Define una título para un elemento &lt;figure&gt;.
 El elemento figcaption representa un título o leyenda de un fragmento de contenido (figure). Un elemento figure representa a un trozo de documento autocontenido que se usa habitualmente para encerrar imágenes, gráficos, tablas de referencia, videos, poemas, fragmentos de código, etc.
 
 La presencia del elemento figcaption dentro de figure es opcional, pero si está presente, sólo puede hacer uno y debe estar ubicado al comienzo o al final del elemento figure al cual pertenece.
+
 
 ## mark
 
@@ -438,7 +441,7 @@ Si los atributos min y max no son declarados en este control, los límites de es
 
 Aunque no existe una forma explícita de especificar las unidades en el elemento meter, éstas pueden proveerse en el atributo title en texto de forma libre.
 
-El soporte provisto por los navegadores para meter es incompleto. Los atutores pueden tener que recurrir a programas y/u hojas de estilo para lograr los mismo efectos consistentemente.
+El soporte provisto por los navegadores para meter es incompleto. Los autores pueden tener que recurrir a programas y/u hojas de estilo para lograr los mismo efectos consistentemente.
 
 ```html
 <p>
@@ -448,6 +451,14 @@ El soporte provisto por los navegadores para meter es incompleto. Los atutores p
 ```
 
 ![Ejemplos de como se ve meter](img/meter.jpg)
+
+Se le pueden añadir algunos parámetros para conseguir medidores visuales en verde, amarillo o rojo
+
+```html
+<meter min="0" max="100" value="25">Medidor</meter>
+<meter min="0" max="100" low="30" value="25">Altos ok/meter>
+<meter min="0" max="100" low="30" optimun="5" high="20" value="25">Bajos OK</meter>
+```
 
 ## progress
 
@@ -784,6 +795,63 @@ Los atributos type y valuetype se han vuelto inválidos en HTML5. Se aconseja a 
 <object data="/assets/audio/Bach_Air_on_the_G_string.mid" type="audio/mid">
   <param name="autostart" value="false" />
 </object>
+```
+
+## Elemento script
+
+La etiqueta `<script>` tiene un atributo `nomodule` no muy conocido. Permite indicar a navegadores modernos que el script no debe cargarse. Como los navegadores antiguos lo ignorarán, sirve para cargar scripts sólo en navegadores antiguos como IE, útil para tareas de legacy.
+
+```html
+<script type="module">
+  import snarkdown from "https://cdn.jsdelivr.net/npm/snarkdown@2.0.0/dist/snarkdown.es.js";
+
+  const md="**Hola**, esto es una prueba"
+  cont html = snarkdown(md)
+</script>
+<script nomodule src="/legacy.js"></script>
+```
+
+## Elemento input
+
+El elemento input, utilizado en los formularios. 
+
+A parte de los usos comunes, podemos: 
+
+### Indicar patrones
+ ```html
+ <input pattern="[a-zA-Z0-9]{8,}">
+ <style>
+   input:valid {background: green}
+   input:invalid {background: red}
+</style>
+```
+
+### Establecer tipos: 
+
+```html
+<input type="color" value="#440055">
+<input type="range" min="1" max="50" value="7">
+<input type="date" value="2021-08-03">
+<input type="tel" value="986223344">
+```
+
+Podemos deshabilitar el autocompletado con: 
+
+```html
+<input autocomplete="off">
+```
+
+## Elemento video
+
+Ya vimos ejemplos con la etiqueta source. Añadiremos que podemos añadir una imagen mientras no se carga el video
+
+```html
+<video controls poster="/media/video/capture1.svg">
+  <source src="video.mp4" type="video/mp4">
+  <source src="video.webm" type="video/webm">
+  <source src="video.ogv" type="video/ogg">
+  <img src="imagen.png" alt="video no soportado">
+</video>
 ```
 
 ## Elementos eliminados:
