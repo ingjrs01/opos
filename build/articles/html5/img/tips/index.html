@@ -1,0 +1,121 @@
+<h2>Contenido editable</h2>
+<p>Con el atributo contenteditable, podemos hacer que un elemento sea editable. Ej</p>
+<pre><code class="language-html">&lt;p contenteditable=&quot;true&quot;&gt;Texto editable por el usuario&lt;/p&gt;
+</code></pre>
+<h2>Atributo hidden</h2>
+<p>Con este atributo podemos hacer que un elemento no se muestre, de forma similar a display:none, pero mientras en segundo se trata de ocultar un elemento por cuestiones de presentación, el primero se oculta porque no es relevante semánticamente.</p>
+<h2>data</h2>
+<p>Podemos añadir metadatos a un elemento. Para ello lo correcto es utilizar el prefijo data, y así luego los podemos obtener con la propiedad dataset:</p>
+<pre><code class="language-html">&lt;p class=&quot;element&quot; data-info=&quot;metadatos a procesar&quot;&gt;Texto del párrafo&lt;/p&gt;
+&lt;script&gt;
+    const info = document.querySelector(&quot;.element&quot;).dataset.info,
+&lt;/script&gt;
+</code></pre>
+<h2>Carga diferida.</h2>
+<p>Es una técnica común poner los scripts de una página al final de ésta para que cuando se carguén ya tengamos el DOM cargado. Podemos hacer esto mismo con el atributo defer, que indica al navegador que primero cargue el HTML y luego el script.</p>
+<pre><code class="language-html">&lt;script defer src=&quot;js/index.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>Por otro lado, el atributo async hace que la carga se realice el pararelo.</p>
+<h2></h2>
+<p>Con las etiquetas <code>&lt;details&gt;</code> y <code>&lt;summary&gt;</code> puedes crear acordeones HTML (elementos desplegables). La etiqueta <code>&lt;summary&gt;</code> contiene el título a pulsar para desplegar, y la etiqueta a continuación el contenido a mostrar. El atributo <code>open</code> hace que esté desplegado por defecto.</p>
+<pre><code class="language-html">&lt;details open&gt;
+    &lt;summary&gt;Título del acordeón&lt;/summary&gt;
+    &lt;p&gt;Aquí dentro el contenido&lt;/p&gt;
+&lt;/details&gt;
+</code></pre>
+<p>La etiqueta <code>&lt;dialog&gt;</code> permite crear mensajes, ventanas o diálogos accesibles para nuestros documentos de una forma rápida y sencilla. El atributo <code>open</code> muestra el diálogo, que por defecto está oculto (cerrado). Cuidado con el soporte actual: https://caniuse.com/dialog</p>
+<pre><code class="language-html">&lt;dialog open&gt;
+    &lt;p&gt;Mensaje&lt;/p&gt;
+    &lt;button onclick=&quot;this.parentelement.close()&quot;&gt;Close&lt;/button&gt;
+&lt;/dialog&gt;
+</code></pre>
+<h2>Inputs</h2>
+<p>Combinando un input con un datalist, podemos tener un campo de texto, que permite autorelleno</p>
+<pre><code class="language-html">&lt;datalist id=&quot;conocimientos&quot;&gt;
+          &lt;option value=&quot;HTML&quot;&gt;HTML&lt;/option&gt;          
+          &lt;option value=&quot;CSS&quot;&gt;CSS&lt;/option&gt;          
+          &lt;option value=&quot;Javascript&quot;&gt;Javascript&lt;/option&gt;          
+&lt;/datalist&gt;
+
+&lt;input list=&quot;conocimientos&quot;&gt;
+</code></pre>
+<h2>Formularios</h2>
+<p>A tener en cuenta en los formularios. Los campos disabled y readonly aparecen ambos en gris, y no son editables. Sin embargo, a la hora de enviar el formulario, solo el segundo será enviado.</p>
+<h2>Tipografías</h2>
+<p>Para utilizar tipografías específicas, es mejor alojarlas en la propia web, y cargarlas mediatne @font-face, usando formatos como WOFF2 y WOFF</p>
+<pre><code class="language-css">@font-face {
+    font-family: &quot;Montserrat&quot;;
+    src:
+        url(/fonts/montserrat.woff2) format(&quot;woff2&quot;),
+        url(/fonts/montserrat.woff) format(&quot;woff&quot;),
+        url(/fonts/montserrat.ttf) format(&quot;truetype&quot;);
+    font-display: swap;
+}
+</code></pre>
+<p>También se pueden utilziar repositorios como Google Fonts, pero desde diciembre de 2020, en Chrome, que es el navegador mayoritario ya no se aplican las ventajas de rendimiento en CDN compartidos. En cuano a los formatos, woff2 y woff son suficientes para la mayoría de navegadores. Podmeos añadir TTF para navegadores antiguos, pero fuetnes como EOT y SVG no tienen sentido actualmente.</p>
+<h2>Barras de progreso.</h2>
+<p>Tenemos una eitqueta para crear barras de progreso. Se puede utilizar de forma infinita, en un punto fijo o de forma dinámica.</p>
+<pre><code class="language-html">
+&lt;!--Modo infinito --&gt;
+&lt;progress&gt;&lt;/progress&gt;
+
+&lt;!-- Ejemplo fixed, al 25% de un total de 100 --&gt;
+&lt;progress max=&quot;100&quot; value=&quot;25&quot;&gt;&lt;/progress&gt;
+
+&lt;!-- Dinámico (creado en JS) --&gt;
+&lt;progress class=&quot;bar&quot; max=&quot;100&quot; value=&quot;0&quot;&gt;&lt;/progress&gt;
+&lt;script&gt;
+    const progress = document.querySelector(&quot;.bar&quot;);
+    for (let i = 0;i &lt;= 100;i++) {
+        setTimeout(() =&gt; progress.value = i, 50 * i);
+    }
+&lt;/script&gt;
+
+</code></pre>
+<h2>Descargas</h2>
+<p>En un enlace para descargar, el atributo download indica al navegador que debe descargar el recurso:</p>
+<pre><code class="language-html">&lt;a href=&quot;documento234454.pdf&quot;&gt;Ver PDF&lt;/a&gt;
+&lt;a href=&quot;documento234454.pdf&quot; download&gt;Descargar&lt;/a&gt;
+&lt;a href=&quot;documento234454.pdf&quot;download=&quot;file.pdf&quot;&gt;Lo descarga como file.pdf&lt;/a&gt;
+</code></pre>
+<h2>checkbox</h2>
+<p>El elemento checkbox tiene dos estados, pero con javascript podemos asignarle un tercer estado &quot;indeterminado&quot;, que se representa con un guión horizontal.</p>
+<pre><code class="language-html">&lt;input class=&quot;test&quot; type=&quot;checkbox&quot; checked&gt;
+&lt;script&gt;
+    document.querySelector(&quot;.test&quot;).indeterminate=true;
+&lt;/script&gt;
+</code></pre>
+<h2>step</h2>
+<p>En los elementos numéricos, el atributo step nos permite indicar el incremento de valor que es posible:</p>
+<pre><code class="language-html">&lt;input type=&quot;number&quot; min=&quot;0&quot; max=&quot;100&quot; step=&quot;5&quot;&gt;
+&lt;input type=&quot;date&quot; value=&quot;2021-07-21&quot; step=&quot;7&quot; max=&quot;2021-10-20&quot;&gt;
+</code></pre>
+<h2>kdb</h2>
+<p>Esta etiqueta se utiliza para simbolizar atajos de teclado. Veámosla con un ejemplo:</p>
+<pre><code class="language-html">&lt;kbd&gt;CTRL&lt;/kbd&gt;+&lt;kbd&gt;R&lt;/kbd&gt;
+&lt;style&gt;
+    kbd {
+        background: linear-gradient(160deg, #ddd, #fff);
+        border-radius: 5px;
+        box-shadow: 
+            0 -2px 0 0 #cdcde6 inset,
+            0 0 1px 1px #fff inset,
+            0 1px 2px 1px #1e235a66;
+        color: #04c5564;
+        font-family: &quot;Victor Mono&quot;, consolas;
+        font-size: 14px;
+        font-weight: 500;
+        margin: 0 2px;
+        padding: 2px 6px 4px;
+    }
+&lt;/style&gt;
+</code></pre>
+<h2>template</h2>
+<p>La etiqueta template permite crear plantillas HTML inertes, que no son interpretadas ni renderizadas por el navegador.</p>
+<pre><code class="language-html">&lt;template&gt;
+    &lt;div class=&quot;user&quot;&gt;
+        &lt;img src=&quot;avatar.png&quot; alt=&quot;Username&quot;&gt;
+        &lt;span&gt;Username&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>

@@ -334,13 +334,18 @@ El elemento figcaption representa un título o leyenda de un fragmento de conten
 <p>Los autores no deben confudir a este elemento con progress. A diferencia de meter, el elemento progress mide únicamente la completitud de una tarea.</p>
 <p>Si los atributos min y max no son declarados en este control, los límites de esta medida serán los predeterminados 0 (límite inferior) y 1 (límite superior).</p>
 <p>Aunque no existe una forma explícita de especificar las unidades en el elemento meter, éstas pueden proveerse en el atributo title en texto de forma libre.</p>
-<p>El soporte provisto por los navegadores para meter es incompleto. Los atutores pueden tener que recurrir a programas y/u hojas de estilo para lograr los mismo efectos consistentemente.</p>
+<p>El soporte provisto por los navegadores para meter es incompleto. Los autores pueden tener que recurrir a programas y/u hojas de estilo para lograr los mismo efectos consistentemente.</p>
 <pre><code class="language-html">&lt;p&gt;
   Uso de la memoria RAM:
   &lt;meter max=&quot;2048&quot; value=&quot;547&quot; title=&quot;Megabytes&quot;&gt;547/2048&lt;/meter&gt;
 &lt;/p&gt;
 </code></pre>
 <p><img src="img/meter.jpg" alt="Ejemplos de como se ve meter"></p>
+<p>Se le pueden añadir algunos parámetros para conseguir medidores visuales en verde, amarillo o rojo</p>
+<pre><code class="language-html">&lt;meter min=&quot;0&quot; max=&quot;100&quot; value=&quot;25&quot;&gt;Medidor&lt;/meter&gt;
+&lt;meter min=&quot;0&quot; max=&quot;100&quot; low=&quot;30&quot; value=&quot;25&quot;&gt;Altos ok/meter&gt;
+&lt;meter min=&quot;0&quot; max=&quot;100&quot; low=&quot;30&quot; optimun=&quot;5&quot; high=&quot;20&quot; value=&quot;25&quot;&gt;Bajos OK&lt;/meter&gt;
+</code></pre>
 <h2>progress</h2>
 <p>El elemento progress representa el estado de progreso de una operación, como ser la transferencia de un archivo, una codificación o la recuperación de valores desde una base de datos. Este control es normalmente representado por una barra de progreso, compuesta por un contenedor que es llenado de izquierda a derecha de acuerdo con el progreso de la operación.</p>
 <p>Una barra progress puede representar un progreso en dos estados: como indeterminado, indicando que el proceso está siendo llevado a cabo pero no existe información acerca de su estado de completitud; o como un valor que indica la cantidad de trabajo que ha sido realizado en la tarea.</p>
@@ -592,6 +597,44 @@ Dependiendo del valor del atributo kind, el elemento track puede ser usado para 
 &lt;object data=&quot;/assets/audio/Bach_Air_on_the_G_string.mid&quot; type=&quot;audio/mid&quot;&gt;
   &lt;param name=&quot;autostart&quot; value=&quot;false&quot; /&gt;
 &lt;/object&gt;
+</code></pre>
+<h2>Elemento script</h2>
+<p>La etiqueta <code>&lt;script&gt;</code> tiene un atributo <code>nomodule</code> no muy conocido. Permite indicar a navegadores modernos que el script no debe cargarse. Como los navegadores antiguos lo ignorarán, sirve para cargar scripts sólo en navegadores antiguos como IE, útil para tareas de legacy.</p>
+<pre><code class="language-html">&lt;script type=&quot;module&quot;&gt;
+  import snarkdown from &quot;https://cdn.jsdelivr.net/npm/snarkdown@2.0.0/dist/snarkdown.es.js&quot;;
+
+  const md=&quot;**Hola**, esto es una prueba&quot;
+  cont html = snarkdown(md)
+&lt;/script&gt;
+&lt;script nomodule src=&quot;/legacy.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h2>Elemento input</h2>
+<p>El elemento input, utilizado en los formularios.</p>
+<p>A parte de los usos comunes, podemos:</p>
+<h3>Indicar patrones</h3>
+<pre><code class="language-html">&lt;input pattern=&quot;[a-zA-Z0-9]{8,}&quot;&gt;
+&lt;style&gt;
+  input:valid {background: green}
+  input:invalid {background: red}
+&lt;/style&gt;
+</code></pre>
+<h3>Establecer tipos:</h3>
+<pre><code class="language-html">&lt;input type=&quot;color&quot; value=&quot;#440055&quot;&gt;
+&lt;input type=&quot;range&quot; min=&quot;1&quot; max=&quot;50&quot; value=&quot;7&quot;&gt;
+&lt;input type=&quot;date&quot; value=&quot;2021-08-03&quot;&gt;
+&lt;input type=&quot;tel&quot; value=&quot;986223344&quot;&gt;
+</code></pre>
+<p>Podemos deshabilitar el autocompletado con:</p>
+<pre><code class="language-html">&lt;input autocomplete=&quot;off&quot;&gt;
+</code></pre>
+<h2>Elemento video</h2>
+<p>Ya vimos ejemplos con la etiqueta source. Añadiremos que podemos añadir una imagen mientras no se carga el video</p>
+<pre><code class="language-html">&lt;video controls poster=&quot;/media/video/capture1.svg&quot;&gt;
+  &lt;source src=&quot;video.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  &lt;source src=&quot;video.webm&quot; type=&quot;video/webm&quot;&gt;
+  &lt;source src=&quot;video.ogv&quot; type=&quot;video/ogg&quot;&gt;
+  &lt;img src=&quot;imagen.png&quot; alt=&quot;video no soportado&quot;&gt;
+&lt;/video&gt;
 </code></pre>
 <h2>Elementos eliminados:</h2>
 <ul>

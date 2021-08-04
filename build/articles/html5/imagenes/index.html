@@ -46,16 +46,52 @@ Si todavía queremos mejorar esto, podemos utilizar el siguiente atributo:</p>
 El elemento figcaption representa un título o leyenda de un fragmento de contenido (figure). Un elemento figure representa a un trozo de documento autocontenido que se usa habitualmente para encerrar imágenes, gráficos, tablas de referencia, videos, poemas, fragmentos de código, etc.</p>
 <p>La presencia del elemento figcaption dentro de figure es opcional, pero si está presente, sólo puede hacer uno y debe estar ubicado al comienzo o al final del elemento figure al cual pertenece.</p>
 <p>En cuanto al formato de las imágenes. Es muy común utilizar JPG, pero no es el mejor formato en todos los casos</p>
-<p>:white_check_mark: SVG
-Signo grueso blanco de verificaciónPNG
-CruzGIF -&gt; MP4 ó APNG
-Signo grueso blanco de verificaciónAPNG</p>
-<p>Signo grueso blanco de verificaciónJPG
-CruzJPEG2000 -&gt; JPG ó WebP
-CruzJPEG-XR -&gt; JPG ó WebP
-Signo grueso blanco de verificaciónWebP
-Cuadrado naranjaAVIF
-Cuadrado naranjaJPEG-XL</p>
+<p>SVG
+SPNG
+GIF -&gt; MP4 ó APNG
+APNG</p>
+<p>JPG
+JPEG2000 -&gt; JPG ó WebP
+JPEG-XR -&gt; JPG ó WebP
+WebP
+AVIF
+JPEG-XL</p>
+<p>Formatos como APNG, WebP, (alternativa a jpg con soporte para transparencia) son buenas opciones, pero no los soportan todos los navegadores, así que para mejorar esto debemos utilizar picture:</p>
+<h2>picture</h2>
+<p>Con picture podemos utilizar fallbacks. Veámoslo con un ejemplo.</p>
+<pre><code class="language-html">&lt;figure id=&quot;rey-elefante&quot;&gt;
+    &lt;picture&gt;
+        &lt;source srcset=&quot;imagen-detallada-elefante.avif&quot; type=&quot;image/avif&quot;&gt;
+        &lt;source srcset=&quot;imagen-detallada-elefante.jxl&quot; type=&quot;image/jxl&quot;&gt;
+        &lt;source srcset=&quot;imagen-detallada-elefante.webp&quot; type=&quot;image/webp&quot;&gt;
+        &lt;img src=&quot;imagen-detallada-elefante.jpg&quot; alt=&quot;Un gran elefante, dueño de la selva&quot;&gt;
+    &lt;/picture&gt;
+    &lt;figcaption&gt;El señor elefante, el auténtico rey de la selva&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>Si el navegador soporta AVIF, carga esta imágen. Sino lo soporta, pero si JPG XL, luego con WepP. Si no soporta ninguno de ellos, entonces carga el img normal.</p>
+<h2>Lazy loading</h2>
+<p>En ocaciones, tenemos muchas imágenes, pero no es necesario cargar todas  a la vez, y se pueden ir cargando según se va viendo la web (scroll). A esta técnica la denominamos lazy load, y se hace añadiendo el atributo loading, con el valor lazy. Ejemplo:</p>
+<pre><code class="language-html">&lt;figure id=&quot;rey-elefante&quot;&gt;
+    &lt;picture&gt;
+        &lt;source srcset=&quot;imagen-detallada-elefante.avif&quot; type=&quot;image/avif&quot;&gt;
+        &lt;source srcset=&quot;imagen-detallada-elefante.jxl&quot; type=&quot;image/jxl&quot;&gt;
+        &lt;source srcset=&quot;imagen-detallada-elefante.webp&quot; type=&quot;image/webp&quot;&gt;
+        &lt;img loading=&quot;lazy&quot; src=&quot;imagen-detallada-elefante.jpg&quot; alt=&quot;Un gran elefante, dueño de la selva&quot;&gt;
+    &lt;/picture&gt;
+    &lt;figcaption&gt;El señor elefante, el auténtico rey de la selva&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<h2>Otras consideraciones</h2>
+<p>Es una buena práctica utilizar los atributos height y width para que el navegador conozca previamente el tamaño de la imágen.</p>
+<p>También podemos  hacer una precarga de una imágen (la más grande la la web), consiguiendo una web más rápida y mejorando el LCP de Google Web Vitals.</p>
+<pre><code class="language-html">&lt;head&gt;
+    &lt;link rel=&quot;preload&quot; href=&quot;imagen-detallada-elefante.jpg&quot; as &quot;image&quot;&gt;
+&lt;/head&gt;
+</code></pre>
+<p>Otro atributo que podemos uitlizar en caso de una imágen que no necesita ser cargada aún, para que el navegaodr se centro en otros recursos y mejorando la velocidad de carga.</p>
+<pre><code class="language-html">&lt;img src=&quot;imagen-detallada-elefante.jpg&quot; alt=&quot;El señor elefante, dueño de la selva&quot; decoding=&quot;async&quot;&gt;
+</code></pre>
 
         <a href=""> Volver</a>
     </main>

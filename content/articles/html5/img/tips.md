@@ -178,3 +178,27 @@ La etiqueta template permite crear plantillas HTML inertes, que no son interpret
     </div>
 </template>
 ```
+
+## Listas desplegables. 
+
+Una opción interesante en las listas desplegables. Veámoslo con un ejemplo: 
+
+```html
+<select>
+    <option selected disabled>--</option>
+    <option>Opción 1</option>
+    <option>Opción 2</option>
+    <option>Opción 3</option>
+</select>
+```
+
+De esta forma, la primera opción será la selecciada al principio,pero una vez se cambie esta opción, no podrá volver a ser marcada.
+
+# Atributo media en links
+
+El atributo media en etiquetas de tipo link, infdica que solo se actúe si se cumplen los requisitos. Por ejemplo, el siguiente ejemplo, el fichero css sólo se carga en dispositivos de escritorio de más de 800px de ancho. 
+
+```html
+<link rel="stylesheet" href="/desktop.css" media="(min-width: 801px)">
+```
+
