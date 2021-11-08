@@ -119,3 +119,17 @@
     &lt;/div&gt;
 &lt;/template&gt;
 </code></pre>
+<h2>Listas desplegables.</h2>
+<p>Una opción interesante en las listas desplegables. Veámoslo con un ejemplo:</p>
+<pre><code class="language-html">&lt;select&gt;
+    &lt;option selected disabled&gt;--&lt;/option&gt;
+    &lt;option&gt;Opción 1&lt;/option&gt;
+    &lt;option&gt;Opción 2&lt;/option&gt;
+    &lt;option&gt;Opción 3&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+<p>De esta forma, la primera opción será la selecciada al principio,pero una vez se cambie esta opción, no podrá volver a ser marcada.</p>
+<h1>Atributo media en links</h1>
+<p>El atributo media en etiquetas de tipo link, infdica que solo se actúe si se cumplen los requisitos. Por ejemplo, el siguiente ejemplo, el fichero css sólo se carga en dispositivos de escritorio de más de 800px de ancho.</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;/desktop.css&quot; media=&quot;(min-width: 801px)&quot;&gt;
+</code></pre>

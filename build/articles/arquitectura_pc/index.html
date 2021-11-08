@@ -17,8 +17,38 @@
      <main>
         <!-- Aquí es donde va el contenido -->
         <h1>Arquitectura de ordenadores</h1>
+<h2>Elementos básicos.</h2>
+<h2>Funcións. A unidade central de procesamento.</h2>
+<h2>A memoria: tipos, xerarquía e modos de direccionamento</h2>
 <h2>La memoria: tipos, jerarquía y modos de direccionamento</h2>
-<p>La memoria</p>
+<h2>La memoria</h2>
+<p>En los sistemas digitales, no combinacionales, de proceso debe existir una unidad de memoria
+en  la  que  se  almacenen  los  datos,  los  resultados  parciales  y  los  resultados  finales  del  proceso.<br>
+Cuando el sistema digital de proceso es programable, además, han de memorizarse las
+instrucciones del programa. El esquema del dispositivo de memoria que vamos a utilizar es el siguiente:</p>
+<p>Dirección.  Toda  memoria  está  dividida  en  “porciones”,  de  forma  que  el  acceso  a  la<br>
+memoria, bien para escritura o bien para lectura, se realiza sobre una determinada de esas
+porciones.  Para  poder  especificar  a  cuál  de  ellas  queremos  acceder,  a  cada  una  se  le<br>
+asigna un identificador. A este identificador se le denomina de manera genérica dirección
+de memoria.</p>
+<p>http://www.dacya.ucm.es/hidalgo/estructura/lanchares.pdf</p>
+<h2>Modos de direccionamiento</h2>
+<ul>
+<li><strong>Modo de direccionamiento inmediato</strong>. Es la forma más simple de direccionamiento. El operando es parte de la instrucción, y por lo tanto, no una referencia a la memoria. Este modo es rápido</li>
+<li><strong>Modo de direccionamiento directo</strong>. En este modo, el campo de dirección contiene la dirección del operando. Se requiere uan única referencia de memoria para leer el opreando de la dirección dada, sin embargo, sólo proporciona un espacio limitado de direcciones.</li>
+<li><strong>Modo de direccionamiento indirecto</strong>. La celda de memoria a la que apunta el campo de dirección contiene la dirección del operando, que a su vez contiene la dirección de longitud completa del operando. Este modo tiene un espacio de direcciones grande.</li>
+<li><strong>Modo de direccionamiento de registro</strong>. Similar al directo. La diferencia clave entre los dos modos es que el campo de dirección de la instrucción se refiere a un regsitro en lugar de una posición de memoria. El direccionamiento de registro no tiene una dirección eficaz. Tres o cuatro bits son utilizados como campo de dirección para hacer referencia a los registros.</li>
+<li><strong>Modo de direccionamiento indirecto de registro</strong>. Similar al direccionamiento indirecto. El operando se encuentra en una celda de memoria apuntada por el contenido de un registro. El registro contiene la dirección efectiva del operando. Este modo utiliza menos acceso a memoria que el direccionamiento indirecto. Tiene un espacio de direcciones grande, pero es limitado al ancho de los registros disponibles para almacenar la dirección efectiva.</li>
+<li><strong>Modo de direccionamiento de desplazamiento</strong>. Tiene tres variaciones:
+<ul>
+<li>Direccionamiento relativo</li>
+<li>Direccionamiento de registro base</li>
+<li>Direccionamiento de índice</li>
+</ul>
+</li>
+<li><strong>Modo de direccionamiento de pila</strong>. También conocido como direccionamiento implícito. Consiste en un conjunto lineal de ubicaciones referidos al último que entra y primero en salir. El operando está en la parte superior de la pila. El puntero de la pila es un regsitro que almacena la dirección de la parte superior de la ubicación de la pila.</li>
+</ul>
+<p>http://dea.unsj.edu.ar/mp1/APUNTES/Catedra%20Modos%20de%20Direccionamiento.pdf</p>
 
         <a href=""> Volver</a>
     </main>
