@@ -854,6 +854,60 @@ Ya vimos ejemplos con la etiqueta source. Añadiremos que podemos añadir una im
 </video>
 ```
 
+## Nuevos atributos para hipervínculos
+
+## Atributo target
+
+Especifica donde desplegar la url enlazada. Sus valores son: 
+
+- _self: La url se carga en el mismo contexto de navegación. Por defecto. 
+- _blank: Carga la url en un nuevo contexto de navegación, normalmente una pestaña, aunque se puede configurar el navegador para que se abra en una ventana. 
+- _parent: Carga la url en el contexto de navegación padre del actual. Si no existe padre, es lo mismo que self.
+- _top: Carga la url en el contexto más alto de navegación. Si no hay, self.
+
+### Atributo rel
+
+Este atributo establece una realación entre el documento actual, y el destino del enlace en el que se encuentra el atributo. El atributo es compatible con todos los navegadores, y puede tener los siguientes valores: 
+- alternate: Indica que el enlace lleva a una versión alternativa de la página. Ejemplos, una traducción, una versión en pdf o adaptada a otros medios.
+- author: Referencia a la información del autor de una publicación.
+- bookmark: Indica que se trata de una url permanente, apta para guardar en los marcadores. 
+- help: Referencia a la ayuda de una publicación o documento. 
+- license: Referencia a la licencia de una publicación. 
+- next: Referencia al siguiente documento de una selección. 
+- nofollow: Este atributo le indica a los rastreadores (ej, la araña de google) que no deben seguir el rastreo por este enlace. 
+- noreferrer: Indica al navegador que no debe enviar ninguna cabecera "HTTP referer"
+- prefetch: Indica que hay que almacenar en cache el documento
+- prev: Referencia al documento anterior dentro de una selección
+- search: Se utiliza en los enlaces a herramientas de búsqueda para el documento
+- tag: Enlace a una etiqueta o 'keyword' de la publicación actual. 
+
+### Atributo download
+
+El atributo download se encarga de indicarle al navegador que el enlace es un archivo para descargarevitando que se ejecute en el navegador (como pasa muchas veces con los pdf's).
+
+```html
+<a href="manual-de-html5.pdf" download>Descargar manual</a>
+```
+
+### Atributo media
+
+Su finalidad es espeficiar al navegador el tipo de medio que aplica al recurso enlazado, y su valor debe de ser un media query. El atributo se utiliza sobre todo cuando se enlaza a una hora de estilos externa. 
+
+### Atributo ping:
+
+Entre los atributos curiosos que le podemos añadir, tenemos el atributo ping, al cual le añadimos una lista de url y cuando pinchemos sobre ese enlace, haremos una petición POST a esas urls
+
+```html
+<!-- En este ejemplo, nos vamos a la página de contacto, pero se notifica a contador -->
+<a href="http://mipagina.dev/contacto" ping="http://mipagina.dev/contador">
+```
+
+Este atributo tiene un soporte bastante limitado, soportándolo navegadores como Chrome o Safari, y en otros como Firefox, está soportado, pero viene deshabilitado por defecto (para habilitarlo tendremos que ir a about:config). Esto se hizo,porque se hizo impopularque una función de HTML esté diseñada par que anunciantes rastreen los clicks de los anuncios. 
+
+### Atributo hreflang
+
+Indica el idioma del recurso enlazado, pero solo a nivel informativo
+
 ## Elementos eliminados:
 
 - acronym
