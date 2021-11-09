@@ -606,6 +606,17 @@ p {
   margin-bottom: 0.5rem
 }
 
+& code {
+  --tw-bg-opacity: 1;
+  background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+  display: inline;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
 .container {
   width: 100%;
 }
@@ -31884,6 +31895,27 @@ p {
 
 .backdrop-sepia {
   --tw-backdrop-sepia: sepia(100%);
+}
+
+.markdown {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  line-height: 1.5;
+  text-align: justify;
+  --tw-text-opacity: 1;
+  color: rgba(17, 24, 39, var(--tw-text-opacity));
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+  & code {
+    --tw-bg-opacity: 1;
+    background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+    display: inline;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
 }
 
 @media (min-width: 640px) {

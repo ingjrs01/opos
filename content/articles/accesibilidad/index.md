@@ -3,15 +3,15 @@ title: Acesibilidad, diseño universal y usabilidad.
 layout: articles.njk
 ---
 
-# Acesibilidad, diseño universal y usabilidad.
+## Acesibilidad, diseño universal y usabilidad.
 
-## Accesibilidad
+### Accesibilidad
 
 La accesibilidad, aplicada al mundo de la tecnología, hace referencia al acceso universal a un contenido electrónico, típicamente, una página web, independientemente del tipo de hardware, software, infraestructura de red, idioma ,localización geográfica o capacidad de los usuarios.
 
 Para poner en práctica la accesibilidad hay que tener presenta las Pautas de Accesibilidad al Contenido Web (WCAG) así como aplicar los Roles ARIA que se usan para hacer contenido accesible para las personas con diversidad funcional.
 
-## Usabilidad
+### Usabilidad
 
 La usabilidad hace referencia a la facilidad de uso con que las personas pueden usar una herramienta en particual, en concreto podemos pensar también en una web. En hacer que el contenido sea fácil de utilizar.
 
@@ -60,7 +60,7 @@ Según Jakob Nielsen, uno de los gurús de la usabilidad más populares del mund
 
 En la actualidad hay que destacar que por ejemplo en web, gran parte de los usuarios nos visitarán desde dispositivos móviles. Es muy importante considerar la usabilidad cuando nos visitan con estos dispositivos.
 
-## Diseño universal.
+### Diseño universal.
 
 Es un concepto relativamente reciente y tiene que ver con el diseño de productos y entornos que resulten de fácil acceso para el mayor número de personas posible, sin necesidad de adaptarlos o rediseñarlos de forma especial. Es un término más global que engloba la accesibilidad
 
@@ -82,7 +82,7 @@ Los siete principios del diseño universal:
 - **Tamaño adecuado de aproximación y uso**. Ejemplos, es universal un MOSTRADOR de atención A DOBLE ALTURA (uno a 80 cm del suelo (con hueco bajo él) para personas de talla baja o que van en silla, y otro a 110 cm para personas que caminan) y no son universales las baldas de un lineal que están por encima de los 120 cm (porque una persona en silla de ruedas no alcanza con comodidad los productos).
 
 
-# Accesibilidad por el W3C
+## Accesibilidad por el W3C
 
 Uno de los objetivos del W3C es guiar la web hacía su máximo potencial, lo cual incluye hacer una web más accesible para las personas, tengan o no cualquier tipo de discapacidad. De esta forma nace la WAI (Iniciativa de Accesibilidad Web), dentro de la cual podemos ubicar el grupo de trabajo PFWG (Group Work Formats Protocol), que a su vez son los autores de: 
 - Las pautas de accesibilidad WCAG 2.0
@@ -90,7 +90,7 @@ Uno de los objetivos del W3C es guiar la web hacía su máximo potencial, lo cua
 - Aplicaciones de Internet enriquecidas accesibles ARIA
 
 
-## Pautas de Accesibilidad para el Contenido Web (WCAG)
+### Pautas de Accesibilidad para el Contenido Web (WCAG)
 
 Las pautas de accesibilidad para el contenido web son un conjunto de reglas, cuyo cumplimiento hace que nuestro sitio sea más accesible para las personas con diversidad funcional. Las pautas WCAG 2.0 se publicaron el 11 de diciembre de 2008 y las 2.1 el 5 de junio de 2018. Todos los criterios de 2.0 están incluídos en las 2.1. 
 Tanto WCAG 2.0 como 2.1 son estándares actuales. WCAG 2.1 no deja WCAG 2.0 obsoleto ni lo sustituye. Desde W3C se anima a utilizar la versión más reciente al desarrollar o actualizar contenido
@@ -141,11 +141,7 @@ De forma resumida:
 
 
 
-
-
-
-
-## Navegación accesible con roles WAI-ARIA (Accesible Rich Internet Application)
+### Navegación accesible con roles WAI-ARIA (Accesible Rich Internet Application)
 
 
 Segun la definición del W3C, aria es la forma de crear contenido web y aplicaciones web que sean accesibles para las personas con discapacidades. 
@@ -170,39 +166,77 @@ Para ello, ARIA cuenta con:
 </div>
 ```
 
+Con ARIA puedes definir áreas de contenido que se actulizan sin intervención del usuario (como un reloj que nos indique cuanto tiempo nos queda) de tl forma que las actualizaciones le pasen desapercibidas al usuario que no puede verlas. 
 
+ARIA también permite definir accesibilidad para contenidos SVG.
 
-### Roles
-
-Los roles sirven para especificar la función de un elemento. Para utilizarlo, es tan sencillo como añadir una propiedad al elemento role="[nombre_rol]".
-
-Ejemplos:
+Se puede utilizar tanto en HTML5, HTML4 y XHTML, solo que en éstos dos últimos, sino quieres que el validador del W3C de un error, deberás utilizar un DOCTYPE específico
 ```html
-<div role="application">
-   <ul role="nav">
-   ...
-   </ul>
+<!-- En XHTML:  -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+ARIA 1.0//EN" "http://www.w3.org/WAI/ARIA/schemata/xhtml-aria-1.dtd">  
+<!-- En HTML 4:  -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML+ARIA 1.0//EN" "http://www.w3.org/WAI/ARIA/schemata/html4-aria-1.dtd">
+```
+
+Veamos un ejemplo simple:
+
+Supongmos un formulario web, donde queremos sustutuír el botón de envir el formulario por una imagen. Algo como lo siguiente
+
+```html
+<div><img src="sobre.png" alt="enviar" /> </div>
+```
+
+Estamos utilizando un div como se fuese una etiqueta button. Si usamos ARIA, podemos indicarle esta circunstancia al navegador, agregando:
+
+```html
+<div role="button"><img src="sobre.png" alt="enviar" /> </div>
+```
+
+A partir de este momento, el lector de pantalla lo va a ver como un botón, lo anuncia como un botón, lo incluye como un elemento del formulario e incluso le asocia la tecla de acceso rápido asociada a los botones, habitualmente la b.
+
+Sin embargo, falta asociarle el comportamiento de enviar, lo cual lo podemos hacer con Javascript no intrusivo, por ejemplo con el evento onclick. Pero, el hecho de tener un evento onlick, no hace que este elemento pueda recibir el foco a través del teclado (con la tecla tabulador), lo cual es importante para los usuarios que se manejan con el teclado. Para conseguir esto, deberemos añadirle el atributo tabindex, consiguiendo así tanto recibir el foco, como poder enviar usando la tecla ENTER. 
+
+```html
+<div role="button" tabindex="0" id="buttonEnviar">
+   <img src="sobre.png" alt="enviar" />
 </div>
 ```
 
-Dentro de los roles, existen dos tipos: los que definen la estructura de la página (cabecera, navegación , pié, ...) también llamamos landmark roles y aquellos que definen elementos de la interfaz (árboles, alertas, sliders, ...)
+Con todo esto, tendríamos el comportamiento equivalente. Sin embargo, este tipo de contrucción no está recomendado. ARIA no está pensado para que hagamos pasar unos elementos como otros. Los casos en los que se recomienda usar aria son: 
+- La característica no está disponible en HTML
+- La característica está disponible en HTML pero no implementada en los agentes de usuario. 
+- La característica está disponible e implementada, pero el agente de usuario no proporciona el sorpote para la accesibilidad de ese elemento.
+- El diseño visual "obliga" a determinado estilo, pero no podríamos decorar un elemento nativo con ese diseño  visual. 
 
-Ej, Para ojear los encabezados pueden ir pulsando la letra h.
 
-¿ Como saltar entre los diferntes bloques de contenido ?
-Es decir, de la cabecera a la zonad e navegación, al contenido principal, al cuadro de búsqueda, al pié de página, etc. Las WCAG 2.0 establecieron la especificación WAI-ARIA que consistte en establecer unos roles que sirven para crear contenidos web accesibles.
+
+#### Roles
+
+Los roles sirven para especificar la función de un elemento. Para utilizarlo, es tan sencillo como añadir una propiedad al elemento role="[nombre_rol]".
+
+![Roles ARIA](img/roles.png "Roles ARIA")
+
+
+Tipos: 
+- Abstract: widget, window, section, input, etc. No se usan en el contenido, sino para definir dentro de la ontología tipos de roles generales. 
+- Widget: menu, menitem, tree, treeitem, tablist, tab, tabpanel, button, grid, etc. 
+- Document structure. heading, table, img, tooltip, list, presentation. No suelen ser interactivos. 
+- Landmark. Permiten definir las grandes zonas de la página igual que las etiquetas semátnicas de HTML5 (header, main, nav, footer). Los usuarios de lectores de pantalla tienen atajos para saltar de zona en zonao sacar un árbol de la estructura de la página generado a partir de esta información. 
+- Live region. alert, log, marquee, status y timer. Definen la función de las zonas vivas de la página, es decir, que cambian automáticamente sin intervención del usuario.
+- Window: alertdialog y dialog. Para capas que abrimos a modo de ventanas.
+
 
 Los landmark roles son:
 
-- banner: zona del logo y título de la página. Debería haber solo uno por página. En html se puede asimilar a header
-- complementary: zona complementaria,  por ejemplo artículos relacionados. En HTML5 sería un aside
-- contentinfo: zona de información sobre el documento, normalmente el pié de página. 1 por página. En HTML5 footer
-- form
-- main. Solo uno por página
-- navigation. Se pueden tener varios. En HTML5 nav
-- search. No hay un elemento en HTML5, así que se haría con un form
-- application (eliminado de los Landmark Roles en ARIA 1.1, que pasa a ser un rol de estructura)
-- region (añadido en los Landmark Roles en ARIA 1.1)
+- **banner**: zona del logo y título de la página. Debería haber solo uno por página. En html se puede asimilar a header
+- **complementary**: zona complementaria,  por ejemplo artículos relacionados. En HTML5 sería un aside
+- **contentinfo**: zona de información sobre el documento, normalmente el pié de página. 1 por página. En HTML5 footer
+- **form**
+- **main**. Solo uno por página
+- **navigation**. Se pueden tener varios. En HTML5 nav
+- **search**. No hay un elemento en HTML5, así que se haría con un form
+- **application** (eliminado de los Landmark Roles en ARIA 1.1, que pasa a ser un rol de estructura)
+- **region** (añadido en los Landmark Roles en ARIA 1.1)
 
 
 Los otros elementos, son de interfaz (roles para widgets). Para verlo mejor, veamos un ejemplo, los problemas que tiene y las soluciones que aporta ARIA: 
@@ -228,16 +262,46 @@ Para una persona sin discapacidad su uso es trivial, pero para una que utilice u
 
 ```
 
-### Navegación con el teclado
+#### Navegación con el teclado
 
 Podemos establecer la navegación con el teclado mediante el atributo tabindex, pero hay que tener en cuenta que los únicos elementos capaces de recibir el foco son : a, area, button, input, object, select y textarea. 
 
 Con tabindex y un número, podemos indicar el órden. Si queremos excluír algén elemento, podemos indicar tabindex=-1
 
 
-### Actualizaciones dinámicas de contenido. 
+#### Estados y propiedades
 
-ARIA denomina "regiones activas" a los elementos/zonas que pueden presntar actualizaciones por ajax y cuenta con la propiedad aria-live para indicar el valor de intrusismo: 
+Además de los roles, ARIA define los estados y propiedades de los diversos controles. La diferencia conceptual entre "estado" y "propiedad" es muy sutil: las propiedades suelen cambiar menos (aunque no siempre) que los estados, que cambian con frecuencia debido a la interacción del usuario. 
+
+Pero en la práctica no es necesario diferenciarlos y todos ellos comenzarán por aria-. 
+
+Hay 48 estados y propiedades y se dividen en cuatro categorías: 
+
+![Estados y propiedades ARIA](img/estados.png "Estados ARIA")
+
+- Atributos de Widget: aria-checked, aria-disabled, aria-required, aria-selected, aria-readonly, aria-expanded, aria-label, etc.
+- Atributos de Live Region: aria-live, aria-atomic, aria-relevant y aria-busy que permiten definir cuándo se anunciarán al usuario de producto de apoyo los cambios producidos en las zonas que se actualizan solas, qué parte se anunciará, qué tipo de actualización queremos que se anuncie o si queremos que temporalmente dejen de anunciarse.
+- Atributos de Drag-and-Drop:  aria-dropeffect y aria-grabbed
+- Atributos de relaciones: es decir, que expresan relaciones o asociaciones entre los elementos  que  no  se  pueden  determinar  fácilmente a  partir  de  la  estructura  del documento: aria-controls, aria-labelledby, aria-describedby, aria-posinset, aria-setsize, etc.
+
+Los estados y propiedaes pueden modificarse con Javascript, de hecho es recomendable hacerlo para interactuar con el usuario. 
+
+Alguanas de las propiedades pueden aplicarse a todos los elementos: 
+
+- aria-label: Con este atributo indicamos directamente el contenido de la etiqueta del atributo: Ej.
+
+```html
+<button aria-label="Cerrar">X</button>
+```
+Es importante saber que este atributo anula la etiqueta nativa, de forma que un lector para el ejemplo anterior leería botón cerra, y no botón X. En este caso es justamente lo que queremos.
+
+- aria-labelledby y  
+- aria-describedby.
+
+
+#### Actualizaciones dinámicas de contenido. 
+
+ARIA denomina "regiones activas" a los elementos/zonas que pueden presentar actualizaciones por ajax y cuenta con la propiedad aria-live para indicar el valor de intrusismo: 
 
 - off
 - polite
@@ -246,7 +310,7 @@ ARIA denomina "regiones activas" a los elementos/zonas que pueden presntar actua
 
 
 
-### Etiquetas Aria-label
+#### Etiquetas Aria-label
 
 Con ello ponemos una etiqueta dentro del elemento con un atributo
 

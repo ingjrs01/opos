@@ -32,4 +32,16 @@
   p {
     @apply mb-2
   }
+
+  & code {
+    @apply font-mono text-sm inline bg-gray-200 px-1;
+  }
+}
+
+.markdown {
+  @apply text-base text-justify text-gray-900 leading-normal subpixel-antialiased;
+  & code {
+    @apply font-mono text-sm inline bg-gray-200 px-1;
+  }
+
 }
