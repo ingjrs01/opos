@@ -81,6 +81,15 @@ Los siete principios del diseño universal:
 - **Mínimo esfuerzo físico**. Ejemplos, es universal un acceso por rampa mecánica a un primer piso de un centro comercial y no es universal una gran superficie que no disponga de espacios para el descanso.
 - **Tamaño adecuado de aproximación y uso**. Ejemplos, es universal un MOSTRADOR de atención A DOBLE ALTURA (uno a 80 cm del suelo (con hueco bajo él) para personas de talla baja o que van en silla, y otro a 110 cm para personas que caminan) y no son universales las baldas de un lineal que están por encima de los 120 cm (porque una persona en silla de ruedas no alcanza con comodidad los productos).
 
+
+# Accesibilidad por el W3C
+
+Uno de los objetivos del W3C es guiar la web hacía su máximo potencial, lo cual incluye hacer una web más accesible para las personas, tengan o no cualquier tipo de discapacidad. De esta forma nace la WAI (Iniciativa de Accesibilidad Web), dentro de la cual podemos ubicar el grupo de trabajo PFWG (Group Work Formats Protocol), que a su vez son los autores de: 
+- Las pautas de accesibilidad WCAG 2.0
+- Directrices de accesiblidad para XML XAG
+- Aplicaciones de Internet enriquecidas accesibles ARIA
+
+
 ## Pautas de Accesibilidad para el Contenido Web (WCAG)
 
 Las pautas de accesibilidad para el contenido web son un conjunto de reglas, cuyo cumplimiento hace que nuestro sitio sea más accesible para las personas con diversidad funcional. Las pautas WCAG 2.0 se publicaron el 11 de diciembre de 2008 y las 2.1 el 5 de junio de 2018. Todos los criterios de 2.0 están incluídos en las 2.1. 
@@ -136,11 +145,10 @@ De forma resumida:
 
 
 
-## Navegación accesible con roles WAI-ARIA
+## Navegación accesible con roles WAI-ARIA (Accesible Rich Internet Application)
+
 
 Segun la definición del W3C, aria es la forma de crear contenido web y aplicaciones web que sean accesibles para las personas con discapacidades. 
-
-La llega de Ajax a la web, y su uso intensivo ha hecho que las aplicaciones sean más interactivas y ricas, pero a la vez menos accesibles. Imaginamos por un momento que tenemos un widget en una web como un slider. Un lector de pantalla no puede identificar que elemento es, ni conocer su estado y propiedades o capturar su comportamiento. 
 
 ARIA proporciona: 
 1. Estructuras semánticas para las zonas funcionales
@@ -148,8 +156,21 @@ ARIA proporciona:
 3. Controles complejos (widgets) más accesibles.
 4. Accesibilidad para el contenido actualizado de forma dinámica.
 
-Se trata de hacerles la vida más fácil a usuarios que usan un lector de pantalla. Se trata de estructurar la navegación a través del sitio web.
+Se trata de hacerles la vida más fácil a usuarios que usan un lector de pantalla, estructurandndo la navegación a través del sitio web.
 Para orientarse a través de un sitio web, los usuarios que usan lector de pantallas van pulsando diferentes teclas para navegar por la web: ir saltando por encabezados, listas, ojear imágenes, etc.
+
+Con ARIA se pueden crear controles  complejos, como barras de progreso, deslizadores, desplegables, tooltipsflotantes, alertas, pop-hovercon opciones de diálogo, ordenación de listas de elementos, árboles de contenido contraíbles y desplegables, elementos sobre los que se puede hacer drag-and-drop. También se puede indicar la obligatoriedad de un campo de formulario o que este ha dado error de validación.
+
+Para ello, ARIA cuenta con: 
+- Roles. Su misión es definir que papel juegan los elementos dentro del documento (Ej, decir que es un slider)
+- Estados y propiedades. Determinar las características y los valores de las propiedades. 
+
+```html
+<div id="slider" role="slider" aria-valuenow="27">
+</div>
+```
+
+
 
 ### Roles
 

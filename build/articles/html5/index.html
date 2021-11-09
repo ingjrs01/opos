@@ -16,7 +16,70 @@
     </header>
      <main>
         <!-- Aquí es donde va el contenido -->
-        <h1>Novedades en HTML5</h1>
+        <h1>Tipos de Atributos.</h1>
+<p>Las etiquetas por si solas no contienen la suficiente información, y por ello contamos con los atributos,que son pares nombe=valor escritos en la etiqueta inicial. El valor pued estar encerrado en comillas simples o dobles.</p>
+<p>Tipos de atributos:</p>
+<ul>
+<li>Atributos básicos</li>
+<li>Atributos de internacionalización</li>
+<li>Atributos de eventos</li>
+<li>Atributos de foco.</li>
+</ul>
+<h2>Atributos básicos.</h2>
+<p>Los atributos básicos se utilizan en la mayoría de etiquetas HTML, aunque adquieren mayor sentidos cuando se utilizan hojas de estilo en cascada (CSS).</p>
+<ul>
+<li>id=&quot;texto&quot;. Establece un identificador único para cada elemento.</li>
+<li>class=&quot;texto&quot;. establace la case css que se aplica a los estilos del elemento.</li>
+<li>style=&quot;texto&quot;. Aplica de forma directa estilos al elemento.</li>
+<li>title=&quot;texto&quot;. Establece el título del elemento, lo que mejora la accesibilidad.</li>
+</ul>
+<h2>Atributos de internacionalización I18N</h2>
+<p>Se utilizan con aquellos elementos de los que se quiera indicar de forma explícita el idioma de su contenido.</p>
+<ul>
+<li>lang=&quot;codigo&quot;</li>
+<li>xml:lang=&quot;codigo&quot;. Indica el idioma del elemento como el atributo anterior,pero tiene más prioridad que el y es obligatorio si se incluye el atributo lang</li>
+<li>dir. Índica la dirección del texto.</li>
+</ul>
+<h2>Atributos de eventos.</h2>
+<p>Estos atributos los utilizan las páginas que utilizan javascript para realizar icertas acciones dinámicas sobre los elementos de la página.</p>
+<p>Pueden ser utilizados por todos los elementos:</p>
+<ul>
+<li>onclick</li>
+<li>ondbclick. Se ejecuta la acción cuando se hace doble click sobre el elemento</li>
+<li>onmousedown. Ejecuta la acción cuando se detecta el botón pulsado.</li>
+<li>onmouseup. Ejecuta la acción cuando se detecta que se ha soltado el botón.</li>
+<li>onmousemove. Cuando se detecta movimiento del ratón sobre el elemento.</li>
+<li>onmouseover. Cuando el ratón está encima del elemento</li>
+</ul>
+<p>Utilizaods por <body></p>
+<ul>
+<li>onload. Ejecuta la acción cuando se carga el documento.</li>
+<li>onunload. Ejecuta la acción cuando se abandona el documento.</li>
+<li>onresize. Cuando se cambia el tamaño de la ventana.</li>
+</ul>
+<p>Utilizados por elemento de <body>  formularios:</p>
+<ul>
+<li>onkeydown. Ejecuta la acción cuando se detecta que la tecla está presionada.</li>
+<li>onkeyup. Cuando se suelta la tecla.</li>
+<li>onkeypress. Ejecuta la acción cuando se pulsa una tecla.</li>
+</ul>
+<p>Utilzados por varios:</p>
+<ul>
+<li>onblur. Se ejecuta cuando el elemento pierde el foco (da igual por ratón o por teclado). Este evento se puede usar en button, input, label, select, textarea, body</li>
+<li>onfocus. Cuando el elemento obtiene el foco. igual que el anterior.</li>
+<li>onchange. Se ejecuta cuando el valor de un elemento ha sido modificado. Lo pueden utilizar input, select y textarea.</li>
+<li>onreset. Ejecuta la acción cuando el formulario es restablecido a sus valores por defecto. Etiqueta form</li>
+<li>onselect. Se ejecuta esta acción cuando un usuario selecciona texto en un campo de texto. Etiquetas input y textarea</li>
+<li>onsubmit. Se trata de una acción para formularios y se ejecuta cuando se envía.</li>
+</ul>
+<h2>Atributos de foco.</h2>
+<ul>
+<li>accesskey=&quot;letra&quot;. Establece una letra de acceso rápido a un elemento HTML</li>
+<li>tabindex=&quot;numero&quot;. Establece la posición del elemento en el orden de tabulación de la página (valor entre 0 y 32.767)</li>
+<li>onfocus, onblur. Ya vistos antes. Cuando se obtiene o pierde el foco.</li>
+</ul>
+<p>Estos atributos</p>
+<h1>Novedades en HTML5</h1>
 <p>El W3C ha preparado un documento, HTML5 differences from HTML4, en el que detalla las principales diferencias entre HTML4 (y su variante según XML, XHTML 1.0) y la nueva versión del lenguaje, HTML5.</p>
 <p>Algunas de las principales diferencias son:</p>
 <ul>
@@ -636,6 +699,45 @@ Dependiendo del valor del atributo kind, el elemento track puede ser usado para 
   &lt;img src=&quot;imagen.png&quot; alt=&quot;video no soportado&quot;&gt;
 &lt;/video&gt;
 </code></pre>
+<h2>Nuevos atributos para hipervínculos</h2>
+<h2>Atributo target</h2>
+<p>Especifica donde desplegar la url enlazada. Sus valores son:</p>
+<ul>
+<li>_self: La url se carga en el mismo contexto de navegación. Por defecto.</li>
+<li>_blank: Carga la url en un nuevo contexto de navegación, normalmente una pestaña, aunque se puede configurar el navegador para que se abra en una ventana.</li>
+<li>_parent: Carga la url en el contexto de navegación padre del actual. Si no existe padre, es lo mismo que self.</li>
+<li>_top: Carga la url en el contexto más alto de navegación. Si no hay, self.</li>
+</ul>
+<h3>Atributo rel</h3>
+<p>Este atributo establece una realación entre el documento actual, y el destino del enlace en el que se encuentra el atributo. El atributo es compatible con todos los navegadores, y puede tener los siguientes valores:</p>
+<ul>
+<li>alternate: Indica que el enlace lleva a una versión alternativa de la página. Ejemplos, una traducción, una versión en pdf o adaptada a otros medios.</li>
+<li>author: Referencia a la información del autor de una publicación.</li>
+<li>bookmark: Indica que se trata de una url permanente, apta para guardar en los marcadores.</li>
+<li>help: Referencia a la ayuda de una publicación o documento.</li>
+<li>license: Referencia a la licencia de una publicación.</li>
+<li>next: Referencia al siguiente documento de una selección.</li>
+<li>nofollow: Este atributo le indica a los rastreadores (ej, la araña de google) que no deben seguir el rastreo por este enlace.</li>
+<li>noreferrer: Indica al navegador que no debe enviar ninguna cabecera &quot;HTTP referer&quot;</li>
+<li>prefetch: Indica que hay que almacenar en cache el documento</li>
+<li>prev: Referencia al documento anterior dentro de una selección</li>
+<li>search: Se utiliza en los enlaces a herramientas de búsqueda para el documento</li>
+<li>tag: Enlace a una etiqueta o 'keyword' de la publicación actual.</li>
+</ul>
+<h3>Atributo download</h3>
+<p>El atributo download se encarga de indicarle al navegador que el enlace es un archivo para descargarevitando que se ejecute en el navegador (como pasa muchas veces con los pdf's).</p>
+<pre><code class="language-html">&lt;a href=&quot;manual-de-html5.pdf&quot; download&gt;Descargar manual&lt;/a&gt;
+</code></pre>
+<h3>Atributo media</h3>
+<p>Su finalidad es espeficiar al navegador el tipo de medio que aplica al recurso enlazado, y su valor debe de ser un media query. El atributo se utiliza sobre todo cuando se enlaza a una hora de estilos externa.</p>
+<h3>Atributo ping:</h3>
+<p>Entre los atributos curiosos que le podemos añadir, tenemos el atributo ping, al cual le añadimos una lista de url y cuando pinchemos sobre ese enlace, haremos una petición POST a esas urls</p>
+<pre><code class="language-html">&lt;!-- En este ejemplo, nos vamos a la página de contacto, pero se notifica a contador --&gt;
+&lt;a href=&quot;http://mipagina.dev/contacto&quot; ping=&quot;http://mipagina.dev/contador&quot;&gt;
+</code></pre>
+<p>Este atributo tiene un soporte bastante limitado, soportándolo navegadores como Chrome o Safari, y en otros como Firefox, está soportado, pero viene deshabilitado por defecto (para habilitarlo tendremos que ir a about:config). Esto se hizo,porque se hizo impopularque una función de HTML esté diseñada par que anunciantes rastreen los clicks de los anuncios.</p>
+<h3>Atributo hreflang</h3>
+<p>Indica el idioma del recurso enlazado, pero solo a nivel informativo</p>
 <h2>Elementos eliminados:</h2>
 <ul>
 <li>acronym</li>

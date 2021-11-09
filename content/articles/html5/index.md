@@ -3,6 +3,72 @@ title: HTML 5
 layout: articles.njk
 ---
 
+# Tipos de Atributos. 
+
+Las etiquetas por si solas no contienen la suficiente información, y por ello contamos con los atributos,que son pares nombe=valor escritos en la etiqueta inicial. El valor pued estar encerrado en comillas simples o dobles.
+
+Tipos de atributos: 
+
+- Atributos básicos
+- Atributos de internacionalización
+- Atributos de eventos
+- Atributos de foco. 
+
+## Atributos básicos. 
+
+Los atributos básicos se utilizan en la mayoría de etiquetas HTML, aunque adquieren mayor sentidos cuando se utilizan hojas de estilo en cascada (CSS). 
+
+- id="texto". Establece un identificador único para cada elemento. 
+- class="texto". establace la case css que se aplica a los estilos del elemento.
+- style="texto". Aplica de forma directa estilos al elemento.
+- title="texto". Establece el título del elemento, lo que mejora la accesibilidad.
+
+## Atributos de internacionalización I18N
+
+Se utilizan con aquellos elementos de los que se quiera indicar de forma explícita el idioma de su contenido. 
+- lang="codigo"
+- xml:lang="codigo". Indica el idioma del elemento como el atributo anterior,pero tiene más prioridad que el y es obligatorio si se incluye el atributo lang
+- dir. Índica la dirección del texto. 
+
+## Atributos de eventos.
+
+Estos atributos los utilizan las páginas que utilizan javascript para realizar icertas acciones dinámicas sobre los elementos de la página. 
+
+Pueden ser utilizados por todos los elementos: 
+- onclick
+- ondbclick. Se ejecuta la acción cuando se hace doble click sobre el elemento
+- onmousedown. Ejecuta la acción cuando se detecta el botón pulsado. 
+- onmouseup. Ejecuta la acción cuando se detecta que se ha soltado el botón. 
+- onmousemove. Cuando se detecta movimiento del ratón sobre el elemento. 
+- onmouseover. Cuando el ratón está encima del elemento
+
+Utilizaods por <body>
+- onload. Ejecuta la acción cuando se carga el documento. 
+- onunload. Ejecuta la acción cuando se abandona el documento. 
+- onresize. Cuando se cambia el tamaño de la ventana. 
+
+Utilizados por elemento de <body>  formularios: 
+- onkeydown. Ejecuta la acción cuando se detecta que la tecla está presionada. 
+- onkeyup. Cuando se suelta la tecla. 
+- onkeypress. Ejecuta la acción cuando se pulsa una tecla. 
+
+Utilzados por varios: 
+- onblur. Se ejecuta cuando el elemento pierde el foco (da igual por ratón o por teclado). Este evento se puede usar en button, input, label, select, textarea, body
+- onfocus. Cuando el elemento obtiene el foco. igual que el anterior. 
+- onchange. Se ejecuta cuando el valor de un elemento ha sido modificado. Lo pueden utilizar input, select y textarea.
+- onreset. Ejecuta la acción cuando el formulario es restablecido a sus valores por defecto. Etiqueta form
+- onselect. Se ejecuta esta acción cuando un usuario selecciona texto en un campo de texto. Etiquetas input y textarea
+- onsubmit. Se trata de una acción para formularios y se ejecuta cuando se envía. 
+
+## Atributos de foco. 
+
+- accesskey="letra". Establece una letra de acceso rápido a un elemento HTML
+- tabindex="numero". Establece la posición del elemento en el orden de tabulación de la página (valor entre 0 y 32.767)
+- onfocus, onblur. Ya vistos antes. Cuando se obtiene o pierde el foco. 
+
+Estos atributos
+
+
 # Novedades en HTML5
 
 El W3C ha preparado un documento, HTML5 differences from HTML4, en el que detalla las principales diferencias entre HTML4 (y su variante según XML, XHTML 1.0) y la nueva versión del lenguaje, HTML5.
