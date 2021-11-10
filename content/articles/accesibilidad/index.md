@@ -262,6 +262,7 @@ Para una persona sin discapacidad su uso es trivial, pero para una que utilice u
 
 ```
 
+
 #### Navegación con el teclado
 
 Podemos establecer la navegación con el teclado mediante el atributo tabindex, pero hay que tener en cuenta que los únicos elementos capaces de recibir el foco son : a, area, button, input, object, select y textarea. 
@@ -295,8 +296,66 @@ Alguanas de las propiedades pueden aplicarse a todos los elementos:
 ```
 Es importante saber que este atributo anula la etiqueta nativa, de forma que un lector para el ejemplo anterior leería botón cerra, y no botón X. En este caso es justamente lo que queremos.
 
-- aria-labelledby y  
-- aria-describedby.
+- aria-labelledby. Este atributo se utiliza cuando el nombre de la etiqueta está visible en la página, referenciando el id del elemento que contiene dicha información. Ejemplo: 
+```html
+<span id="sd">Buscar</span>
+<input type="text" aria-labeledby="sd" />
+```
+NOTA: Los atributos aria-label y aria-labeledby se anulan entre sí, por lo tanto no tiene sentido utilizarlos juntos.
+
+aria-labelledby también se puede utilizar con el valor de los campos de un formulario, como se puede ver en el siguiente ejemplo. 
+
+```html
+<label for="duration" id="timeout">Extender el tiempo a</label>
+<input type="text" id="duration" value="20" aria-labelledby="timeout duration unit" >
+<span id="unit">minutos</span>
+```
+
+También podemos utilizarlo para etiquetar zonas de página, o también para etiquetar imágenes, como en el siguiente ejemplo: 
+
+
+![Valoración con estrellas](img/estrellas.png "Valoración")
+
+```html
+<div role="img" aria-labelledby="puntos">
+    <img src="estrella_rellena.png" alt=""/>
+    <img src="estrella_rellena.png" alt=""/>
+    <img src="estrella_rellena.png" alt=""/>
+    <img src="estrella_rellena.png" alt=""/>
+    <img src="estrella_vacia.png" alt=""/>
+</div>
+<div id="puntos" aria-hidden="true">
+    <span class="oculto">puntuación</span>
+    <span>4 de 5</span>
+<div>
+```
+En este caso, el lector de pantalla ignorará las estrellas porque tienen alt="" y anunciará la capa como una imágen con la etiqueta asociada "puntuación 4 de 5". Se utiliza la etiqueta aria-hidden, para el ese div no se anuncie de nuevo despues de la imágen.
+
+- aria-describedby. Permite referencia el id del elemento que queremos que funciones como descripción de otro, es decir, que proporcione información adicional al de su etiqueta: Ejemplo: 
+
+```html
+<button aria-label="Cerrar" aria-describedby="desClose">X</button>
+
+<div id="desClose">
+Cerrar esta ventana descartará cualquier cambio realizado y regresará a la página principal
+</div>
+```
+
+También puede utilizarse para la descripción de imágenes: 
+
+```html
+<img src="" alt="Esquema WCAG 2.1" aria-describedby="desWCAG" />
+
+<div id="desWCAG">
+    <p>Las pautas WCAG 2.0 se componen de 4 principios: </p>
+    <ol>
+        <li>Perceptible</li>
+        <li>Operable</li>
+        <li>Comprensible</li>
+        <li>Robusto</li>
+    </ol>
+</div>
+```
 
 
 #### Actualizaciones dinámicas de contenido. 
@@ -321,6 +380,90 @@ https://olgacarreras.blogspot.com/2014/03/navegacion-mas-accesible-y-semantica-e
 http://www.nosolousabilidad.com/articulos/wai_aria.htm
 
 
+
+## Mitos
+
+- Todas las imágenes necesitan un texto alternativo. Probablemente uno de los más extendidos. Todas las imágenes necesitan un atributo alt, pero éste puede estar vacío si la imágen es puramente decorativa.
+- El placeholder de un campo es suficiente para su explicación. Esto no se debe hacar, y deberemos incorporar siempre un label for
+
+
+## Buenas practicas: 
+- **No utilices ARIA si no es necesario**. Usa siempre que puedas etiquetas estándar de HTML. Mucho mejor utilizar input type="checkbox" que div role="checkbox"
+- **Un rol es una promesa**. Si indicamos que un div es un botón mediante role="button", esto lo único que hace es que el navegador lo anuncie como tal, pero no cambiará en absoluto si imágen o su comportamiento.
+- **Usa los roles y las propiedades según la especificación**. Recuerda que el rol no debe de cambiar dinámicamente, pero las propiedades si pueden hacerlo. 
+- **Evita los conflictos**. No se debe añadir ARIA a etiquetas si pueden entrar en conflicto con su propia semántica. (ej input type="radio" role="checkbox"). 
+- **Evita la redundancia**. No añadas ARIA a controles nativos con el mismo valor. Ej input type="checkbox" role="checkbox".
+- **Cambia los estados y propiedades en respuesta a los eventos**.
+- **Accesible por teclado**. Con el atributo tabindex
+- **Sincroniza la interfaz visual con la interfaz accesible**. 
+- Programa utilizando **Javascript no intrusivo**.
+- Revisa el documento con alguna herramienta. 
+
+## Técnicas específicas de ARIA
+
+Las WCAG 2.1 incluyen 21 tecnicas específicas: 
+
+1. Usa la propiedad aria-described-by para **describir los controles** de interfaz de usuario.
+2. **Identifica los campos obligatorios** con la propiedad aria-required.
+3. Utiliza los roles para informar del rol de cada componente de interfaz de usuario.
+4. Utiliza los estados y propiedades para informas del estado de cada componente.
+5. Etiqueta objetos con aria-label
+6. Define el objetivo del enlace con aria-labelledby
+7. Define el objetivo del enlace con aria-label
+8. Crea una etiqueta concatenando varios nodos de texto con aria-labelledby
+9. Usa aria-labelledby para dar un texto alternativo a contenido no textual
+10. Usa los roles landmarks para identificar las zonas de la página.
+11. Identifica los encabezados con role=heading
+12. Nombra regiones y landmarks con aria-labelledby
+13. Provee etiqueta invisibles con aria-label cuando no puedas utilizar etiquettas visibles.
+14. Describe imágenes con aria-describedby.
+15. Nombra los controles de interfaz de usuario con aria-labelledby
+16. Usa controles de agrupación para identificar controles de formulario relacionados
+17. Identifica errores con role=alertdialog.
+18. Identifica errores con role=alert o con live regions
+19. Identifica regiones de la página con rol=region
+20. Identifica campos con errores con aria-invalid.
+
+
+15. Nombra los controles de interfaz de usuario con aria-labelledby
+16. Usa controles de agrupación para identificar controles de formulario relacionados
+17. Identifica errores con role=alertdialog.
+18. Identifica errores con role=alert o con live regions
+19. Identifica regiones de la página con rol=region
+20. Identifica campos con errores con aria-invalid.
+
+
+## Apendice 1: Javascript no intrusivo. 
+
+Se refiere a que el Javascript está fuertemente ligado a la estructura de la página. 
+
+Veamos un ejemplo: 
+
+```html
+<input type="button" id="botonEnviar" value="Enviar" on-click="enviar()" />
+```
+
+El código anterior, es muy común. Este Javascript es intrusivo, ya que en el propio elemento HTML, tenemos una llamada a una función javascript.
+
+Podemos hacer lo mismo de una forma mucho menos intrusiva: 
+
+```html
+<input type="button" id="botonEnviar" value="Enviar" />
+```
+
+y en el head, o en un archivo js separado, podemos tener el código del click: 
+
+```js
+<script language="javascript" type="text/javascript">
+window.onload = function() {
+
+    document.getElementById("botonEnviar").onclick =enviar;
+}
+
+function enviar() {
+    alert("Hola Mundo");
+}
+```
 
 ## Bibliografía
 

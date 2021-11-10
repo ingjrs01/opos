@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../styles/tailwind.css" />
+    <title>Ejemplo resuelto de ARIA</title>
+</head>
+<body>
+    <div class="container mx-auto">
+     <header>
+        <img src="logo_opos.png" />
+        <h1 class="text-4xl text-gray-800 align-middle">Materiales para Oposición</h1>
+       
+    </header>
+     <main>
+        <!-- Aquí es donde va el contenido -->
+        <h2>Mejorar el uso accesible. navegación en pestañas</h2>
+<p>supongamos que tenemos el siguiene ejemplo:</p>
+<p><img src="img/pestanas.png" alt="">)</p>
+<p>Y el código para producir este ejemplo sería.</p>
+<pre><code class="language-html">&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;#cap1&quot;&gt;Capítulo 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#cap2&quot;&gt;Capítulo 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#cap3&quot;&gt;Capítulo 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;a
+
+&lt;!-- contenidos --&gt;
+&lt;section id=&quot;cap1&quot;&gt;
+    En un lugar de la Mancha ...
+&lt;/section&gt;
+&lt;section id=&quot;cap2&quot;&gt;...&lt;/section&gt;
+&lt;section id=&quot;cap3&quot;&gt;...&lt;/section&gt;
+</code></pre>
+<p>Cuando se pulsa en las pestañas, con Javascript no intrusivo y CSS, se muestra el contenido del capítulo correspondiene. Sin embargo, los productos de apoyo, no entenderán la verdadera función de la lista, ni su relación con las secciones.</p>
+<p>Para mejorar esto tenemos que:</p>
+<ul>
+<li>Informar que la lista se comparta como un widget de pestañas y darle una eitqueta aria-label o aria-labelledby</li>
+<li>Luego, indicar que cada elemento de la lista cumple el rol de presentación de contenidos (role=presentation) para que anuncie su contenido pero no su rol nativo.</li>
+<li>A los enlaces hay que añadirles varios atributos:
+<ul>
+<li>Primero, cual es su rol (role=tabpane)</li>
+<li>Haremos que pueda coger el foco con tabindex=0, para falicitar moverse con el teclado.</li>
+<li>Si el método utilizado para ocultar las pestañas solo las oculta visualmente, necesitaremos el atributo aria-hidden=true que indica que se oculte también al lector de pantalla, y este valor deberá cambiarse dinámicamente a través del Javascript que manipula el componente.</li>
+<li>Por último, añadir el atributo aria-labelledby</li>
+</ul>
+</li>
+</ul>
+<h2>Ejemplo resuelto.</h2>
+<pre><code class="language-html">&lt;ul role=&quot;tablist&quot; aria-label=&quot;Capítulos del Quijote&quot;&gt;
+    &lt;li role=&quot;presentation&quot;&gt;
+        &lt;a href=&quot;#cap1&quot; tabindex=&quot;0&quot; role=&quot;tab&quot; aria-controls=&quot;cap1&quot; aria-selected=&quot;true&quot; aria-posinset=&quot;1&quot; aria-setsize=&quot;3&quot;&gt;Capítulo 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;presentation&quot;&gt;
+        &lt;a href=&quot;#cap2&quot; tabindex=&quot;-1&quot; role=&quot;tab&quot; aria-controls=&quot;cap2&quot; aria-posinset=&quot;2&quot; aria-setsize=&quot;3&quot;&gt;Capítulo 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;presentation&quot;&gt;
+        &lt;a href=&quot;#cap3&quot; tabindex=&quot;-1&quot; role=&quot;tab&quot; aria-controls=&quot;cap3&quot; aria-posinset=&quot;2&quot; aria-setsize=&quot;2&quot;&gt;Capítulo 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- contenidos --&gt;
+
+&lt;section id=&quot;cap1&quot; role=&quot;tabpanel&quot; tabindex=&quot;0&quot; aria-labelledby=&quot;cap1&quot;&gt;
+En un lugar de la Mancha ...
+&lt;/section&gt;
+
+&lt;section id=&quot;cap2&quot; role=&quot;tabpanel&quot; tabindex=&quot;0&quot; aria-labelledby=&quot;cap2&quot; aria-hiden=&quot;true&quot;&gt;
+...
+&lt;/section&gt;
+&lt;section id=&quot;cap3&quot; role=&quot;tabpanel&quot; tabindex=&quot;0&quot; aria-labelledby=&quot;cap3&quot; aria-hidden=true&gt;
+...
+&lt;/section&gt;
+
+</code></pre>
+<p>Si nos fijamos, a los enlaces de las pestañas, se le ha puesto tabindex=0 al primero, mientras que a los otros -1. Esto se hace por la manera en la que deben comportarse las pestañas. Si en cada sitio web, las pestañas que comportasen de una forma diferente, los usuarios tendrían que aprender a manejar el teclado en cada uno de ellos.</p>
+<p>En el caso de las pestañas, una vez que coje el foco la primera, las demás ya no cojen el foco, y nos movemos por ellas con los cursores, y teclas de inicio y fin. Al pulsar espacio o enter en una pestaña tienes que activarla.</p>
+<p>A medida que el usuario selecciona las pestañas con las flechas, se va cambiando dinámicamente por Javascript el atributo tabindex=-1. Esto se denomina reving tabindex.</p>
+
+        <a href=""> Volver</a>
+    </main>
+    <footer>
+        <hr/>
+        <p>Copyright año 2021. Todos los derechos reservados</p>
+    </footer>
+    </div>
+</body>
+</html>

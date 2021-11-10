@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../styles/tailwind.css" />
+    <title>Ejemplos prácticos con html5 y ARIA</title>
+</head>
+<body>
+    <div class="container mx-auto">
+     <header>
+        <img src="logo_opos.png" />
+        <h1 class="text-4xl text-gray-800 align-middle">Materiales para Oposición</h1>
+       
+    </header>
+     <main>
+        <!-- Aquí es donde va el contenido -->
+        <h1>Ejemplos prácticos con html5 y ARIA</h1>
+<h2>Una imagen con su descripción en HTML</h2>
+<p>Queremos incluír en nuestro documento una imágen, con un texto descrivo. Una solución típica:</p>
+<pre><code class="language-html">&lt;div class=&quot;picture&quot;&gt;
+    &lt;img src=&quot;imagen.png&quot; alt=&quot;El escarabajo común desde arriba&quot;&gt;
+    &lt;p&gt;El escarabajo común desde arriba&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<p>El problema de esto es que tiene una descrición redundante. Una resolución mucho mejor sería:</p>
+<pre><code class="language-html">&lt;figure role=&quot;img&quot; aria-labelledby=&quot;descEsc&quot;&gt;
+    &lt;img src=&quot;imagen.png&quot; &gt;
+    &lt;figcaption id=&quot;descEsc&quot;&gt;El escarabajo común desde arriba&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<h2>Validando un formulario:</h2>
+<pre><code class="language-html">&lt;label for=&quot;field&quot;&gt;Nombre&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&quot;field&quot; required aria-required=&quot;true&quot; name=&quot;name&quot; placeholder=&quot;Ej Paquito&quot;&gt;
+</code></pre>
+
+        <a href=""> Volver</a>
+    </main>
+    <footer>
+        <hr/>
+        <p>Copyright año 2021. Todos los derechos reservados</p>
+    </footer>
+    </div>
+</body>
+</html>
