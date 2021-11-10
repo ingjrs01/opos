@@ -3,6 +3,11 @@ title: Protección de Datos
 layout: articles.njk
 ---
 
+- Regulamento general de protección de datos (RXPD)
+- Lei orgánica 3/2018, de protección de datos persoais e garantía de dereitos dixitais. 
+- Características y aplicación.
+
+
 # La protección de datos personales. Régimen Jurídico. 
 
 El artículo 3 define dato como "cualquier información concerniente a personas físicas idenficados o identificables". Específicamente el reglamento considera dato personal cualquier información numérica, alfabética, acústica, fotográfica, gráfica o de cualquier otro tipo, siempre que concierna a una persona física identificada o identificable. 
@@ -40,3 +45,15 @@ Principios de tratamiento:
 - Principio de "Limitación del plazo de conservación". 
 - Principio de "Integridad y confidencialidad". 
 - Responsablidad proactiva
+
+## Lei orgánica 3/2018, de protección de datos persoais e garantía de dereitos dixitais.
+
+[Enlace a ley](https://www.boe.es/eli/es/lo/2018/12/05/3)
+
+La presente ley orgánica tiene por objeto:
+
+a) Adaptar el ordenamiento jurídico español al Reglamento (UE) 2016/679 del Parlamento Europeo y el Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento de sus datos personales y a la libre circulación de estos datos, y completar sus disposiciones.
+
+El derecho fundamental de las personas físicas a la protección de datos personales, amparado por el artículo 18.4 de la Constitución, se ejercerá con arreglo a lo establecido en el Reglamento (UE) 2016/679 y en esta ley orgánica.
+
+b) Garantizar los derechos digitales de la ciudadanía conforme al mandato establecido en el artículo 18.4 de la Constitución.
