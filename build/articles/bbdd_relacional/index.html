@@ -17,15 +17,25 @@
      <main>
         <!-- Aquí es donde va el contenido -->
         <h1>Bases de datos</h1>
-<p>Tradicionalemente los sistemas de información de las empresas se componían de programs escritos en lenguajes de alto nivel (C, fortran, ...) que gestionaban información almacenada en ficheros, de forma que el programador esta el responsable de almacenar y recuperar la información. Esto supone varios problemas:
-Por un lado los programadores estan escribiendo una y otra vez código para realizar las mismas operaciones, y posiblemente no todos de una forma correcta.
-Además no estamos controlando si varios programas están accediendo a los ficherso de forma concurrente.
-El hecho de que un mismo fichero necesite ser abierto por varios programas, si tenemos que hacer un cambio en el fichero, por ejemplo para añadir un dato a los registros, esto nos obligará a reescribir todos los programas que utilizan ese fichero.
-Si para evitar estos problemas, cada aplicación tiene sus propios ficheros, entonces tenemos redundancia de datos, lo cual es un despilfarro de recursos, pero además puede suponer tener información inconsistente.
-Y además existen otros posibles problemas como recuperación frente a fallos, control de acceso a los datos, etc.</p>
-<p>Por todo esto se buscó un nuevo enfoque, que se trató de independizar los datos de las aplicaciones que los utilizan, de modo que ningun cambio en la estructura de los datos afecte a los programas que los utilizan. De esta forma podemos definir una base de datos como un conjunto de datos interrelacionados y almacenados, que sirven a aplicaciones de la menor manera posible, pero manteniendo una independencia entre datos y programas.
-Las bases de datos han de dar a los usuarios (entendemos que un programa que la utilzia es un usuario) métodos para definir los datos que van a utilizar, para instroducir datos, para modificarlos y borrarlos. También buscan otro sservicios como control de acceso, recuperación ante fallos, acceso concurrente, rendimiendo óptimo, poder realizar operaciones atómicas.</p>
+<h2>Introducción</h2>
+<p>Tradicionalmente los sistemas de información de las empresas se componían de programas escritos en lenguajes de alto nivel (C, fortran, ...) que gestionaban información almacenada en ficheros, de forma que el programador esta el responsable de almacenar y recuperar la información. Esto supone varios problemas:</p>
+<ul>
+<li>Por un lado los programadores estan escribiendo una y otra vez código para realizar las mismas operaciones, y posiblemente no todos de una forma correcta.</li>
+<li>Además no estamos controlando si varios programas están accediendo a los ficherso de forma concurrente.</li>
+<li>El hecho de que un mismo fichero necesite ser abierto por varios programas, si tenemos que hacer un cambio en el fichero, por ejemplo para añadir un dato a los registros, esto nos obligará a reescribir todos los programas que utilizan ese fichero.</li>
+<li>Si para evitar estos problemas, cada aplicación tiene sus propios ficheros, entonces tenemos redundancia de datos, lo cual es un despilfarro de recursos, pero además puede suponer tener información inconsistente.</li>
+<li>Y además existen otros posibles problemas como recuperación frente a fallos, control de acceso a los datos, etc.</li>
+</ul>
+<p>Por todo esto se buscó un nuevo enfoque, que se trató de independizar los datos de las aplicaciones que los utilizan, de modo que ningun cambio en la estructura de los datos afecte a los programas que los utilizan. De esta forma podemos definir una base de datos como un conjunto de datos interrelacionados y almacenados, que sirven a aplicaciones de la menor manera posible, pero manteniendo una independencia entre datos y programas.</p>
+<p>Las bases de datos han de dar a los usuarios (entendemos que un programa que la utilzia es un usuario) métodos para definir los datos que van a utilizar, para instroducir datos, para modificarlos y borrarlos. También buscan otro sservicios como control de acceso, recuperación ante fallos, acceso concurrente, rendimiendo óptimo, poder realizar operaciones atómicas.</p>
 <p>Un Sistema Gestor de Bases de Datos es un conjunto de programas que permiten administrar y gestionar la información de una base de datos.</p>
+<h2>Arquitectura. Niveles</h2>
+<p>en 1975 el comité ANSI-SPARC propuso una arquitectura de tres nivles para los sitemas gestires de bases de datos, cuyo principal objetivo era separar los programas de aplicación de la base de dato física. Estos niveles son:</p>
+<ul>
+<li>Nivel interno o físico. Se trata del nivel más cercano al almacenamiento. En el se describe como están almacenados los datos en el ordenador. Arquivos que contienen la información, organización, métodos de acceso a los registros, etc.</li>
+<li>Nivel externo o de visión. Se trata del nivel más cercano a los usuarios. En el se describen varios esquemas o vistas de usuarios. Cada esquema define a parte de la base de datos que interesa a ese grupo de usuarios.</li>
+<li>Nivel conceptual. Describe la estructura de toda la base de datos. Este nivel describe las entidades, atributos, relaciones, operaciones de los usuarios, restricciones, etc.</li>
+</ul>
 <h2>Definiciones.</h2>
 <p>Llamamos LDM al lenguaje de manipulación de datos. Este lenguaje nos permite realizar consultas, insertar registros, eleminar, actulaizar. Sus instrucciones:
 INSERT
@@ -42,7 +52,7 @@ REVOKE</p>
 <h2>Funciones de una base de datos.</h2>
 <p>Edgar Frank Cood, el creador del modelo relacionar estableció una serie de servicios que debe cumplir todo Sistema Gestor de Bases de Datos:</p>
 <ul>
-<li>El principal servicio es propocionar al usuario la capacidad de almacenar datos en la base de datos, acceder a ellos y actualizarlos. Esta es la función principal. Además debe hacerlo ocultando la estructura física interna (archivos que halla por debajo. )</li>
+<li>El principal servicio es propocionar al usuario la <strong>capacidad de almacenar datos</strong> en la base de datos, acceder a ellos y actualizarlos. Esta es la función principal. Además debe hacerlo ocultando la estructura física interna (archivos que halla por debajo. )</li>
 <li>Se debe proporcionar al usuario un catálogo en el que se almacenen las descripciones de los datos. Se llama el diccionario de datos.</li>
 <li>Se debe proporcionar un mecanismo que garantice que todas las actualizaciones correspondientes a una determinada transacción se realicen todas o no se realice ninguna.</li>
 <li>Se debe proporcionar un mecanismo que se asegure que la base de datos se actualiza correctamente cuando varios usuarios hacen cambios de forma simultánea. El acceso concurrente es uno de los principales objetivos de los SGBD</li>
@@ -53,7 +63,55 @@ REVOKE</p>
 </ul>
 <p><img src="img/funciones.jpg" alt="Funciones" title="Funciones SGBD"></p>
 <h2>Componentes</h2>
-<p>Módulos del SGBD</p>
+<p>Los compoentes de una base de datos son los encargados de realizar las funcionanes de ésta:</p>
+<ul>
+<li>Lenguajes de datos.</li>
+<li>Diccionario de datos.</li>
+<li>Objetos.</li>
+<li>Herramientas de administración.</li>
+<li>Optimizador de consultas.</li>
+<li>Gestor de trasacciones.</li>
+<li>Planificador.</li>
+<li>Copias de seguridad.</li>
+</ul>
+<h3>Lenguajes de datos.</h3>
+<p>Hay 3+1 tipos de lenguaje según su funcionalidad:</p>
+<ul>
+<li>DDL Lenguaje de definición de datos. CREATE, DROP, ...</li>
+<li>DCL Lenguaje de control de datos. GRANT</li>
+<li>DML Lenguaje de maniputación de datos. SELECT INSERT, UPDATE, DELETE</li>
+<li>Lenguajes de cuarta generación, diseñados con el objetivo de diseñar aplicaciones dentro de la propia BBDD</li>
+</ul>
+<h3>Diccionario.</h3>
+<p>El diccionario está compuesto opr el conjutno de esquemas que describen el contenido del SGBD, incluyendo los distintos objetos y sus propiedades:</p>
+<ul>
+<li>Nombre, tipo y tamaño</li>
+<li>Relaciones entre datos</li>
+<li>Restricciones de integridad</li>
+<li>Usuarios autorizados</li>
+<li>Estadísticas de utilización.</li>
+</ul>
+<p>El diccionario es accesible por los usuarios.</p>
+<h3>Objetos.</h3>
+<p>Todos los gestores poseen una serie de objetos que permiten la definición y manipulacíon de los datos:</p>
+<ul>
+<li>Tablas base y vistas</li>
+<li>Consultas</li>
+<li>Dominios y tipos definidos de datos</li>
+<li>Resctricciones de tabla, dominio y aserciones.</li>
+<li>Funciones y procedimientos almacenados.</li>
+<li>Disparadores (triggers)</li>
+</ul>
+<h3>Herramientas de administración.</h3>
+<p>Todo sistema posee una serie de herramientas para cubrir las tareas de administración.</p>
+<h3>Optimizador de consultas.</h3>
+<p>Este componente se encarga de deterinadr la estrategia más optima para la ejecución de una consulta.</p>
+<h3>Gestor de trasacciones.</h3>
+<p>Una trasacción es un conjunto de operaciones que ha de ejecutarse de forma atómica (es decir, o se ejecutan todas las operaciones o no se ejecuta ninguna). Esto es muy importante para la interidad de los datos, y de esta parte se encarga este gestor.</p>
+<h3>Planificador (scheduler).</h3>
+<p>Parte del SGBD que se encarga de programar y automatizar la ejecución de tareas.</p>
+<h3>Copias de seguridad.</h3>
+<p>Módulos del SGBD:</p>
 <ul>
 <li>
 <p>El <strong>procesador de consultas</strong> es el componente principal. Transforma las consultas en instrucciones de bajo nivel que se dirigen al gestor de la base de datos.</p>

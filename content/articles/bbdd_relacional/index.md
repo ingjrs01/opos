@@ -5,17 +5,31 @@ layout: articles.njk
 
 # Bases de datos
 
-Tradicionalemente los sistemas de información de las empresas se componían de programs escritos en lenguajes de alto nivel (C, fortran, ...) que gestionaban información almacenada en ficheros, de forma que el programador esta el responsable de almacenar y recuperar la información. Esto supone varios problemas: 
-Por un lado los programadores estan escribiendo una y otra vez código para realizar las mismas operaciones, y posiblemente no todos de una forma correcta. 
-Además no estamos controlando si varios programas están accediendo a los ficherso de forma concurrente. 
-El hecho de que un mismo fichero necesite ser abierto por varios programas, si tenemos que hacer un cambio en el fichero, por ejemplo para añadir un dato a los registros, esto nos obligará a reescribir todos los programas que utilizan ese fichero. 
-Si para evitar estos problemas, cada aplicación tiene sus propios ficheros, entonces tenemos redundancia de datos, lo cual es un despilfarro de recursos, pero además puede suponer tener información inconsistente. 
-Y además existen otros posibles problemas como recuperación frente a fallos, control de acceso a los datos, etc. 
+## Introducción 
+
+Tradicionalmente los sistemas de información de las empresas se componían de programas escritos en lenguajes de alto nivel (C, fortran, ...) que gestionaban información almacenada en ficheros, de forma que el programador esta el responsable de almacenar y recuperar la información. Esto supone varios problemas: 
+
+- Por un lado los programadores estan escribiendo una y otra vez código para realizar las mismas operaciones, y posiblemente no todos de una forma correcta. 
+- Además no estamos controlando si varios programas están accediendo a los ficherso de forma concurrente. 
+- El hecho de que un mismo fichero necesite ser abierto por varios programas, si tenemos que hacer un cambio en el fichero, por ejemplo para añadir un dato a los registros, esto nos obligará a reescribir todos los programas que utilizan ese fichero. 
+- Si para evitar estos problemas, cada aplicación tiene sus propios ficheros, entonces tenemos redundancia de datos, lo cual es un despilfarro de recursos, pero además puede suponer tener información inconsistente. 
+- Y además existen otros posibles problemas como recuperación frente a fallos, control de acceso a los datos, etc. 
 
 Por todo esto se buscó un nuevo enfoque, que se trató de independizar los datos de las aplicaciones que los utilizan, de modo que ningun cambio en la estructura de los datos afecte a los programas que los utilizan. De esta forma podemos definir una base de datos como un conjunto de datos interrelacionados y almacenados, que sirven a aplicaciones de la menor manera posible, pero manteniendo una independencia entre datos y programas. 
+
 Las bases de datos han de dar a los usuarios (entendemos que un programa que la utilzia es un usuario) métodos para definir los datos que van a utilizar, para instroducir datos, para modificarlos y borrarlos. También buscan otro sservicios como control de acceso, recuperación ante fallos, acceso concurrente, rendimiendo óptimo, poder realizar operaciones atómicas. 
 
 Un Sistema Gestor de Bases de Datos es un conjunto de programas que permiten administrar y gestionar la información de una base de datos. 
+
+
+## Arquitectura. Niveles
+
+en 1975 el comité ANSI-SPARC propuso una arquitectura de tres nivles para los sitemas gestires de bases de datos, cuyo principal objetivo era separar los programas de aplicación de la base de dato física. Estos niveles son: 
+
+- Nivel interno o físico. Se trata del nivel más cercano al almacenamiento. En el se describe como están almacenados los datos en el ordenador. Arquivos que contienen la información, organización, métodos de acceso a los registros, etc.
+- Nivel externo o de visión. Se trata del nivel más cercano a los usuarios. En el se describen varios esquemas o vistas de usuarios. Cada esquema define a parte de la base de datos que interesa a ese grupo de usuarios. 
+- Nivel conceptual. Describe la estructura de toda la base de datos. Este nivel describe las entidades, atributos, relaciones, operaciones de los usuarios, restricciones, etc. 
+
 ## Definiciones. 
 
 Llamamos LDM al lenguaje de manipulación de datos. Este lenguaje nos permite realizar consultas, insertar registros, eleminar, actulaizar. Sus instrucciones: 
@@ -37,7 +51,7 @@ REVOKE
 ## Funciones de una base de datos. 
 Edgar Frank Cood, el creador del modelo relacionar estableció una serie de servicios que debe cumplir todo Sistema Gestor de Bases de Datos: 
 
-- El principal servicio es propocionar al usuario la capacidad de almacenar datos en la base de datos, acceder a ellos y actualizarlos. Esta es la función principal. Además debe hacerlo ocultando la estructura física interna (archivos que halla por debajo. ) 
+- El principal servicio es propocionar al usuario la **capacidad de almacenar datos** en la base de datos, acceder a ellos y actualizarlos. Esta es la función principal. Además debe hacerlo ocultando la estructura física interna (archivos que halla por debajo. ) 
 - Se debe proporcionar al usuario un catálogo en el que se almacenen las descripciones de los datos. Se llama el diccionario de datos. 
 - Se debe proporcionar un mecanismo que garantice que todas las actualizaciones correspondientes a una determinada transacción se realicen todas o no se realice ninguna. 
 - Se debe proporcionar un mecanismo que se asegure que la base de datos se actualiza correctamente cuando varios usuarios hacen cambios de forma simultánea. El acceso concurrente es uno de los principales objetivos de los SGBD
@@ -48,10 +62,72 @@ Edgar Frank Cood, el creador del modelo relacionar estableció una serie de serv
 
 ![Funciones](img/funciones.jpg "Funciones SGBD")
 
-
 ## Componentes
 
-Módulos del SGBD
+Los compoentes de una base de datos son los encargados de realizar las funcionanes de ésta: 
+
+- Lenguajes de datos.
+- Diccionario de datos.
+- Objetos.
+- Herramientas de administración. 
+- Optimizador de consultas. 
+- Gestor de trasacciones.
+- Planificador. 
+- Copias de seguridad.
+
+### Lenguajes de datos.
+
+Hay 3+1 tipos de lenguaje según su funcionalidad: 
+- DDL Lenguaje de definición de datos. CREATE, DROP, ...
+- DCL Lenguaje de control de datos. GRANT
+- DML Lenguaje de maniputación de datos. SELECT INSERT, UPDATE, DELETE
+- Lenguajes de cuarta generación, diseñados con el objetivo de diseñar aplicaciones dentro de la propia BBDD
+
+### Diccionario. 
+
+El diccionario está compuesto opr el conjutno de esquemas que describen el contenido del SGBD, incluyendo los distintos objetos y sus propiedades: 
+
+- Nombre, tipo y tamaño
+- Relaciones entre datos
+- Restricciones de integridad
+- Usuarios autorizados
+- Estadísticas de utilización. 
+
+El diccionario es accesible por los usuarios. 
+
+### Objetos. 
+
+Todos los gestores poseen una serie de objetos que permiten la definición y manipulacíon de los datos:
+- Tablas base y vistas
+- Consultas
+- Dominios y tipos definidos de datos
+- Resctricciones de tabla, dominio y aserciones. 
+- Funciones y procedimientos almacenados. 
+- Disparadores (triggers)
+
+
+### Herramientas de administración. 
+
+Todo sistema posee una serie de herramientas para cubrir las tareas de administración. 
+
+
+### Optimizador de consultas. 
+
+Este componente se encarga de deterinadr la estrategia más optima para la ejecución de una consulta. 
+
+### Gestor de trasacciones. 
+
+Una trasacción es un conjunto de operaciones que ha de ejecutarse de forma atómica (es decir, o se ejecutan todas las operaciones o no se ejecuta ninguna). Esto es muy importante para la interidad de los datos, y de esta parte se encarga este gestor. 
+
+### Planificador (scheduler).
+
+Parte del SGBD que se encarga de programar y automatizar la ejecución de tareas. 
+
+### Copias de seguridad.
+
+
+Módulos del SGBD:
+
 - El **procesador de consultas** es el componente principal. Transforma las consultas en instrucciones de bajo nivel que se dirigen al gestor de la base de datos. 
 - **Gestor de la base de datos**. Es la interfaz entre los programas de aplicación y las consultas de los usuarios. Acepta consultas y examino los esquemas externo y conceptual para determinar que registros re requieren para satisfacer la petición. Entonces el gestor de base de datos realizar una llamada al gestor de archivos para ejecutar la petición. 
 - **Gestor de archivos**. Maneja los archivos en disco, donde se almacena la base de datos. No realiza la E/S de datos, sino que usa los métodos del Sistema Operativo. 
