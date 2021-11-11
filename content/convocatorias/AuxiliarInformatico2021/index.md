@@ -37,7 +37,7 @@ Ademais das condicións sinaladas na base cuarta das xerais as persoas aspirante
 1. Informática básica. Concepto de datos e información. Concepto de sistema de información. Elementos constitutivos de un sistema de información. Características efuncións.
 2. [Arquitectura de ordenadores. Elementos básicos. Funcións. A unidade central de procesamento. A memoria: tipos, xerarquía e modos de direccionamento](/articles/arquitectura_pc)
 3. Periféricos: conectividade e administración. Elementos de impresión. Elementos de almacenamento. Elementos de visualización e dixitalización.
-4. Paquetes de ofimática: aplicacións que os compoñen. Comandos e os seus usos.
+4. [Paquetes de ofimática: aplicacións que os compoñen. Comandos e os seus usos.](/articles/ofimatica)
 5. [Sistemas operativos. Características técnicas e elementos constitutivos. Sistemas Windows. Sistemas Unix y Linux](/articles/sistemas_operativos)
 6. Sistemas operativos para dispositivos móbiles.
 7. [Sistemas de xestión de bases de datos relacionais. Características e compoñentes](/articles/bbdd_relacional)
