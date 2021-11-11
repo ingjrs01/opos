@@ -25,4 +25,4 @@ Los documentos compulsados electronicamente, se almacenarán en el Archivo de Co
 
 Los organismos públicos deberán 
 
-https://www.boe.es/buscar/doc.php?id=BOE-A-2006-8577
+[Ley](https://www.boe.es/buscar/doc.php?id=BOE-A-2006-8577)

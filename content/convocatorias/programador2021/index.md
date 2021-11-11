@@ -70,7 +70,7 @@ Ademais das condicións sinaladas na base cuarta das xerais as persoas aspirante
 29. Criptografía. Clave asimétrica. Clave simétrica. Certificados dixitais, sinatura electrónica. Sistemas KDC.
 30. Esquema Nacional de Seguridade (ENS) e Esquema Nacional de Interoperabilidade (ENI), adecuación e cumprimento, instrumentos.
 31. Implantación da Administración electrónica. Sede electrónica. Sede electrónica e servizos de Sede.
-32. [Rexistro electrónico. Expediente electrónico. Arquivo electrónico de documentos. Dixitalización, compulsa electrónica.](/articles/registro)
+32. [Rexistro electrónico. Expediente electrónico. Arquivo electrónico de documentos. Dixitalización, compulsa electrónica.](/articles/registro_electronico/)
 
 ## Enlaces: 
 
