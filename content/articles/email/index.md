@@ -1,5 +1,5 @@
 ---
-title: Correo Electrónico:
+title: Correo Electrónico
 layout: articles.njk
 ---
 # Correo Electrónico

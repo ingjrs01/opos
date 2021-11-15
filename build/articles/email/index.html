@@ -25,6 +25,20 @@
 <li>Administración de servidores de correo electrónico.</li>
 <li>Protocolos de correo electrónico</li>
 </ul>
+<h2>Componentes <a href="" id="componentes"></a></h2>
+<p>Cuando se envía un correo electrónico, el mensaje se enruta de servidor a servidor hasta llegar al servidor de correo del receptor. Estos servidores de correo se denominan <strong>MTA</strong> (Mail Transport Agent), y se comunican entre si mediante el protocolo SMTP, por eso a menudo se les llama servidores SMTP e incluso servidores de correo saliente.</p>
+<p>Una vez llega al servidor del receptor, el MTA entrega el corrego al <strong>MDA</strong> (Mail Delivey Agent), el cual lo almacena esperando que el usuario lo acepte. Los protocolos que pueden usar los MDA son POP3 e IMAP</p>
+<p>Finalmente el trabajo de recuperar el correo, y mostrarselo al usuario es el MUA (Mail User Agent)</p>
+<h2>Partes de un mensaje: <a href="" id="partes"></a></h2>
+<p>Los elementos de la estructura interna de un mensaje:</p>
+<ul>
+<li>Dirección de correo.  Es una cadena de texto separada en dos mitadas por una @, donde la primera mitad se correponde con el nombre de usuario, y la segunda con el dominio del servidor de correo.</li>
+<li>Cabeceras (headers): Son metadatos que van dentro de un correo. Inclyuen información del remitente (FROM), destinatario (TO y CC), los MTA por los que ha pasado (Received), el asunto del mensaje (SUBJECT), la fecha (DATE) y otra inforación.</li>
+<li>Cuerpo del mensaje. Puede ser texto plano, y on contenido formateado marcado por un Content-type.</li>
+<li>Mensaje. contendio enviado de un MTA  otro</li>
+<li>Buzón. Es donde el MDA almacena los mensajes recibidos para un usuario.</li>
+<li>Relay. Ocurre cuando un mensaje recibido en un MTA no permitene al dominio que lo controla, y debe enviarlo al MTA propiedad de ese dominio.</li>
+</ul>
 <h2>Introducción</h2>
 <p>El servicio de correo electrónico es uno de los métodos de comunicación más usados del mundo. Lo usamos en nuestros ordenadores, móviles, tablets e incluso en nuestros relojes inteligentes. Gracias a él podemos comunicarnos con personas de todo el mundo en cuestión de segundos. Es una de las herramientas creadas que existen en Internet.</p>
 <p>Servidor de correo.
@@ -41,7 +55,8 @@ Ejemplos de MTA pueden ser:</p>
 <li>Courier</li>
 <li>Cyrus</li>
 </ul>
-<p>Puede definirse como el servidor SMTP que usamos, el que recibe datos generalmente de un MUA (Mail User Agent) para obtener el correo, y luego enviarlo al destino.
+<p>Puede definirse como el servidor SMTP que usamos, el que recibe datos generalmente de un MUA (Mail User Agent) para obtener el correo, y luego enviarlo al
+destino.
 Un MUA, o Agente de Usuario de Correo, es el que recibe el correo y envía mail usando SMTP  a través del MTA, y recibe por POP3 o IMAP.</p>
 <p>Ejemplos de MUA puede ser:</p>
 <ul>
@@ -86,6 +101,29 @@ La firma y cifrado de correos electrónicos.
 La incorporación automática de un descargo de responsabilidad al final del mensaje.
 El archivo de correos electrónicos.
 El enrutamiento de correo y la reescritura en caso de modificación de la dirección.</p>
+<h2>MIME</h2>
+<p><a ref="https://es.wikipedia.org/wiki/Multipurpose_Internet_Mail_Extensions" target="_blank">Wikipedia</a></p>
+<p>Multipurpose Internet Mail Extensións.
+En sentido general, estas extensiones van dirigidas a soportar:</p>
+<ul>
+<li>Texto en conjuntos de caracteres distintos a US-ASCII</li>
+<li>Adjuntos que no son de texto</li>
+<li>Cuerpos de mensajes con múltiples partes</li>
+<li>Información de encabezados con codificacion distinta de US-ASCII</li>
+</ul>
+<p>Practimanete la totalidad de los mensajes escritos por personas, y parte de los generaods d forma autoóamica están transmitidos en formato MIME, a través de SMTP.</p>
+<p>MIME asocia un nombre a cada tipo de dato, con el siguiente formato:</p>
+<p>tipo/subtipo</p>
+<p>El tipo define la categoría general, mientra que el subtimo afina más en los datos. El tipo puede contener los siguientes valores.</p>
+<ul>
+<li>text: texto plano</li>
+<li>multipart: tiene múltiples partes independientes. ejemplos de subtipos son form-data y digest</li>
+<li>message: Para encapsular un mensaje existente, como por ejemplo cuando respondiemos a un correo conteniendo el mensaje origen. Ejemplos de subtipos son partial y rfc822.</li>
+<li>image: indica que una imágen. Ejemplos de subtipos pueden ser jpg o png</li>
+<li>audio: Ejemplos de subtipos mp3 o 32kadpcm</li>
+<li>video: mpeg o avi</li>
+<li>application: indica que se trata de datos de aplicación, lo cual pueden ser binarios. Ej puede ser un pdf o json.</li>
+</ul>
 
         <a href=""> Volver</a>
     </main>

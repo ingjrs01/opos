@@ -1,475 +1,147 @@
 ---
-title: Acesibilidad, diseño universal y usabilidad.
+title: Aplicaciones Web
 layout: articles.njk
 ---
 
 ## Acesibilidad, diseño universal y usabilidad.
 
-### Accesibilidad
 
-La accesibilidad, aplicada al mundo de la tecnología, hace referencia al acceso universal a un contenido electrónico, típicamente, una página web, independientemente del tipo de hardware, software, infraestructura de red, idioma ,localización geográfica o capacidad de los usuarios.
+## XML 
 
-Para poner en práctica la accesibilidad hay que tener presenta las Pautas de Accesibilidad al Contenido Web (WCAG) así como aplicar los Roles ARIA que se usan para hacer contenido accesible para las personas con diversidad funcional.
-
-### Usabilidad
-
-La usabilidad hace referencia a la facilidad de uso con que las personas pueden usar una herramienta en particual, en concreto podemos pensar también en una web. En hacer que el contenido sea fácil de utilizar.
-
-Como una primera guía, podemos considerar que tenemos un problema de usabilidad cuando:
-
-- Hay problemas para completar una tarea.
-- Se saca al usuario del camino
-- Algo produce confusión en los usuarios.
-- Se producen errores.
-- Los usuarios no ven algo que deberían haber visto.
-- Los usuarios piensan que han finalizado una tarea y no es así
-- No se entiende la navegación web.
-- Se tienen dar muchísimos clics para llegar al objetivo.
-- La página tarda mucho en cargarse.
-
-Beneficios de la usabilidad:
-
-- Facilidad de aprendizaje
-- Disminuyen los costes de asistencia al usuario.
-- Optimización de los costes de diseño, rediseño y mantenimiento.
-- Aumenta la tasa de conversión.
-- Para la usuarios es más fácil navegar.
-- Mejora el prestigio de la web y la imagen de marca.
-- Aumenta la velocidad de carga.
-
-Existen 5 reglas principales para la usabilidad web:
-
-- Rápido. Las páginas deben cargarse en una media de 4 segundos. Está comprobado que los usuarios esperan como máximo 10 segundos para ver el contenido solicitado
-- Simple. Mantener una navegación simple. No forzar a aprender diversos caminos o esquemas de navegación.
-- Investigable. Los motores de búsqueda buscan texto real, no prestan atención a animaciones o gráficos
-- Universalidad. El código debe ser compatible con todos los navegadores. Utilizar HTML estándar.
-- Mantener actualizado
-
-Según Jakob Nielsen, uno de los gurús de la usabilidad más populares del mundo, las reglas para tener un diseño user fiendly son:
-
-1. Visiblidad del estado del sistema. El sistema debe mantener informado al usuario sobre lo que está sucediendo. Son ejemplos básicos las barras de progreso, y los iconos de cargando.
-2. Relación entre el sistema y el mundo real. El sistema debería hablar el lenguaje de los usuarios mediante palabras, frases y conceptos que sean familiares al usuario, más que con términos relacionados con el sistema.
-3. Control y libertad del usuario. Es posible que los usuarios elegirán las funciones del sistema por error y necesitarán una “salida de emergencia” claramente marcada para dejar el estado no deseado al que accedieron, sin tener que pasar por una serie de pasos. Se deben apoyar las funciones de deshacer y rehacer
-4. Consistencia y estándares. Los usuarios no deberían cuestionarse si acciones, situaciones o palabras diferentes significan en realidad la misma cosa. Mejor ser estándar que innovar.
-5. Prevención de errores. Mucho mejor que hacer un buen diseño de mensajes de error, es realizar un diseño cuidadoso que prevenga la concurrencia de errores. El ejemplo más sencillo es el autocorrector del móvil (no solo te marca que hay un error, sino que te ofrece una corrección).
-6. Reconocimiento antes que recuerdo. Se deben hacer visibles los objetos, acciones y opciones, El usuario no tendría que recordar la información que se le da en una parte del proceso, para seguir adelante. Las instrucciones para el uso del sistema deben estar a la vista o ser fácilmente recuperables cuando sea necesario.
-7. Flexibilidad y eficiencia de uso. La presencia de aceleradores, que no son vistos por los usuarios novatos, puede ofrecer una interacción más rápida a los usuarios expertos que la que el sistema puede proveer a los usuarios de todo tipo. Se debe permitir que los usuarios adapte el sistema para usos frecuentes. Por ejemplo, el clásico botón de “Saltar” que aparece al instalar un juego es un buen ejemplo. El usuario “novato” verá el tutorial, y el que ya conozca la mecánica podrá saltarlo y empezar a jugar directamente.
-8. Estética y diseño minimalista. Los diálogos no deben contener información que es irrelevante o poco usada. Cada unidad extra de información en un diálogo, compite con las unidades de información relevante y disminuye su visibilidad relativa. El buscador de Google es el máximo exponente de esto. Google.com consta de una barra de búsqueda, dos botones y una lupa.
-9. Ayudar a los usuarios a reconocer, diagnosticar y recuperarse de errores. Los mensajes de error se deben entregar en un lenguaje claro y simple, indicando en forma precisa el problema y sugerir una solución constructiva al problema
-10. Ayuda y documentación. Incluso en los casos en que el sistema pueda ser usado sin documentación, podría ser necesario ofrecer ayuda y documentación. Dicha información debería ser fácil de buscar, estar enfocada en las tareas del usuario, con una lista concreta de pasos a desarrollar y no ser demasiado extensa
-
-En la actualidad hay que destacar que por ejemplo en web, gran parte de los usuarios nos visitarán desde dispositivos móviles. Es muy importante considerar la usabilidad cuando nos visitan con estos dispositivos.
-
-### Diseño universal.
-
-Es un concepto relativamente reciente y tiene que ver con el diseño de productos y entornos que resulten de fácil acceso para el mayor número de personas posible, sin necesidad de adaptarlos o rediseñarlos de forma especial. Es un término más global que engloba la accesibilidad
-
-El Diseño Universal va más allá de la definición de accesibilidad, proponiendo siete principios tanto para espacios construidos como para productos o servicios que se ofrecen en la vida diaria y que, obviamente, deben estar disponibles para todos en igualdad de condiciones, teniendo en cuenta, también, el acceso a la información y las comunicaciones como parte de la integración e inclusión de personas con discapacidad.
-
-Lo cierto es que, en un momento dado, todos podemos vernos perjudicados por las características del entorno por lo que la accesibilidad pensada, en principio, para personas con discapacidad, nos ayuda a todas las personas, haciendo los espacios más cómodos y seguros, por lo que podríamos hablar de “diseño para todos”, “diseños incluyentes” o “diseño universal”.
-
-El diseño universal es definido como “el diseño de productos y entornos para ser usados por todas las personas, al máximo posible, sin adaptaciones o necesidades de un diseño especializados”.
-
-Los siete principios del diseño universal:
-
-- **Uso equitativo**.
-- **Uso flexible**.Ha de ser usable por personas con un amplio rango de preferencias, hábitos y habilidades. Por ejemplo un packaging diseñado para baja visión y con etiqueta braille es universal, pero una máquina de vending táctil no parlante no lo es.
-- **Uso simple e intuitivo**. Fácil de enteder por cualquier persona. Ejemplo, el sistema de pago sin contacto NFC y no es universal las máquinas expendedoras de tiques del metro (porque normalmente requieren de experiencia o mucha habilidad cognitiva).
-- **Información Perceptible**. La información ha de poder ser percibida y entendida por todos en condiciones ambientales diversas y por parte de usuarios con distintas habilidades sensoriales. Por ejemplo, es universal el DVD de una película que contenga un canal con audio descripción para personas con dificultades de visión y con subtítulos para personas con diversidad funcional auditiva y no es universal un aviso de oferta que sólo se emite por el sistema de audio de un supermercado (porque no es recibido por personas que no oyen o que lo hacen con dificultad).
-- **Tolerancia al error**. Ejemplos, es universal una máquina vending que tenga un botón claramente identificable para cancelar la operación.
-  No es universal una lata de conservas que deja filos metálicos cortantes.
-- **Mínimo esfuerzo físico**. Ejemplos, es universal un acceso por rampa mecánica a un primer piso de un centro comercial y no es universal una gran superficie que no disponga de espacios para el descanso.
-- **Tamaño adecuado de aproximación y uso**. Ejemplos, es universal un MOSTRADOR de atención A DOBLE ALTURA (uno a 80 cm del suelo (con hueco bajo él) para personas de talla baja o que van en silla, y otro a 110 cm para personas que caminan) y no son universales las baldas de un lineal que están por encima de los 120 cm (porque una persona en silla de ruedas no alcanza con comodidad los productos).
-
-
-## Accesibilidad por el W3C
-
-Uno de los objetivos del W3C es guiar la web hacía su máximo potencial, lo cual incluye hacer una web más accesible para las personas, tengan o no cualquier tipo de discapacidad. De esta forma nace la WAI (Iniciativa de Accesibilidad Web), dentro de la cual podemos ubicar el grupo de trabajo PFWG (Group Work Formats Protocol), que a su vez son los autores de: 
-- Las pautas de accesibilidad WCAG 2.0
-- Directrices de accesiblidad para XML XAG
-- Aplicaciones de Internet enriquecidas accesibles ARIA
-
-
-### Pautas de Accesibilidad para el Contenido Web (WCAG)
-
-Las pautas de accesibilidad para el contenido web son un conjunto de reglas, cuyo cumplimiento hace que nuestro sitio sea más accesible para las personas con diversidad funcional. Las pautas WCAG 2.0 se publicaron el 11 de diciembre de 2008 y las 2.1 el 5 de junio de 2018. Todos los criterios de 2.0 están incluídos en las 2.1. 
-Tanto WCAG 2.0 como 2.1 son estándares actuales. WCAG 2.1 no deja WCAG 2.0 obsoleto ni lo sustituye. Desde W3C se anima a utilizar la versión más reciente al desarrollar o actualizar contenido
-Para que una página sea compatible con la normativa WCAG 2.1, se deben satisfacer todos los requisitos de conformidad:
-
-- Existen tres niveles de conformidad. Se debe cumplir con todos los requisitos de al menos un nivel.
-  - Nivel A: Requisitos básicos para que algunos usuarios puedan utilizar los contenidos web.
-  - Nivel AA: Mejor accesibilidad y eliminación de algunas barreras de acceso al contenido.
-  - Nivel AAA: Mejoras
-- Páginas completas. No se alcanza si partes de las páginas no cumplen.
-- Procesos completos.
-- Uso exclusivo.
-- Sin interferencias.
-
-Las pautas se pueden agrupar en cuatro principios
-- Perceptible.
-- Operable.
-- Comprensible
-- Robusto
-
-![Pautas WCAG](img/pautas.png "Pautas WCAG")
-
-De forma resumida:
-
-1. Perceptible:
-   - Se proporcionan ayudas textuales a todo contenido no textual de modo que se puedan convertir a otros formatos que las personas necesiten.
-   - Se proporcionan alternativas para medios dependientes del tiempo (videos, sonidos, enlaces. )
-   - Existe contenido que puede presentarse de diferente forma sin perder información o estructura
-   - Se facilita a los usuarios ver y oír el contenido, incluyendo separación entre el primer plano y el fondo.
-2. Manejable:
-   - Se proporciona acceso a toda funcionalidad mediante el teclado.
-   - Se proporciona tiempo suficiente para leer y usar el contenido.
-   - No se diseña el conteido de forma que pueda provocar ataques, espasmos o convulsiones.
-   - Se proporcionan medios para ayudar a los usuarios a navegar, encontrar contenido y determinar donde se encuentran.
-3. Comprensible:
-   - Los contenidos textuales resultan fáciles de leer y comprender.
-   - Las páginas web aparecen y operan de forma predecible.
-   - Se ayuda a los usuarios a corregir los errores.
-4. Robusto:
-   - Se maximiza la compatiblidad con las aplicaciones de usuario actuales y futuras, incluyendo las ayudas técnicas.
+### Características: 
+- XML separa los datos de HTML
+- XML simplifica el intercambio de datos. Tanto los ficheros de datos como las BBDD contienen información en formatos incompatibles. Un fichero en XML es un fichero de texto plano, que es complatible con cualquier plataforma. 
+- XML aumenta la disponibilidad de datos. Diferentes aplicaciones pueden acceder a los datos.
+- XML se puede utilizar para crear nuevos idiomas. 
 
 
 
 
+## Presentando: 
 
-![Pautas WCAG](img/pautas_resumen.png "Pautas WCAG")
+Se puede presentar XML con xmlstylesheet.
 
-
-
-
-### Navegación accesible con roles WAI-ARIA (Accesible Rich Internet Application)
-
-
-Segun la definición del W3C, aria es la forma de crear contenido web y aplicaciones web que sean accesibles para las personas con discapacidades. 
-
-ARIA proporciona: 
-1. Estructuras semánticas para las zonas funcionales
-2. Mejora la navegación mediante teclado
-3. Controles complejos (widgets) más accesibles.
-4. Accesibilidad para el contenido actualizado de forma dinámica.
-
-Se trata de hacerles la vida más fácil a usuarios que usan un lector de pantalla, estructurandndo la navegación a través del sitio web.
-Para orientarse a través de un sitio web, los usuarios que usan lector de pantallas van pulsando diferentes teclas para navegar por la web: ir saltando por encabezados, listas, ojear imágenes, etc.
-
-Con ARIA se pueden crear controles  complejos, como barras de progreso, deslizadores, desplegables, tooltipsflotantes, alertas, pop-hovercon opciones de diálogo, ordenación de listas de elementos, árboles de contenido contraíbles y desplegables, elementos sobre los que se puede hacer drag-and-drop. También se puede indicar la obligatoriedad de un campo de formulario o que este ha dado error de validación.
-
-Para ello, ARIA cuenta con: 
-- Roles. Su misión es definir que papel juegan los elementos dentro del documento (Ej, decir que es un slider)
-- Estados y propiedades. Determinar las características y los valores de las propiedades. 
-
-```html
-<div id="slider" role="slider" aria-valuenow="27">
-</div>
+```xml
+<?xml-stylesheet type="text/css" href="stylesheet.css"?>
 ```
 
-Con ARIA puedes definir áreas de contenido que se actulizan sin intervención del usuario (como un reloj que nos indique cuanto tiempo nos queda) de tl forma que las actualizaciones le pasen desapercibidas al usuario que no puede verlas. 
+Aunque otra forma de presentarlos más poderosa es con xls. Para poder hacer esto, utilizaremos: 
 
-ARIA también permite definir accesibilidad para contenidos SVG.
-
-Se puede utilizar tanto en HTML5, HTML4 y XHTML, solo que en éstos dos últimos, sino quieres que el validador del W3C de un error, deberás utilizar un DOCTYPE específico
-```html
-<!-- En XHTML:  -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+ARIA 1.0//EN" "http://www.w3.org/WAI/ARIA/schemata/xhtml-aria-1.dtd">  
-<!-- En HTML 4:  -->
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML+ARIA 1.0//EN" "http://www.w3.org/WAI/ARIA/schemata/html4-aria-1.dtd">
-```
-
-Veamos un ejemplo simple:
-
-Supongmos un formulario web, donde queremos sustutuír el botón de envir el formulario por una imagen. Algo como lo siguiente
-
-```html
-<div><img src="sobre.png" alt="enviar" /> </div>
-```
-
-Estamos utilizando un div como se fuese una etiqueta button. Si usamos ARIA, podemos indicarle esta circunstancia al navegador, agregando:
-
-```html
-<div role="button"><img src="sobre.png" alt="enviar" /> </div>
-```
-
-A partir de este momento, el lector de pantalla lo va a ver como un botón, lo anuncia como un botón, lo incluye como un elemento del formulario e incluso le asocia la tecla de acceso rápido asociada a los botones, habitualmente la b.
-
-Sin embargo, falta asociarle el comportamiento de enviar, lo cual lo podemos hacer con Javascript no intrusivo, por ejemplo con el evento onclick. Pero, el hecho de tener un evento onlick, no hace que este elemento pueda recibir el foco a través del teclado (con la tecla tabulador), lo cual es importante para los usuarios que se manejan con el teclado. Para conseguir esto, deberemos añadirle el atributo tabindex, consiguiendo así tanto recibir el foco, como poder enviar usando la tecla ENTER. 
-
-```html
-<div role="button" tabindex="0" id="buttonEnviar">
-   <img src="sobre.png" alt="enviar" />
-</div>
-```
-
-Con todo esto, tendríamos el comportamiento equivalente. Sin embargo, este tipo de contrucción no está recomendado. ARIA no está pensado para que hagamos pasar unos elementos como otros. Los casos en los que se recomienda usar aria son: 
-- La característica no está disponible en HTML
-- La característica está disponible en HTML pero no implementada en los agentes de usuario. 
-- La característica está disponible e implementada, pero el agente de usuario no proporciona el sorpote para la accesibilidad de ese elemento.
-- El diseño visual "obliga" a determinado estilo, pero no podríamos decorar un elemento nativo con ese diseño  visual. 
-
-
-
-#### Roles
-
-Los roles sirven para especificar la función de un elemento. Para utilizarlo, es tan sencillo como añadir una propiedad al elemento role="[nombre_rol]".
-
-![Roles ARIA](img/roles.png "Roles ARIA")
-
-
-Tipos: 
-- Abstract: widget, window, section, input, etc. No se usan en el contenido, sino para definir dentro de la ontología tipos de roles generales. 
-- Widget: menu, menitem, tree, treeitem, tablist, tab, tabpanel, button, grid, etc. 
-- Document structure. heading, table, img, tooltip, list, presentation. No suelen ser interactivos. 
-- Landmark. Permiten definir las grandes zonas de la página igual que las etiquetas semátnicas de HTML5 (header, main, nav, footer). Los usuarios de lectores de pantalla tienen atajos para saltar de zona en zonao sacar un árbol de la estructura de la página generado a partir de esta información. 
-- Live region. alert, log, marquee, status y timer. Definen la función de las zonas vivas de la página, es decir, que cambian automáticamente sin intervención del usuario.
-- Window: alertdialog y dialog. Para capas que abrimos a modo de ventanas.
-
-
-Los landmark roles son:
-
-- **banner**: zona del logo y título de la página. Debería haber solo uno por página. En html se puede asimilar a header
-- **complementary**: zona complementaria,  por ejemplo artículos relacionados. En HTML5 sería un aside
-- **contentinfo**: zona de información sobre el documento, normalmente el pié de página. 1 por página. En HTML5 footer
-- **form**
-- **main**. Solo uno por página
-- **navigation**. Se pueden tener varios. En HTML5 nav
-- **search**. No hay un elemento en HTML5, así que se haría con un form
-- **application** (eliminado de los Landmark Roles en ARIA 1.1, que pasa a ser un rol de estructura)
-- **region** (añadido en los Landmark Roles en ARIA 1.1)
-
-
-Los otros elementos, son de interfaz (roles para widgets). Para verlo mejor, veamos un ejemplo, los problemas que tiene y las soluciones que aporta ARIA: 
-
-Pensemos en un slider, que se puede situar en 3 posiciones: fácil, normal o difícil (valores 1, 2 y 3). El código podría ser algo como : 
-
-```html
-<div id="slider-background" title="nivel">
-	<div id="slider-pointer">
-		<img src="handler.png" />
-	</div>
-</div>
-```
-
-Para una persona sin discapacidad su uso es trivial, pero para una que utilice un lector de pantalla, el lector no sabe que tipod e elemento es (el ve un div), ni puede acceder a el (los divs no son accesibles por teclado), no se sabe el estado actual, ni que posibles valores puede tomar. En el siguiente ejemplo vemos un slider accesible con ARIA: 
-
-```html
-<p id="slider-description">Puede usar las teclas derecha/izquierda para cambiar el nivel.</p> 
-<span id="slider-label">Nivel:</span> 
-<div id="slider-rail">
-	<button id="slider-handler" role="slider" aria-labelledby="slider-label" aria-describedby="slider-description" aria-valuemin="1" aria-valuemax="3" aria-valuenow="2"></button>
-</div>
-
+```xml
+<?xml-stylesheet type="text/xsl" href="transform.xsl"?>
 ```
 
 
-#### Navegación con el teclado
+### Estructura <a href="" id="estructura"></a>
 
-Podemos establecer la navegación con el teclado mediante el atributo tabindex, pero hay que tener en cuenta que los únicos elementos capaces de recibir el foco son : a, area, button, input, object, select y textarea. 
+Un documento en XML está formato por un prólogo, y un cuerpo: 
 
-Con tabindex y un número, podemos indicar el órden. Si queremos excluír algén elemento, podemos indicar tabindex=-1
-
-
-#### Estados y propiedades
-
-Además de los roles, ARIA define los estados y propiedades de los diversos controles. La diferencia conceptual entre "estado" y "propiedad" es muy sutil: las propiedades suelen cambiar menos (aunque no siempre) que los estados, que cambian con frecuencia debido a la interacción del usuario. 
-
-Pero en la práctica no es necesario diferenciarlos y todos ellos comenzarán por aria-. 
-
-Hay 48 estados y propiedades y se dividen en cuatro categorías: 
-
-![Estados y propiedades ARIA](img/estados.png "Estados ARIA")
-
-- Atributos de Widget: aria-checked, aria-disabled, aria-required, aria-selected, aria-readonly, aria-expanded, aria-label, etc.
-- Atributos de Live Region: aria-live, aria-atomic, aria-relevant y aria-busy que permiten definir cuándo se anunciarán al usuario de producto de apoyo los cambios producidos en las zonas que se actualizan solas, qué parte se anunciará, qué tipo de actualización queremos que se anuncie o si queremos que temporalmente dejen de anunciarse.
-- Atributos de Drag-and-Drop:  aria-dropeffect y aria-grabbed
-- Atributos de relaciones: es decir, que expresan relaciones o asociaciones entre los elementos  que  no  se  pueden  determinar  fácilmente a  partir  de  la  estructura  del documento: aria-controls, aria-labelledby, aria-describedby, aria-posinset, aria-setsize, etc.
-
-Los estados y propiedaes pueden modificarse con Javascript, de hecho es recomendable hacerlo para interactuar con el usuario. 
-
-Alguanas de las propiedades pueden aplicarse a todos los elementos: 
-
-- aria-label: Con este atributo indicamos directamente el contenido de la etiqueta del atributo: Ej.
-
-```html
-<button aria-label="Cerrar">X</button>
-```
-Es importante saber que este atributo anula la etiqueta nativa, de forma que un lector para el ejemplo anterior leería botón cerra, y no botón X. En este caso es justamente lo que queremos.
-
-- aria-labelledby. Este atributo se utiliza cuando el nombre de la etiqueta está visible en la página, referenciando el id del elemento que contiene dicha información. Ejemplo: 
-```html
-<span id="sd">Buscar</span>
-<input type="text" aria-labeledby="sd" />
-```
-NOTA: Los atributos aria-label y aria-labeledby se anulan entre sí, por lo tanto no tiene sentido utilizarlos juntos.
-
-aria-labelledby también se puede utilizar con el valor de los campos de un formulario, como se puede ver en el siguiente ejemplo. 
-
-```html
-<label for="duration" id="timeout">Extender el tiempo a</label>
-<input type="text" id="duration" value="20" aria-labelledby="timeout duration unit" >
-<span id="unit">minutos</span>
-```
-
-También podemos utilizarlo para etiquetar zonas de página, o también para etiquetar imágenes, como en el siguiente ejemplo: 
-
-
-![Valoración con estrellas](img/estrellas.png "Valoración")
-
-```html
-<div role="img" aria-labelledby="puntos">
-    <img src="estrella_rellena.png" alt=""/>
-    <img src="estrella_rellena.png" alt=""/>
-    <img src="estrella_rellena.png" alt=""/>
-    <img src="estrella_rellena.png" alt=""/>
-    <img src="estrella_vacia.png" alt=""/>
-</div>
-<div id="puntos" aria-hidden="true">
-    <span class="oculto">puntuación</span>
-    <span>4 de 5</span>
-<div>
-```
-En este caso, el lector de pantalla ignorará las estrellas porque tienen alt="" y anunciará la capa como una imágen con la etiqueta asociada "puntuación 4 de 5". Se utiliza la etiqueta aria-hidden, para el ese div no se anuncie de nuevo despues de la imágen.
-
-- aria-describedby. Permite referencia el id del elemento que queremos que funciones como descripción de otro, es decir, que proporcione información adicional al de su etiqueta: Ejemplo: 
-
-```html
-<button aria-label="Cerrar" aria-describedby="desClose">X</button>
-
-<div id="desClose">
-Cerrar esta ventana descartará cualquier cambio realizado y regresará a la página principal
-</div>
-```
-
-También puede utilizarse para la descripción de imágenes: 
-
-```html
-<img src="" alt="Esquema WCAG 2.1" aria-describedby="desWCAG" />
-
-<div id="desWCAG">
-    <p>Las pautas WCAG 2.0 se componen de 4 principios: </p>
-    <ol>
-        <li>Perceptible</li>
-        <li>Operable</li>
-        <li>Comprensible</li>
-        <li>Robusto</li>
-    </ol>
-</div>
+```XML
+<?xml version="1.0" encoding="ISO8859-1" standalone="no" ?>
+<!DOCTYPE persona SYSTEM "persona.dtd">
+<!-- hasta aquí el proloco. -->
+<persona>
+    <nombre>Jose Luis</nombre>
+    <apellidos>Castro</apellidos>
+</persona>
 ```
 
 
-#### Actualizaciones dinámicas de contenido. 
-
-ARIA denomina "regiones activas" a los elementos/zonas que pueden presentar actualizaciones por ajax y cuenta con la propiedad aria-live para indicar el valor de intrusismo: 
-
-- off
-- polite
-- assertive
-- rude
+Como cualquiera puede crear sus etiquetas, XML tiene dos métodos para poder órden en el caos:
+- Las DTD's
+- Los XML schemas. Al igual que los DTD's describen el contenido, pero de forma más precisa. Los esquemas indican tipo de dato, número minimo y máximo, como se organizan los datos, etc. 
 
 
+### DTD 
+<a href="https://desarrolloweb.com/articulos/2263.php" target="_blank">Enlace</a>
+Se pueden hacer 4 tipos de declaraciones: 
+- Declaraciones de tipo de elemento (Element type declarations).
+- Declaraciones de listas de atributos (atribute list declarations).
+- Declaraciones de entidades (entity declarations).
+- Declaraciones de notación (notation declarations).
 
-#### Etiquetas Aria-label
+Las declaraciones de tipo de elemento establecen que elementos pueden formar parte del documento y cuales pueden formar parte de su interior (los elementos se pueden anidar).
 
-Con ello ponemos una etiqueta dentro del elemento con un atributo
-
-https://olgacarreras.blogspot.com/2017/12/novedades-wai-aria-11.html
-https://olgacarreras.blogspot.com/2007/09/wai-aria-introduccion-referencias.html
-https://www.usableyaccesible.com/servicios.php
-https://olgacarreras.blogspot.com/2014/03/navegacion-mas-accesible-y-semantica-en.html
-http://www.nosolousabilidad.com/articulos/wai_aria.htm
-
-
-
-## Mitos
-
-- Todas las imágenes necesitan un texto alternativo. Probablemente uno de los más extendidos. Todas las imágenes necesitan un atributo alt, pero éste puede estar vacío si la imágen es puramente decorativa.
-- El placeholder de un campo es suficiente para su explicación. Esto no se debe hacar, y deberemos incorporar siempre un label for
+Los elementos que puede contener cada elemento
 
 
-## Buenas practicas: 
-- **No utilices ARIA si no es necesario**. Usa siempre que puedas etiquetas estándar de HTML. Mucho mejor utilizar input type="checkbox" que div role="checkbox"
-- **Un rol es una promesa**. Si indicamos que un div es un botón mediante role="button", esto lo único que hace es que el navegador lo anuncie como tal, pero no cambiará en absoluto si imágen o su comportamiento.
-- **Usa los roles y las propiedades según la especificación**. Recuerda que el rol no debe de cambiar dinámicamente, pero las propiedades si pueden hacerlo. 
-- **Evita los conflictos**. No se debe añadir ARIA a etiquetas si pueden entrar en conflicto con su propia semántica. (ej input type="radio" role="checkbox"). 
-- **Evita la redundancia**. No añadas ARIA a controles nativos con el mismo valor. Ej input type="checkbox" role="checkbox".
-- **Cambia los estados y propiedades en respuesta a los eventos**.
-- **Accesible por teclado**. Con el atributo tabindex
-- **Sincroniza la interfaz visual con la interfaz accesible**. 
-- Programa utilizando **Javascript no intrusivo**.
-- Revisa el documento con alguna herramienta. 
-
-## Técnicas específicas de ARIA
-
-Las WCAG 2.1 incluyen 21 tecnicas específicas: 
-
-1. Usa la propiedad aria-described-by para **describir los controles** de interfaz de usuario.
-2. **Identifica los campos obligatorios** con la propiedad aria-required.
-3. Utiliza los roles para informar del rol de cada componente de interfaz de usuario.
-4. Utiliza los estados y propiedades para informas del estado de cada componente.
-5. Etiqueta objetos con aria-label
-6. Define el objetivo del enlace con aria-labelledby
-7. Define el objetivo del enlace con aria-label
-8. Crea una etiqueta concatenando varios nodos de texto con aria-labelledby
-9. Usa aria-labelledby para dar un texto alternativo a contenido no textual
-10. Usa los roles landmarks para identificar las zonas de la página.
-11. Identifica los encabezados con role=heading
-12. Nombra regiones y landmarks con aria-labelledby
-13. Provee etiqueta invisibles con aria-label cuando no puedas utilizar etiquettas visibles.
-14. Describe imágenes con aria-describedby.
-15. Nombra los controles de interfaz de usuario con aria-labelledby
-16. Usa controles de agrupación para identificar controles de formulario relacionados
-17. Identifica errores con role=alertdialog.
-18. Identifica errores con role=alert o con live regions
-19. Identifica regiones de la página con rol=region
-20. Identifica campos con errores con aria-invalid.
+Las declaraciones de tipo de atributo
+Todas la definiciones de atributo comienzan por <!ATTLIST
 
 
-15. Nombra los controles de interfaz de usuario con aria-labelledby
-16. Usa controles de agrupación para identificar controles de formulario relacionados
-17. Identifica errores con role=alertdialog.
-18. Identifica errores con role=alert o con live regions
-19. Identifica regiones de la página con rol=region
-20. Identifica campos con errores con aria-invalid.
+Las declaraciones de tipo de atributo
+Todas la definiciones de atributo comienzan por <!ATTLIST
+
+Cada atributo está formato por 3 partes: 
+- Nombre
+- Tipo del atributo
+- Valor por defecto
+
+El tipo del atributo puede tomar los siguientes valores: 
+
+- CDATA: El atributo será una cadena de caracteres, pero no todos los caracteres son válidos. Si queremos utilizar los caracteres no válidos, utilizaremos secciones PCDATA
+- ID: Un identificador. Solo puede haber uno por elemento
+- IDREF/S: Este atributo se emplea para referenciar otros elementos del documento a partir de su ID.
+- ENTITY/S: Contiene nombres de entidades
+- NMTOKEN/S: Contiene una única cadena de texto (ed, una sola palabra).
+- (<<enumerados>>): Especificamos un conjunto de valores. 
+
+Para los valores por defecto, se admite: 
+- #REQUIRED
+- #IMPLIED. Es opcional darle valor al atributo
+- <<valor>>. Podemos poner un valor (NO una lista de valores) opcional directamente, entonces, si no se le otorga un valor en el documento, asumirá éste.
+- #FIXED <<valor>>. Obligamos a que el atributo tenga el valor <<valor>>.
 
 
-## Apendice 1: Javascript no intrusivo. 
+### Entidades. 
 
-Se refiere a que el Javascript está fuertemente ligado a la estructura de la página. 
+Son métodos para escribir aslgunos caracteres reservados. En XML son: 
+&lt (<), &gt (>), @amp; (&), &quot ("), &apos (').
 
-Veamos un ejemplo: 
+Hay 3 tipos de entidades que podemos definir en un DTD: internas, externas y de parámetros
 
-```html
-<input type="button" id="botonEnviar" value="Enviar" on-click="enviar()" />
+Podemos definir nuestras propias entidades internas con: 
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE body [
+  <!ENTITY warning "Advertencia: Algo malo pasó... porfavor intente de nuevo.">
+]>
+<body>
+  <message> &warning; </message>
+</body>
 ```
 
-El código anterior, es muy común. Este Javascript es intrusivo, ya que en el propio elemento HTML, tenemos una llamada a una función javascript.
+Las entidades externas sriven para referencias su contenido o valor desde otros ficheros
 
-Podemos hacer lo mismo de una forma mucho menos intrusiva: 
+<!ENTITY arch System "arch.txt">
 
-```html
-<input type="button" id="botonEnviar" value="Enviar" />
+
+Las entidades de paramétros tienen una sintaxis distinta: 
+
+<!ENTITY %items "a CDATA #REQUIRED b CDATA #REQUIRED c CDATA #REQUIRED">
+<!ELEMENT motos EMPTY>
+<!ATTLIST motos %items> 
+
+### XML Schema
+
+Mientras el DTD forma parte de la propia definición del XML, el XSD (XML Schema Definition) se utiliza para definir la estructura y las restricciones del contenido de una forma muy precisa
+
+Ejemplo: 
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?> 
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+     <xsd:element name="Libro">
+         <xsd:complexType>
+            <xsd:sequence>
+                 <xsd:element name="Título" type="xsd:string"/>
+                 <xsd:element name="Autores" type="xsd:string" maxOccurs="10"/>
+                 <xsd:element name="Editorial" type="xsd:string"/>
+            </xsd:sequence>
+            <xsd:attribute name="precio" type="xsd:double"/>
+        </xsd:complexType>
+   </xsd:element>
+</xsd:schema>
 ```
 
-y en el head, o en un archivo js separado, podemos tener el código del click: 
-
-```js
-<script language="javascript" type="text/javascript">
-window.onload = function() {
-
-    document.getElementById("botonEnviar").onclick =enviar;
-}
-
-function enviar() {
-    alert("Hola Mundo");
-}
-```
-
-## Bibliografía
-
-Web: https://www.mcarmendealba.com/accesibilidad-y-usabilidad-diferencias/
-Web: https://olgacarreras.blogspot.com/
-Web: http://accesibilidadweb.dlsi.ua.es/?menu=pautas-accesibilidad-contenido-web
-Web: http://itakora.com
-
-Buscando
