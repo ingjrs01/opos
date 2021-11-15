@@ -1,5 +1,5 @@
 ---
-title: Correo Electrónico
+title: Correo Electrónico:
 layout: articles.njk
 ---
 # Correo Electrónico
@@ -10,6 +10,26 @@ layout: articles.njk
 - Relays
 - Administración de servidores de correo electrónico. 
 - Protocolos de correo electrónico
+
+
+## Componentes <a href="" id="componentes"></a>
+
+Cuando se envía un correo electrónico, el mensaje se enruta de servidor a servidor hasta llegar al servidor de correo del receptor. Estos servidores de correo se denominan **MTA** (Mail Transport Agent), y se comunican entre si mediante el protocolo SMTP, por eso a menudo se les llama servidores SMTP e incluso servidores de correo saliente.
+
+Una vez llega al servidor del receptor, el MTA entrega el corrego al **MDA** (Mail Delivey Agent), el cual lo almacena esperando que el usuario lo acepte. Los protocolos que pueden usar los MDA son POP3 e IMAP
+
+Finalmente el trabajo de recuperar el correo, y mostrarselo al usuario es el MUA (Mail User Agent)
+
+## Partes de un mensaje: <a href="" id="partes"></a>
+
+Los elementos de la estructura interna de un mensaje: 
+
+- Dirección de correo.  Es una cadena de texto separada en dos mitadas por una @, donde la primera mitad se correponde con el nombre de usuario, y la segunda con el dominio del servidor de correo. 
+- Cabeceras (headers): Son metadatos que van dentro de un correo. Inclyuen información del remitente (FROM), destinatario (TO y CC), los MTA por los que ha pasado (Received), el asunto del mensaje (SUBJECT), la fecha (DATE) y otra inforación.
+- Cuerpo del mensaje. Puede ser texto plano, y on contenido formateado marcado por un Content-type.
+- Mensaje. contendio enviado de un MTA  otro
+- Buzón. Es donde el MDA almacena los mensajes recibidos para un usuario.
+- Relay. Ocurre cuando un mensaje recibido en un MTA no permitene al dominio que lo controla, y debe enviarlo al MTA propiedad de ese dominio.
 
 
 
@@ -31,7 +51,8 @@ Ejemplos de MTA pueden ser:
 - Courier
 - Cyrus
 
-Puede definirse como el servidor SMTP que usamos, el que recibe datos generalmente de un MUA (Mail User Agent) para obtener el correo, y luego enviarlo al destino. 
+Puede definirse como el servidor SMTP que usamos, el que recibe datos generalmente de un MUA (Mail User Agent) para obtener el correo, y luego enviarlo al
+ destino. 
 Un MUA, o Agente de Usuario de Correo, es el que recibe el correo y envía mail usando SMTP  a través del MTA, y recibe por POP3 o IMAP. 
 
 Ejemplos de MUA puede ser: 
@@ -78,3 +99,32 @@ La firma y cifrado de correos electrónicos.
 La incorporación automática de un descargo de responsabilidad al final del mensaje. 
 El archivo de correos electrónicos. 
 El enrutamiento de correo y la reescritura en caso de modificación de la dirección.
+
+## MIME
+
+<a ref="https://es.wikipedia.org/wiki/Multipurpose_Internet_Mail_Extensions" target="_blank">Wikipedia</a>
+
+
+Multipurpose Internet Mail Extensións.
+En sentido general, estas extensiones van dirigidas a soportar: 
+- Texto en conjuntos de caracteres distintos a US-ASCII
+- Adjuntos que no son de texto
+- Cuerpos de mensajes con múltiples partes
+- Información de encabezados con codificacion distinta de US-ASCII
+
+Practimanete la totalidad de los mensajes escritos por personas, y parte de los generaods d forma autoóamica están transmitidos en formato MIME, a través de SMTP.
+
+MIME asocia un nombre a cada tipo de dato, con el siguiente formato:
+
+tipo/subtipo
+
+El tipo define la categoría general, mientra que el subtimo afina más en los datos. El tipo puede contener los siguientes valores. 
+
+- text: texto plano
+- multipart: tiene múltiples partes independientes. ejemplos de subtipos son form-data y digest
+- message: Para encapsular un mensaje existente, como por ejemplo cuando respondiemos a un correo conteniendo el mensaje origen. Ejemplos de subtipos son partial y rfc822.
+- image: indica que una imágen. Ejemplos de subtipos pueden ser jpg o png
+- audio: Ejemplos de subtipos mp3 o 32kadpcm
+- video: mpeg o avi
+- application: indica que se trata de datos de aplicación, lo cual pueden ser binarios. Ej puede ser un pdf o json.     
+
