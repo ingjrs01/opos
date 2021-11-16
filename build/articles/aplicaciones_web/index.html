@@ -16,7 +16,49 @@
     </header>
      <main>
         <!-- Aquí es donde va el contenido -->
-        <h2>Acesibilidad, diseño universal y usabilidad.</h2>
+        <ul>
+<li><a href="#aplicaciones">Aplicaciones Web</a></li>
+<li><a href="#ventajas">Ventajas e inconvenientes</a></li>
+<li><a href="#tecnologias">Tecnologías de programación.</a></li>
+<li><a href="#javascript">Javascript, Applets, Servlets, servizos web. </a></li>
+<li><a href="#lenguajes">Lenguajes de descrición de datos: HTML, XML y sus derivaciones.</a></li>
+<li><a href="#navegadores">Navegadores y lenguajes de programación web.</a></li>
+<li><a href="#lenguajes">Lenguajes de script</a></li>
+</ul>
+<h2>Aplicaciones Web <a href="" id="aplicaciones"></a></h2>
+<p>Las aplicaciones web son aquellas herramientas que los usuarios pueden utilizar accediendo a un servidor web, que puede estar en Internet o en una intranet, mediante un navegador.</p>
+<p>Este tipo de aplicación es muy popular, debido que al ejecutarse en un navegador, son independientes del sistema operativo, no necesitan mantenimiento, ni instalar nada y muy accesibles. Existen multitud de herramientas de este tipo, cmo correos web, tiendas, blogs, ....</p>
+<h2>Ventajas e inconvenientes. <a ref="" id="ventajas"></a></h2>
+<p>Ventajas:</p>
+<ul>
+<li>Ahorro de tiempo. No es necesario instalar nada, ni actualizar, ...</li>
+<li>Consumo de recursos bajo. Dado que la mayor parte de la aplicación se ejecta an el servidor, el consumo de recursos en nuestra máquina es bajo.</li>
+<li>Multiplataforma.</li>
+<li>Virus/malware. Al ejecutarse en un servidor, son menos proclives a ser afectados por malware.</li>
+<li>Aumento de funcionalidades.</li>
+<li>Compatilibilidad.</li>
+<li>Portables.</li>
+<li>Espacio. No ocupan espacio en nuestro disco</li>
+<li>Actualizaciones inmediatas.</li>
+<li>Mejoras en colaboración. Dado a que se trabaja con un servidor, suelen incorporar herramientas para el trabajo colaborativo.</li>
+</ul>
+<p>En cuanto a los inconvenientes:</p>
+<ul>
+<li>Requieren un navegador compatible, y normalemnte alcuatlizado</li>
+<li>La aplicación web puede desaparecer o cambiar su forma de uso si así lo decide su mantenedor.</li>
+<li>El usuario normalmente no tiene capacidad de decisión sore la  versión a instalar, no actualizar, etc.</li>
+<li>La disponibilidad depende de un tercero (acceso a internet, etc.).</li>
+</ul>
+<h2>Tecnologías de programación. <a ref="" id="tecnologias"></a></h2>
+<p>Las aplicciones web están programadas en varias capas, y en función de la capaen la que estemos se utilizan una u otras tecnologías:</p>
+<p>Tenemos una capa de presentación, que es con la que interactúa el usuario. Esta parte se ejecuta en un navegador, y como tal se trata de tecnologías web. En esta capa las tecnologías utilizadas son HTML, CSS, y JavaScript.</p>
+<p>La segunda capa es el software que reside en el servidor, donde se implementa la lógica del negocio, etc. En esta capa se utilizan multitud de lenguajes y tecnologías que se pueden utilizar, como por ejemplo PHP, Java, Python, Ruby, JavaScript, ...</p>
+<p>La tercera capa es la de la persistencia de datos, y en esta capa las tecnologías tienen que ver con bases de datos, desde las más tradicionales como las bases de datos relacionales, hasta las bases de datos NoSQL en la nube que están en auge últimamente.</p>
+<h2>Javascript, Applets, Servlets, servizos web. <a href="" id="javascript"></a></h2>
+<p>JavaScript es un lenguaje de script, que nace originalmente para ejecutarse del lado de cliente, y aportar más dinamismo a las páginas web, pero en la actualidad también puede utilizarse y de hecho se utiliza mucho en el lado del servidor. Un ejemplo es Node.js, y todas las tenologías que han deribado de él, que están sirviendo para que muchos servicios están corriendo con javascript en el lado del servidor (Netflix, Playpal, Uber o Ebay son ejemplos)</p>
+<p>Mientras los applets son programas para los clientes, los servlets son programas para los servidoreis. Normalmente responden a las peticiones HTTP de los clientes, creando una respuesta en HTML, XML, ... En la actualidad se considera una tecnología un poco antigua, y se está sustituyendo por JSF</p>
+<p>Una aplicación web es una aplicación a la que los usuarios acceden a través de un navegador web.
+Según el W3C define un sevicio web como un sistema de softwaere que permite que diferentes máquinas intereractúen entre sí a través de una red. Los servicios web logran esta tarea utilzando estándares abiertos como XML, SOAP WSDL UDDI. La mayoría de las veces, los servicios web ni siquiere tienen una interfaz de usuario.</p>
 <h2>XML</h2>
 <h3>Características:</h3>
 <ul>
@@ -25,19 +67,7 @@
 <li>XML aumenta la disponibilidad de datos. Diferentes aplicaciones pueden acceder a los datos.</li>
 <li>XML se puede utilizar para crear nuevos idiomas.</li>
 </ul>
-<h3>Entidades.</h3>
-<p>Son métodos para escribir aslgunos caracteres reservados. En XML son:
-&amp;lt (&lt;), &amp;gt (&gt;), @amp; (&amp;), &amp;quot (&quot;), &amp;apos (').</p>
-<p>Podemos definir nuestras propias entidades con:</p>
-<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE body [
-  &lt;!ENTITY warning &quot;Advertencia: Algo malo pasó... porfavor intente de nuevo.&quot;&gt;
-]&gt;
-&lt;body&gt;
-  &lt;message&gt; &amp;warning; &lt;/message&gt;
-&lt;/body&gt;
-</code></pre>
-<h2>Presentando:</h2>
+<h3>Presentando:</h3>
 <p>Se puede presentar XML con xmlstylesheet.</p>
 <pre><code class="language-xml">&lt;?xml-stylesheet type=&quot;text/css&quot; href=&quot;stylesheet.css&quot;?&gt;
 </code></pre>
@@ -74,6 +104,64 @@ Se pueden hacer 4 tipos de declaraciones:</p>
 Todas la definiciones de atributo comienzan por &lt;!ATTLIST</p>
 <p>Las declaraciones de tipo de atributo
 Todas la definiciones de atributo comienzan por &lt;!ATTLIST</p>
+<p>Cada atributo está formato por 3 partes:</p>
+<ul>
+<li>Nombre</li>
+<li>Tipo del atributo</li>
+<li>Valor por defecto</li>
+</ul>
+<p>El tipo del atributo puede tomar los siguientes valores:</p>
+<ul>
+<li>CDATA: El atributo será una cadena de caracteres, pero no todos los caracteres son válidos. Si queremos utilizar los caracteres no válidos, utilizaremos secciones PCDATA</li>
+<li>ID: Un identificador. Solo puede haber uno por elemento</li>
+<li>IDREF/S: Este atributo se emplea para referenciar otros elementos del documento a partir de su ID.</li>
+<li>ENTITY/S: Contiene nombres de entidades</li>
+<li>NMTOKEN/S: Contiene una única cadena de texto (ed, una sola palabra).</li>
+<li>(&lt;<enumerados>&gt;): Especificamos un conjunto de valores.</li>
+</ul>
+<p>Para los valores por defecto, se admite:</p>
+<ul>
+<li>#REQUIRED</li>
+<li>#IMPLIED. Es opcional darle valor al atributo</li>
+<li>&lt;<valor>&gt;. Podemos poner un valor (NO una lista de valores) opcional directamente, entonces, si no se le otorga un valor en el documento, asumirá éste.</li>
+<li>#FIXED &lt;<valor>&gt;. Obligamos a que el atributo tenga el valor &lt;<valor>&gt;.</li>
+</ul>
+<h3>Entidades.</h3>
+<p>Son métodos para escribir aslgunos caracteres reservados. En XML son:
+&amp;lt (&lt;), &amp;gt (&gt;), @amp; (&amp;), &amp;quot (&quot;), &amp;apos (').</p>
+<p>Hay 3 tipos de entidades que podemos definir en un DTD: internas, externas y de parámetros</p>
+<p>Podemos definir nuestras propias entidades internas con:</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE body [
+  &lt;!ENTITY warning &quot;Advertencia: Algo malo pasó... porfavor intente de nuevo.&quot;&gt;
+]&gt;
+&lt;body&gt;
+  &lt;message&gt; &amp;warning; &lt;/message&gt;
+&lt;/body&gt;
+</code></pre>
+<p>Las entidades externas sriven para referencias su contenido o valor desde otros ficheros</p>
+<!ENTITY arch System "arch.txt">
+<p>Las entidades de paramétros tienen una sintaxis distinta:</p>
+<!ENTITY %items "a CDATA #REQUIRED b CDATA #REQUIRED c CDATA #REQUIRED">
+<!ELEMENT motos EMPTY>
+<!ATTLIST motos %items> 
+<h3>XML Schema</h3>
+<p>Mientras el DTD forma parte de la propia definición del XML, el XSD (XML Schema Definition) se utiliza para definir la estructura y las restricciones del contenido de una forma muy precisa</p>
+<p>Ejemplo:</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; 
+&lt;xsd:schema xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;
+     &lt;xsd:element name=&quot;Libro&quot;&gt;
+         &lt;xsd:complexType&gt;
+            &lt;xsd:sequence&gt;
+                 &lt;xsd:element name=&quot;Título&quot; type=&quot;xsd:string&quot;/&gt;
+                 &lt;xsd:element name=&quot;Autores&quot; type=&quot;xsd:string&quot; maxOccurs=&quot;10&quot;/&gt;
+                 &lt;xsd:element name=&quot;Editorial&quot; type=&quot;xsd:string&quot;/&gt;
+            &lt;/xsd:sequence&gt;
+            &lt;xsd:attribute name=&quot;precio&quot; type=&quot;xsd:double&quot;/&gt;
+        &lt;/xsd:complexType&gt;
+   &lt;/xsd:element&gt;
+&lt;/xsd:schema&gt;
+</code></pre>
 
         <a href=""> Volver</a>
     </main>

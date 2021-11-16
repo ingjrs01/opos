@@ -3,11 +3,64 @@ title: Aplicaciones Web
 layout: articles.njk
 ---
 
-## Acesibilidad, diseño universal y usabilidad.
+- [Aplicaciones Web](#aplicaciones)
+- [Ventajas e inconvenientes](#ventajas)
+- [Tecnologías de programación.](#tecnologias)
+- [Javascript, Applets, Servlets, servizos web. ](#javascript)
+- [Lenguajes de descrición de datos: HTML, XML y sus derivaciones.](#lenguajes)
+- [Navegadores y lenguajes de programación web.](#navegadores)
+- [Lenguajes de script](#lenguajes)
 
 
-## XML 
+## Aplicaciones Web <a href="" id="aplicaciones"></a>
+Las aplicaciones web son aquellas herramientas que los usuarios pueden utilizar accediendo a un servidor web, que puede estar en Internet o en una intranet, mediante un navegador.
 
+Este tipo de aplicación es muy popular, debido que al ejecutarse en un navegador, son independientes del sistema operativo, no necesitan mantenimiento, ni instalar nada y muy accesibles. Existen multitud de herramientas de este tipo, cmo correos web, tiendas, blogs, ....
+
+## Ventajas e inconvenientes. <a ref="" id="ventajas"></a>
+
+Ventajas: 
+
+- Ahorro de tiempo. No es necesario instalar nada, ni actualizar, ...
+- Consumo de recursos bajo. Dado que la mayor parte de la aplicación se ejecta an el servidor, el consumo de recursos en nuestra máquina es bajo.
+- Multiplataforma.
+- Virus/malware. Al ejecutarse en un servidor, son menos proclives a ser afectados por malware. 
+- Aumento de funcionalidades. 
+- Compatilibilidad. 
+- Portables. 
+- Espacio. No ocupan espacio en nuestro disco
+- Actualizaciones inmediatas.
+- Mejoras en colaboración. Dado a que se trabaja con un servidor, suelen incorporar herramientas para el trabajo colaborativo. 
+
+En cuanto a los inconvenientes: 
+
+- Requieren un navegador compatible, y normalemnte alcuatlizado
+- La aplicación web puede desaparecer o cambiar su forma de uso si así lo decide su mantenedor. 
+- El usuario normalmente no tiene capacidad de decisión sore la  versión a instalar, no actualizar, etc. 
+- La disponibilidad depende de un tercero (acceso a internet, etc.).
+
+## Tecnologías de programación. <a ref="" id="tecnologias"></a>
+
+Las aplicciones web están programadas en varias capas, y en función de la capaen la que estemos se utilizan una u otras tecnologías: 
+
+Tenemos una capa de presentación, que es con la que interactúa el usuario. Esta parte se ejecuta en un navegador, y como tal se trata de tecnologías web. En esta capa las tecnologías utilizadas son HTML, CSS, y JavaScript. 
+
+La segunda capa es el software que reside en el servidor, donde se implementa la lógica del negocio, etc. En esta capa se utilizan multitud de lenguajes y tecnologías que se pueden utilizar, como por ejemplo PHP, Java, Python, Ruby, JavaScript, ...
+
+La tercera capa es la de la persistencia de datos, y en esta capa las tecnologías tienen que ver con bases de datos, desde las más tradicionales como las bases de datos relacionales, hasta las bases de datos NoSQL en la nube que están en auge últimamente. 
+
+
+## Javascript, Applets, Servlets, servizos web. <a href="" id="javascript"></a>
+
+JavaScript es un lenguaje de script, que nace originalmente para ejecutarse del lado de cliente, y aportar más dinamismo a las páginas web, pero en la actualidad también puede utilizarse y de hecho se utiliza mucho en el lado del servidor. Un ejemplo es Node.js, y todas las tenologías que han deribado de él, que están sirviendo para que muchos servicios están corriendo con javascript en el lado del servidor (Netflix, Playpal, Uber o Ebay son ejemplos)
+
+Mientras los applets son programas para los clientes, los servlets son programas para los servidoreis. Normalmente responden a las peticiones HTTP de los clientes, creando una respuesta en HTML, XML, ... En la actualidad se considera una tecnología un poco antigua, y se está sustituyendo por JSF
+
+
+Una aplicación web es una aplicación a la que los usuarios acceden a través de un navegador web. 
+Según el W3C define un sevicio web como un sistema de softwaere que permite que diferentes máquinas intereractúen entre sí a través de una red. Los servicios web logran esta tarea utilzando estándares abiertos como XML, SOAP WSDL UDDI. La mayoría de las veces, los servicios web ni siquiere tienen una interfaz de usuario. 
+
+## XML
 ### Características: 
 - XML separa los datos de HTML
 - XML simplifica el intercambio de datos. Tanto los ficheros de datos como las BBDD contienen información en formatos incompatibles. Un fichero en XML es un fichero de texto plano, que es complatible con cualquier plataforma. 
@@ -15,9 +68,7 @@ layout: articles.njk
 - XML se puede utilizar para crear nuevos idiomas. 
 
 
-
-
-## Presentando: 
+### Presentando: 
 
 Se puede presentar XML con xmlstylesheet.
 
