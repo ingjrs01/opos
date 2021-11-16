@@ -3,10 +3,17 @@ title: Administración Electronica
 layout: articles.njk
 ---
 
-# Administración Electronica
+- [Administracion Electrónica](#administracion)
+- [Sede Electrónica](#sede)
+- [Identidad Electrónica](#eidentidad)
+- [DNI Electrónico](#dnie)
+---
+
+## Administración Electronica <a href="" id="administracion"></a>
+
 La administración electrónica es la aplicación de las tecnologías de la información y las comunicaciones en la administración pública. Al implementarla, se conseguirían dos cosas, por un lado mejorar de la organización, conviertiendo los procesos en papel por procesos electrónicos que permiten reducir mucho todo el trabajo. Por otro lado se ofrece al ciudadano una nueva forma de interactuar con la administración, cómodamente, desde su casa, sin horarios, sin colas, sin desplazamientos y más rápido. 
 
-La definición oficial dada por la Comisión Europea de la Unión Europea es "Administración Electrónica es el uso de las Tecnologías de la Información y las Comunicaciones en las Administraciones Públicas, Combinado con cambios organizativos y nuevas aptitudes, con el find e mejorar los servicios públicos y los procesos democráticos y reforzar el apoyo a las políticas públicas. 
+La definición oficial dada por la Comisión Europea de la Unión Europea es "Administración Electrónica es el uso de las Tecnologías de la Información y las Comunicaciones en las Administraciones Públicas, Combinado con cambios organizativos y nuevas aptitudes, con el fin de mejorar los servicios públicos y los procesos democráticos y reforzar el apoyo a las políticas públicas. 
 
 Los objetivos son: 
 - Mejora de los servicios públicos. 
@@ -113,7 +120,7 @@ Ley 25/2007, de 18 de octubre, de conservación de datos relativos a las comunic
 Ley 58/2003, de 17 de diciembre, General Tributaria. 
 
 
-## Sede Electrónica.
+## Sede Electrónica. <a href="" id="sede"></a>
 
 La sede electrónica está regulada por la LAECSP en sus artículos 10 y 17, defiéndola como aquella dirección electronica (definica ésta en la propia ley com el "identificador de un equipo o sistema electrónico desde el que se provee de información o servicios en una red de comunicaciones") disponible para los ciudadanos a través de redes de telecomunicaciones cuya titularidad, gestión y administración corresponde a una Administración Pública, órgano o entidad administrativa en el ejercicio de sus competencias". 
 
@@ -160,13 +167,13 @@ Si existe registro, se accederá a él desde la sede
 Puede haber sedes sin registro electrónico
 
 ## Registro Electrónico.
-l concepto de Registro Electrónico se intrudujo ya con la Ley 24/2001, de 27 de diciembre, sobre registro telemático, que incorpora una serie de artículos a la LRJ-PAC con el fin de regular esta materia, sin embargo, la LAECSP deroga todos estos artículos para introducir una nueva regulación más acorde con las nuevas necesidades surgidas con la progresiva implantación de la Administración Electrónica. 
+El concepto de Registro Electrónico se intrudujo ya con la Ley 24/2001, de 27 de diciembre, sobre registro telemático, que incorpora una serie de artículos a la LRJ-PAC con el fin de regular esta materia, sin embargo, la LAECSP deroga todos estos artículos para introducir una nueva regulación más acorde con las nuevas necesidades surgidas con la progresiva implantación de la Administración Electrónica. 
 
 La LAECSP no modifica la normativa sobre el registro presencial, sino que viene a añadir un nuevo canal, asegurando el acceso a los ciudadanos a la tramitacíon electronica con las mismas garantías que ofrece el procedimiento presencial. Este nuevo canal permite registrar la entrada de cualuqier solicitud, queja o escrito dirigfidos a la administración titular del mismo, y la salida de calquier notificación , comunicación o documento, certificando en ambos caoss la fecha y la hora de cada asiento.
 
 Así pues, teniendo las mismas funcionalidades ¿estamos hablando de un solo registro con dos vías de acceso o de dos registros paralelos? Por un lado, la LRJ-PAC obliga a los órganos administrativos a llevar un registro general, pudiendo crar a su vez otros registros que, en cualquier caso, serán auxiliares del citado registro general. Por otro lado, la LAECSP dice que en cada Administración Pública existirá al menos un sistema de registro electrónicos, pero sin hacer referencia a su relación con el registro general. 
 
-La tendencia de las Administraciones es considerar el registro elect´ronico como un registro auxiliar del general, y así se refleja, de hecho , en el Reglamento de creación del Registro Electrónico de la Universidad Complutense aprobando por su Consejo de Gobierno. 
+La tendencia de las Administraciones es considerar el registro electrónico como un registro auxiliar del general, y así se refleja, de hecho, en el Reglamento de creación del Registro Electrónico de la Universidad Complutense aprobando por su Consejo de Gobierno. 
 
 Mención especial merecen, por el cambio que representa del registro presencial, las espeficaciones en materia de calendario, horario y cómputo de plazos: 
 - El Registro Electrónico debe permitir la presentación de cualquier solicitud, escrito o comunicación todos los días del año, 24 horas al día. 
@@ -178,7 +185,7 @@ La LAECSP regula la publicación electrónica del tabón de anuncios en su artí
 
 El objetivo de este tipo de publicación no es otro que facilidtar el acceso y consulta de la información por parte de todos los interesados, hayan iniciado o no trámites por vía telemática. 
 
-## Identificación Electrónica. 
+## Identificación Electrónica. <a href="" id="eidentidad"></a> 
 Cuando se inicia un procedimiento o trámite electrónico, la Administración correspondiente está obligada a ofrecer las mismas garantías jurídicas que hasta ahora han asegurado la tramitación en papel. Una de estas garantías es la autenticidad, es decir, el compromiso que cualquier persona asume sobre el contenido de un documento y que en la tramitación tradicional quedaba patente con la firma manuscrita. 
 
 En el caso de tramitación electrónica la identificación de los interesados, la expresión de su voluntad y el compromiso sobre el contido del documento presentado quedan asegurados gracias a la utilización de la Criptografía.
@@ -210,7 +217,7 @@ En cualquier caso, los tres tipos de firma electrónica deben garantizar tanto l
 ### ¿ Qué es el Certificado Electrónico ?
 Como ya hemos mencionado, la firma electrónica reconocida requiere, para serlo, de un elemento imprescindible, el certificado digital que, tal como indica la Ley de Firma Electrónica, "es un documento firmado electrónicamente por un pretador de servicios de certificación que vincula unos datos de verificación de firma a un firmante y comprueba y ratifica su identidad". Por tanto, el certificado electrónico vincula la identidad de cada usuario con las herramientas de firma electrónica, es decir, con sus claves criptográficas, por lo que constituye realmente un documento de identidad digital.
 
-### El DNI Electrónico. 
+### El DNI Electrónico. <a href="" id="dnie"></a>
 Este sistema de identificación electrónica presenta varias ventajas frente a los otros dos tipo sde certificados (en tarjeta criptográfica y en fichero instalable en el ordenador): 
 - El R.D. 1553/2005, de 23 de diciembre, por el que se regula la expedición del documento nacional de identidad y sus certificados de firma electrónica, establece que el DNIe tiene suficiente valor por si solo para acreditar la identidad y los datos personales de su titular que en él se consignen,m así como la nacionalidad española del mismo". Es decir, nos permite identifcarnos no sólo en el mundo físico, son también ante trasacciones telemáticas mediante la firma electrónica que incorpora. 
 - Nos evita la duplicidad de trámites ya que el DNIe y certificado electrónico se expiden en el mismo acto y además se entregan el mismo día de la solicitud. 
@@ -286,4 +293,5 @@ Valide es un servicio de validación y demostración de firma electrónica. Con 
 
 
 ## Bibliografía
-https://es.slideshare.net/valdericeda/gua-bsica-para-entender-la-administracin-electrnica
+
+- <a href="https://es.slideshare.net/valdericeda/gua-bsica-para-entender-la-administracin-electrnica" target="_blank">Guía básica (Slideshare)</a>

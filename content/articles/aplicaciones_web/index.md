@@ -11,6 +11,7 @@ layout: articles.njk
 - [Navegadores y lenguajes de programación web.](#navegadores)
 - [Lenguajes de script](#lenguajes)
 
+---
 
 ## Aplicaciones Web <a href="" id="aplicaciones"></a>
 Las aplicaciones web son aquellas herramientas que los usuarios pueden utilizar accediendo a un servidor web, que puede estar en Internet o en una intranet, mediante un navegador.
@@ -117,11 +118,10 @@ Los elementos que puede contener cada elemento
 
 
 Las declaraciones de tipo de atributo
-Todas la definiciones de atributo comienzan por <!ATTLIST
-
-
-Las declaraciones de tipo de atributo
-Todas la definiciones de atributo comienzan por <!ATTLIST
+Todas la definiciones de atributo comienzan por 
+```xml
+<!ATTLIST
+```
 
 Cada atributo está formato por 3 partes: 
 - Nombre
@@ -164,15 +164,17 @@ Podemos definir nuestras propias entidades internas con:
 ```
 
 Las entidades externas sriven para referencias su contenido o valor desde otros ficheros
-
+```xml
 <!ENTITY arch System "arch.txt">
+```
 
 
 Las entidades de paramétros tienen una sintaxis distinta: 
-
+```xml
 <!ENTITY %items "a CDATA #REQUIRED b CDATA #REQUIRED c CDATA #REQUIRED">
 <!ELEMENT motos EMPTY>
 <!ATTLIST motos %items> 
+```
 
 ### XML Schema
 
@@ -196,3 +198,6 @@ Ejemplo:
 </xsd:schema>
 ```
 
+## Navegadores y lenguajes de programación web.<a ref="" id="navegadores"></a>
+
+Los lenguajes de programación web má utliizados en la actualidad son PHP, JavaScrip, Java, Python, Ruby, Perl, C++ y C#
