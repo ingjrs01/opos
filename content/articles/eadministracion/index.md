@@ -7,6 +7,7 @@ layout: articles.njk
 - [Sede Electrónica](#sede)
 - [Identidad Electrónica](#eidentidad)
 - [DNI Electrónico](#dnie)
+- [Bibliografía](#bibliografia)
 ---
 
 ## Administración Electronica <a href="" id="administracion"></a>
@@ -193,7 +194,7 @@ En el caso de tramitación electrónica la identificación de los interesados, l
 Como se explica en el tema de criptografía de clave pública, si un documento ha sido generado a partir de una clave privada, tiene que haber sido generado por su propietario, y con ello llegamos al siguiente concepto importante, la Firma Electronica. 
 
 ### ¿Qué es la Firma Electrónica ?
-Según la Ley 59/2003, de 19 de diciembre, de Firma Electrónica, es el "conjunto de datos en forma electrónica, consignados junto a otros o asociados con ellos, que pueden ser utiliaados como medio de identificación del firmante". 
+Según la Ley 59/2003, de 19 de diciembre, de Firma Electrónica, es el "conjunto de datos en forma electrónica, consignados junto a otros o asociados con ellos, que pueden ser utilizados como medio de identificación del firmante". 
 
 Es decir, se trata de datos relativos a una persona, consignados de forma electrónica y que permiten garantizar la identidad del firmatne dy la integridad del mensaje. A efectos jurídicos podría otorgársele la misma validez que una firma manuscrita digitalizada. 
 
@@ -292,6 +293,6 @@ Valide es un servicio de validación y demostración de firma electrónica. Con 
 - Hablar de lo que es la Administración Electrónica
 
 
-## Bibliografía
+## Bibliografía <a href="" id="bibliografia"></a>
 
 - <a href="https://es.slideshare.net/valdericeda/gua-bsica-para-entender-la-administracin-electrnica" target="_blank">Guía básica (Slideshare)</a>
